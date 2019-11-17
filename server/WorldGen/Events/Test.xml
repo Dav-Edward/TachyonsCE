@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="RUN_TEST">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_event="REMOVE_EVADER_AI_BY_ID"></event_param>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="INPUT_TEST">
+		<event_param var_name="INPUT_TEST"></event_param>
+		<event_param var_value="[INPUT]"></event_param>
+	</event>
+	
+	<event type="SPAWN_SHIP" name="SPAWN_ALL_GENS">
+		<event_param nonstop="1"></event_param>
+		<event_param random_ship="0"></event_param>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="ABAND_S1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="ABAND_S2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="ABAND_S3"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="ABAND_S5"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="BEARS_HQ"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_CARGO_L9_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_CARGO_L9_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_CRUS_L14_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_CRUS_L14_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_HS_L7_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_HS_L7_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_INT_L3_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_INT_L3_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_LS_L5_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="B_LS_L5_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="DF"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="DF2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="EMPIRE_HQ"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="H_CRUS_L11_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="H_REP"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="H_T10"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="I_CRUS_L8_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="I_CRUS_L8_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="I_HS_L7_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="I_HS_L7_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="KEK_HQ"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="SCOR_HQ"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_BOSS"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_CARGO_L9_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_CARGO_L9_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_CRUS_L14_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_CRUS_L14_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_HS_L7_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_HS_L7_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_INT_L3_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_INT_L3_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_LS_L5_1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="S_LS_L5_2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION2"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION3"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="TUT_PIRATE"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+		<add_ship>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param gen_ship_model="USC"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="100"></ship_param>
+			<ship_param max_health="200"></ship_param><ship_ai type="SENTRY"><ship_ai_param CREWLESS="1"></ship_ai_param></ship_ai>
+		</add_ship>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="REMOVE_EVADER_AI_BY_ID">
+		<event_param remove_ship_ai_id="d31ls"></event_param>
+		<event_param all_mob_ships="0"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_LIFE_SUPPORT_AI">
+		<event_param all_mob_ships="0"></event_param>
+		<event_param remove_ship_ai_type="LIFE_SUPPORT"></event_param>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="plague_effect">
+		<event_param chain_event="plague_damage"></event_param>
+		<event_param chain_events_to_modified="1"></event_param>
+		<event_param all_mob_ships="0"></event_param>
+		<event_param ignore_passenger_access="1"></event_param>
+	</event>
+	
+	<event type="PLAY_AUDIO" name="PLAY_COUGH">
+		<event_param track="THUNDER"></event_param>
+		<event_param music="0"></event_param>
+		<event_param all_players="0"></event_param>
+	</event>
+	
+	<event type="MODIFY_MOB" name="plague_damage">
+		<event_param chain_event="PLAY_COUGH"></event_param>
+		<event_param take_health="20"></event_param>
+	</event>
+	
+</events>

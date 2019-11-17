@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="SINGULARITY_CAPTAIN">
+		<start>M1</start>
+		<message id="M1" text="Greeting my friend!">
+			<reply id="R2" text="Shit, I don't have time for this."></reply>
+			<reply id="R1" text="[ACTION]Hi. Who are you?" next="M2"></reply>
+		</message>
+		<message id="M2" text="My name is [NPC_NAME]. I am the station's captain.">
+			<reply id="R2" text="Uh huh, what ever..." any_condition="1">
+				<condition type="SHIP_COMBAT_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+				</condition>
+				<condition type="SHIP_COMBAT_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+				</condition>
+				<condition type="SHIP_SYSTEM_PRESENT">
+					<!-- Check_target_ship and check_shooter_ship are used only by events -->
+					<!-- that are triggered by ship projectiles on hit. -->
+					<!-- Available in all SHIP_... events. -->
+					<condition_param check_target_ship="1"></condition_param>
+					<condition_param check_shooter_ship="1"></condition_param>
+					<condition_param system_type="SHIELDS"></condition_param>
+					<condition_param system_model="SHIELDS1"></condition_param>
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param active_system="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_SYSTEM_ABSENT">
+					<condition_param system_type="SHIELDS"></condition_param>
+					<condition_param system_model="SHIELDS1"></condition_param>
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param active_system="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_CARGO_PRESENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_type="SHIELDS"></condition_param>
+					<condition_param system_model="SHIELDS1"></condition_param>
+					<condition_param target_player="0"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_type="SHIELDS"></condition_param>
+					<condition_param system_model="SHIELDS1"></condition_param>
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="100"></condition_param>
+				</condition>
+				<condition type="SHIP_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="500"></condition_param>
+				</condition>
+				<condition type="SHIP_HULL_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="10"></condition_param>
+				</condition>
+				<condition type="SHIP_HULL_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="13"></condition_param>
+				</condition>
+				<condition type="SHIP_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="100"></condition_param>
+				</condition>
+				<condition type="SHIP_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="200"></condition_param>
+				</condition>
+				<condition type="SHIP_MISSILES_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="10"></condition_param>
+				</condition>
+				<condition type="SHIP_MISSILES_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="15"></condition_param>
+				</condition>
+				<condition type="SHIP_DRONES_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="12"></condition_param>
+				</condition>
+				<condition type="SHIP_DRONES_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="16"></condition_param>
+				</condition>
+				<condition type="SHIP_LEVEL_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="6"></condition_param>
+				</condition>
+				<condition type="SHIP_LEVEL_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="SHIP_POSITION_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param area_start="1000:5000"></condition_param>
+					<condition_param area_end="2000:6000"></condition_param>
+				</condition>
+				<condition type="SHIP_POSITION_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param area_start="1000:5000"></condition_param>
+					<condition_param area_end="2000:6000"></condition_param>
+				</condition>
+				<condition type="SHIP_SHIELDS_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="3"></condition_param>
+				</condition>
+				<condition type="SHIP_SHIELDS_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param qty="4"></condition_param>
+				</condition>
+				<condition type="SHIP_NAME_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param ship_name="BLACK PEARL"></condition_param>
+				</condition>
+				<condition type="SHIP_NAME_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param ship_name="WHITE PEARL"></condition_param>
+				</condition>
+				<condition type="SHIP_RACE_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param race="HUMAN"></condition_param>
+				</condition>
+				<condition type="SHIP_RACE_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param race="SPIDER"></condition_param>
+				</condition>
+				<condition type="SHIP_CLASS_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param ship_class="CRUISER"></condition_param>
+				</condition>
+				<condition type="SHIP_CLASS_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param ship_class="BATTLESHIP"></condition_param>
+				</condition>
+				<condition type="SHIP_AI_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param all_req="0"></condition_param>
+					<condition_param ai_type="SENTRY"></condition_param>
+					<condition_param ai_type="EXPLORER"></condition_param>
+				</condition>
+				<condition type="SHIP_AI_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param all_req="1"></condition_param>
+					<condition_param ai_type="SENTRY"></condition_param>
+					<condition_param ai_type="EXPLORER"></condition_param>
+				</condition>
+				<condition type="MOB_HEALTH_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="500"></condition_param>
+				</condition>
+				<condition type="MOB_HEALTH_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="1000"></condition_param>
+				</condition>
+				<condition type="MOB_NAME_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param mob_name="[PLAYER_NAME]"></condition_param>
+					<condition_param mob_name="[NPC_NAME]"></condition_param>
+					<condition_param mob_name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param mob_name="Bob"></condition_param>
+				</condition>
+				<condition type="MOB_NAME_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param mob_name="[PLAYER_NAME]"></condition_param>
+					<condition_param mob_name="[NPC_NAME]"></condition_param>
+					<condition_param mob_name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param mob_name="Frank"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="100"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="200"></condition_param>
+				</condition>
+				<condition type="MOB_OXYGEN_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="1000"></condition_param>
+				</condition>
+				<condition type="MOB_OXYGEN_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param qty="2000"></condition_param>
+				</condition>
+				<condition type="MOB_RACE_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param race="HUMAN"></condition_param>
+				</condition>
+				<condition type="MOB_RACE_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param race="SPIDER"></condition_param>
+				</condition>
+				<condition type="MOB_AI_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_req="0"></condition_param>
+					<condition_param ai_type="NPC_REPAIRMAN"></condition_param>
+					<condition_param ai_type="NPC_FIREMAN"></condition_param>
+					<condition_param ai_type="NPC_WORKER"></condition_param>
+				</condition>
+				<condition type="MOB_AI_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_req="1"></condition_param>
+					<condition_param ai_type="NPC_REPAIRMAN"></condition_param>
+					<condition_param ai_type="NPC_FIREMAN"></condition_param>
+					<condition_param ai_type="NPC_WORKER"></condition_param>
+				</condition>
+				<condition type="SECTOR_AREA_PRESENT">
+					<condition_param threat_start="VAR(PIRATE_LANDS_START)"></condition_param>
+					<condition_param threat_end="VAR(PIRATE_LANDS_END)"></condition_param>
+				</condition>
+				<condition type="SECTOR_TYPE_PRESENT">
+					<condition_param sector_type="0"></condition_param>
+					<condition_param sector_type="1"></condition_param>
+					<condition_param sector_type="2"></condition_param>
+					<condition_param sector_type="3"></condition_param>
+					<condition_param sector_type="4"></condition_param>
+				</condition>
+				<condition type="SECTOR_TYPE_ABSENT">
+					<condition_param sector_type="0"></condition_param>
+					<condition_param sector_type="1"></condition_param>
+					<condition_param sector_type="2"></condition_param>
+					<condition_param sector_type="3"></condition_param>
+					<condition_param sector_type="4"></condition_param>
+				</condition>
+				<condition type="SECTOR_COORDS_PRESENT">
+					<condition_param coords="100:500"></condition_param>
+					<condition_param coords="100:501"></condition_param>
+					<condition_param coords="100:502"></condition_param>
+					<condition_param coords="VAR(PIRATE_BASE_SECTOR)"></condition_param>
+					<condition_param coords="VAR([SHIP_ID]_HOME_BASE_SECTOR)"></condition_param>
+				</condition>
+				<condition type="SECTOR_COORDS_ABSENT">
+					<condition_param coords="101:502"></condition_param>
+					<condition_param coords="100:501"></condition_param>
+					<condition_param coords="100:502"></condition_param>
+					<condition_param coords="VAR(PIRATE_BASE_SECTOR)"></condition_param>
+				</condition>
+				<condition type="SECTOR_AREA_PRESENT">
+					<condition_param area_start="VAR(PIRATE_LANDS_START)"></condition_param>
+					<condition_param area_end="VAR(PIRATE_LANDS_END)"></condition_param>
+				</condition>
+				<condition type="SECTOR_AREA_ABSENT">
+					<condition_param area_start="VAR(PIRATE_LANDS_START)"></condition_param>
+					<condition_param area_end="VAR(PIRATE_LANDS_END)"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Falcon"></condition_param>
+					<condition_param owner="[PLAYER_NAME] [NPC_NAME] VAR(PIRATE_LEADER_NAME) Frank"></condition_param>
+					<condition_param crew="[PLAYER_NAME] [NPC_NAME] VAR(PIRATE_LEADER_NAME) Frank"></condition_param>
+					<condition_param race="HUMAN"></condition_param>
+					<condition_param ship_class="STATION"></condition_param>
+					<condition_param pos_area_start="200:3000"></condition_param>
+					<condition_param pos_area_end="500:4000"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Falcon"></condition_param>
+					<condition_param owner="[PLAYER_NAME] [NPC_NAME] VAR(PIRATE_LEADER_NAME) Frank"></condition_param>
+					<condition_param crew="[PLAYER_NAME] [NPC_NAME] VAR(PIRATE_LEADER_NAME) Frank"></condition_param>
+					<condition_param race="HUMAN"></condition_param>
+					<condition_param ship_class="STATION"></condition_param>
+					<condition_param pos_area_start="200:3000"></condition_param>
+					<condition_param pos_area_end="500:4000"></condition_param>
+					<condition_param qty="3"></condition_param>
+				</condition>
+				<condition type="SECTOR_NPCS_PRESENT">
+					<condition_param name="[PLAYER_NAME]"></condition_param>
+					<condition_param name="[NPC_NAME]"></condition_param>
+					<condition_param name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param name="Frank"></condition_param>
+					<condition_param qty="4"></condition_param>
+				</condition>
+				<condition type="SECTOR_NPCS_ABSENT">
+					<condition_param name="[PLAYER_NAME]"></condition_param>
+					<condition_param name="[NPC_NAME]"></condition_param>
+					<condition_param name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param name="Frank"></condition_param>
+					<condition_param qty="6"></condition_param>
+				</condition>
+				<condition type="SECTOR_PLAYERS_PRESENT">
+					<condition_param name="[NPC_NAME]"></condition_param>
+					<condition_param name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param name="Frank"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SECTOR_PLAYERS_ABSENT">
+					<condition_param name="[NPC_NAME]"></condition_param>
+					<condition_param name="VAR(PIRATE_LEADER_NAME)"></condition_param>
+					<condition_param name="Frank"></condition_param>
+					<condition_param qty="5"></condition_param>
+				</condition>
+				<condition type="SECTOR_THREAT_PRESENT">
+					<condition_param threat_start="0"></condition_param>
+					<condition_param threat_end="5"></condition_param>
+				</condition>
+				<condition type="SECTOR_THREAT_ABSENT">
+					<condition_param threat_start="0"></condition_param>
+					<condition_param threat_end="5"></condition_param>
+				</condition>
+				<condition type="SECTOR_DEBRIS_PRESENT">
+					<condition_param qty="10"></condition_param>
+				</condition>
+				<condition type="SECTOR_DEBRIS_ABSENT">
+					<condition_param qty="20"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param var_name="[MOB_NAME] [MOB_ID] [SECTOR] JIM_DEAD"></condition_param>
+					<condition_param var_value="1"></condition_param>
+					<condition_param var_value="VAR([MOB_NAME]_ISDEAD)"></condition_param>
+					<condition_param any_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param var_name="[SECTOR] RIOT_STARTED[MOB_NAME] [MOB_ID] [SECTOR] SAM_DEAD"></condition_param>
+					<condition_param var_value="HE IS"></condition_param>
+					<condition_param var_value="VAR([MOB_NAME]_ISDEAD)"></condition_param>
+					<condition_param any_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param var_name="JUMPS_MADE_BY_[MOB_NAME]_[MOB_ID]_FROM_[SECTOR]"></condition_param>
+					<condition_param var_value="10"></condition_param>
+					<condition_param var_value="VAR(JUMPS_TILL_[MOB_NAME]_DIES)"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_SMALLER">
+					<condition_param target_player="1"></condition_param>					<condition_param all_mob_ships="1"></condition_param>
+					<condition_param var_name="[MOB_NAME] [MOB_ID] [SECTOR] ASTEROID SECTORS VISITED"></condition_param>
+					<condition_param var_value="10"></condition_param>
+					<condition_param var_value="VAR(JUMPS_TILL_[MOB_NAME]_DIES)"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R1" text="[SKIP]Nice to meet you. I'm [PLAYER_NAME]" next="M3"></reply>
+		</message>
+		<message id="M3" text="[ACTION]Welcome aboard! There's a big asteroid at [SECTOR]">
+			<random_event>0</random_event>
+			<event id="SPAWN_A1" target="PLAYER"></event>
+		</message>
+		<message id="M41" text="[SKIP]Welcome aboard! There's a big asteroid at [SECTOR]">
+			<random_event>0</random_event>
+			<reply id="R1" text="Input your name.[AUTO]" regex="^[a-zA-Z0-9 -]+$" next="M3"></reply>
+			<event id="SPAWN_A1" target="NPC"></event>
+		</message>
+	</dialogue>	
+</dialogues>

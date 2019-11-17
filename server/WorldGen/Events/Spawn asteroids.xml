@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROID_BELT_5_10">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="5"></event_param>
+		<event_param max_event_qty="10"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="6"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROID_BELT_10_15">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="10"></event_param>
+		<event_param max_event_qty="15"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="6"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROID_BELT_15_20">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="15"></event_param>
+		<event_param max_event_qty="20"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="5"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROID_BELT_10_20">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="10"></event_param>
+		<event_param max_event_qty="20"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="5"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROID_BELT_5_20">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="5"></event_param>
+		<event_param max_event_qty="20"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="5"></ship_param>
+		</add_ship>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="SECTOR_ASTEROIDS_SPAWNED">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_DEAD_SHIP_PART">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="H_CRUS_D1"></ship_param>
+			<ship_param gen_ship_model="H_CRUS_D2"></ship_param>
+			<ship_param gen_ship_model="H_CRUS_D3"></ship_param>
+			<ship_param gen_ship_model="H_CRUS_D4"></ship_param>
+			<ship_param gen_ship_model="H_CARGO_D1"></ship_param>
+			<ship_param gen_ship_model="H_CARGO_D2"></ship_param>
+			<ship_param gen_ship_model="H_CARGO_D3"></ship_param>
+			<ship_param gen_ship_model="H_CARGO_D4"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Dead ship part"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="4"></ship_param>
+			<ship_param max_health="8"></ship_param>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P1">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="H_CRUS_D1"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Dead ship part"></ship_param>
+			<ship_param pos="6900:6100:"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="4"></ship_param>
+			<ship_param max_health="8"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P2">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="H_CRUS_D4"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Dead ship part"></ship_param>
+			<ship_param pos="7600:5400:"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="4"></ship_param>
+			<ship_param max_health="8"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P3">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Asteroid"></ship_param>
+			<ship_param pos="7250:5750:"></ship_param>
+			<ship_param min_scrap="10"></ship_param>
+			<ship_param max_scrap="40"></ship_param>
+			<ship_param min_health="1"></ship_param>
+			<ship_param max_health="4"></ship_param>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_RANDOM_ASTEROID_BELT">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_5_10"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_10_15"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_15_20"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_10_20"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_5_20"></event_param>
+	</event>
+	
+</events>

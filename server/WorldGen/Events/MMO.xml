@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SERVER_VARIABLE" name="SET_PLAYER_HOME">
+		<event_param var_name="[PLAYER_NAME] HOME COORDS"></event_param>
+		<event_param var_value="VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="PTX0">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTY0">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="PTXI1">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="++"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTXD1">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="--"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTXI10">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="+=10"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTXD10">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="-=10"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTXI100">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="+=100"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTXD100">
+		<event_param var_name="[PLAYER_NAME] TEMP X"></event_param>
+		<event_param var_value="-=100"></event_param>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="PTYI1">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="++"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTYD1">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="--"></event_param>
+	</event>	
+	<event type="SERVER_VARIABLE" name="PTYI10">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="+=10"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTYD10">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="-=10"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTYI100">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="+=100"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PTYD100">
+		<event_param var_name="[PLAYER_NAME] TEMP Y"></event_param>
+		<event_param var_value="-=100"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="Activate StarGate">
+		<event_param nonstop="1"></event_param>
+		<event_param for_pos_area_start="6500:6500"></event_param>
+		<event_param for_pos_area_end="8000:8000"></event_param>
+		<event_param hyper_jump="VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)"></event_param>
+	</event>
+
+	<event type="SPAWN_NPC" name="Spawn Mechanic">
+		<event_param nonstop="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="Mechanic"></npc_param>
+			<npc_param npc_remote_dialogue="Mechanic"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:SENSORS"></npc_ai_param>
+				<npc_ai_param WORK_TIME="30"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+
+	<event type="SPAWN_SHIP" name="Spawn StarGate 1">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 2">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 3">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 4">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+		<event_param chain_event="StarGate part 4"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 5">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+		<event_param chain_event="StarGate part 4"></event_param>
+		<event_param chain_event="StarGate part 5"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 6">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+		<event_param chain_event="StarGate part 4"></event_param>
+		<event_param chain_event="StarGate part 5"></event_param>
+		<event_param chain_event="StarGate part 6"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate 7">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+		<event_param chain_event="StarGate part 4"></event_param>
+		<event_param chain_event="StarGate part 5"></event_param>
+		<event_param chain_event="StarGate part 6"></event_param>
+		<event_param chain_event="StarGate part 7"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate Full">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Remove StarGate"></event_param>
+		<event_param chain_event="Clear StarGate Area"></event_param>
+		<event_param chain_event="StarGate part 1"></event_param>
+		<event_param chain_event="StarGate part 2"></event_param>
+		<event_param chain_event="StarGate part 3"></event_param>
+		<event_param chain_event="StarGate part 4"></event_param>
+		<event_param chain_event="StarGate part 5"></event_param>
+		<event_param chain_event="StarGate part 6"></event_param>
+		<event_param chain_event="StarGate part 7"></event_param>
+		<event_param chain_event="StarGate part 8"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="Spawn StarGate Operator">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_event="Remove StarGate operator"></event_param>
+		<event_param chain_event="Clear StarGate Operator Area"></event_param>
+		<event_param chain_event="Spawn StarGate Operator Platform"></event_param>
+	</event>
+
+	<event type="REMOVE_SHIP" name="Remove StarGate operator">
+		<event_param nonstop="1"></event_param>
+		<event_param for_ship_name="StarGate_Operator"></event_param>
+		<event_param for_race="ALL"></event_param>
+		<event_param for_ship_class="PLATFORM"></event_param>		
+	</event>
+	<event type="MODIFY_SHIP" name="Clear StarGate Operator Area">
+		<event_param nonstop="1"></event_param>
+		<event_param for_pos_area_start="6650:8750"></event_param>
+		<event_param for_pos_area_end="7750:9250"></event_param>
+		<event_param random_pos="1"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="Spawn StarGate Operator Platform">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="gop"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="StarGate_Operator"></ship_param>
+			<ship_param pos="7200:9000"></ship_param>
+			<ship_param min_health="3000"></ship_param>
+			<ship_param max_health="3000"></ship_param>
+			<ship_ai type="AUTOREPAIR">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="SHIP_GUARD">
+				<ship_ai_param GNAME="Star_Gate"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LEVEL_LOADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_captain="1"></npc_param>
+				<npc_param npc_name="StarGate operator"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="GATE_OPERATOR"></npc_param>
+				<npc_param npc_remote_dialogue="GATE_OPERATOR"></npc_param>
+				<npc_param npc_health="100"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="90"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="StarGate part 1">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gt"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="7200:8450"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>	
+	<event type="SPAWN_SHIP" name="StarGate part 2">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gb"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="7200:5950"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 3">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gl"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="5950:7200"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 4">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gr"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="8450:7200"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 5">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gbl"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="6300:6300"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 6">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gtr"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="8100:8100"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 7">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gtl"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="6300:8100"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="StarGate part 8">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param transparent_cells="1"></ship_param>
+			<ship_param gen_ship_model="gbr"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Star_Gate"></ship_param>
+			<ship_param pos="8100:6300"></ship_param>
+			<ship_param min_health="1000"></ship_param>
+			<ship_param max_health="1000"></ship_param>
+		</add_ship>
+	</event>
+
+	<event type="MODIFY_SHIP" name="Clear StarGate Area">
+		<event_param nonstop="1"></event_param>
+		<event_param for_pos_area_start="5500:5500"></event_param>
+		<event_param for_pos_area_end="9000:9000"></event_param>
+		<event_param random_pos="1"></event_param>
+		<event_param chain_event="Clear StarGate Area 0"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="Clear StarGate Area 0">
+		<event_param nonstop="1"></event_param>
+		<event_param for_pos_area_start="5500:5500"></event_param>
+		<event_param for_pos_area_end="9000:9000"></event_param>
+		<event_param pos="0:0"></event_param>
+	</event>
+
+	<event type="REMOVE_SHIP" name="Remove StarGate">
+		<event_param nonstop="1"></event_param>
+		<event_param for_ship_name="Star_Gate"></event_param>
+		<event_param for_race="ALL"></event_param>
+		<event_param for_ship_class="PLATFORM"></event_param>		
+	</event>
+
+	<event type="MODIFY_MOB" name="Take StarGate activation price from player">
+		<event_param nonstop="1"></event_param>
+		<event_param take_scrap="300"></event_param>
+	</event>
+
+	<event type="MODIFY_MOB" name="Take StarGate construction price from player">
+		<event_param nonstop="1"></event_param>
+		<event_param take_scrap="1000"></event_param>
+	</event>
+
+</events>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_SINGULARITY">
+		<event_param sector="12:26"></event_param>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="1"></ship_param>
+			<ship_param gen_ship_model="SINGULARITY_STATION"></ship_param>
+			<ship_param ship_name="Singularity station"></ship_param>
+			<ship_param pos="5930:6030"></ship_param>
+			<ship_param min_health="10"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_ai type="AUTOREPAIR"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LEVEL_LOADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_captain="1"></npc_param>
+				<npc_param npc_name="Orill"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="SENSORS"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="SINGULARITY_CAPTAIN"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:SENSORS"></npc_ai_param>
+					<npc_ai_param WORK_TIME="120"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_random_race="1"></npc_param>
+				<npc_param npc_home_system="DOOR_CONTROL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param>WORK_TIME=120</npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+</events>

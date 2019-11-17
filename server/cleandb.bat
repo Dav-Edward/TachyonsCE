@@ -1,0 +1,5 @@
+rd /s /q "DataBase\ships"
+rd /s /q "DataBase\NPCs"
+rd /s /q "DataBase\Universe"
+rd /s /q "DataBase\Players"
+del /q "DataBase\vars.dat"

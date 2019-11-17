@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="WORLD_GEN" name="Unique event name">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Spawn an asteroid"></event_param>
+	</event>
+	
+	<event type="THREAT_SPIKE" name="Unique event name">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param range_min="8"></event_param>
+		<event_param range_max="25"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param radius_min="10"></event_param>
+		<event_param radius_max="30"></event_param>
+		<event_param threat_min="10"></event_param>
+		<event_param threat_max="30"></event_param>
+		<event_param any_condition="0"></event_param>
+		<condition type="ANY_CONDITION_AS_FOR_DIALOGUES">
+			<condition_param qty="10"></condition_param>
+		</condition>
+	</event>
+	
+	<event type="SECTOR_EVENT" name="Unique event name">
+		<event_param nonstop="0"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Spawn an asteroid"></event_param>
+		
+		<event_param level="1"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param trigger_message="You have run into"></event_param>
+		<event_param trigger_message="an asteroid"></event_param>
+		<event_param broadcast_message="A new ship has entered this sector"></event_param>
+	</event>
+	
+	<event type="SECTOR_ENTER" name="Unique event name">
+		<event_param nonstop="0"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Spawn an asteroid"></event_param>
+		
+		<event_param level="1"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param trigger_message="You have run into"></event_param>
+		<event_param trigger_message="an asteroid"></event_param>
+		<event_param broadcast_message="A new ship has entered this sector"></event_param>
+	</event>
+	
+	<event type="SECTOR_SCAN" name="Unique event name">
+		<event_param nonstop="0"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="Spawn an asteroid"></event_param>
+		
+		<event_param level="1"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param trigger_message="You have run into"></event_param>
+		<event_param trigger_message="an asteroid"></event_param>
+		<event_param broadcast_message="A new ship has entered this sector"></event_param>
+	</event>
+	
+	<event type="SPAWN_SHIP" name="Spawn an asteroid">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param chain_events_to_created_by_children="0"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param range_min="2"></event_param>
+		<event_param range_max="7"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param random_ship="1"></event_param>
+		<event_param any_condition="0"></event_param>
+		<condition type="ANY_CONDITION_AS_FOR_DIALOGUES">
+			<condition_param qty="10"></condition_param>
+		</condition>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param hack_alert="0"></ship_param>
+			<ship_param boarders_alert="0"></ship_param>
+			<ship_param random_jump_event="1"></ship_param>
+			<ship_param jump_event="PIRATE_HAS_JUMPED"></ship_param>			
+			<ship_param jump_event="PIRATE_HAS_JUMPED2"></ship_param>			
+			<ship_param random_damage_event="1"></ship_param>
+			<ship_param damage_event="PIRATE_WAS_DAMAGED"></ship_param>			
+			<ship_param damage_event="PIRATE_WAS_DAMAGED2"></ship_param>			
+			<ship_param random_death_event="1"></ship_param>
+			<ship_param death_event="PIRATE_WAS_KILLED"></ship_param>			
+			<ship_param death_event="PIRATE_WAS_KILLED2"></ship_param>			
+			<ship_param transparent_cells="0"></ship_param>
+			<ship_param ship_model="SHIP_MODEL_NAME"></ship_param>
+			<ship_param gen_ship_model="GEN_SHIP_MODEL_NAME"></ship_param>
+			<ship_param gen_ship_model="GEN_SHIP_MODEL_NAME2"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="0"></ship_param>
+			<ship_param ship_name="Trader"></ship_param>
+			<ship_param ship_crew="Trader Bobby"></ship_param>
+			<ship_param ship_crew="Trader Smithy"></ship_param>
+			<ship_param ship_owner="Trader Bobby"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param pos="12.4:111.65"></ship_param>
+			<ship_param min_missile_ammo="6"></ship_param>
+			<ship_param max_missile_ammo="12"></ship_param>
+			<ship_param min_drone_ammo="6"></ship_param>
+			<ship_param max_drone_ammo="12"></ship_param>
+			<ship_param min_scrap="5"></ship_param>
+			<ship_param max_scrap="13"></ship_param>
+			<ship_param min_health="10"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_param distress="Someone help! We are being attacked by pirates!"></ship_param>
+			<ship_ai type="SCAVENGER">
+				<ship_ai_param ai_id="abc123"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="BOARDING_MANAGER">
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="EVADER">
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="PEACE_KEEPER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="POSITIONER">
+				<ship_ai_param TARGET="3200:2400"></ship_ai_param>
+				<ship_ai_param LEEWAY="100"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="AUTOREPAIR">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="ANTI_LIFE_SUPPORT">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SHIP_GUARD">
+				<ship_ai_param GNAME="VAR(PIRATE_LEADER_NAME)"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SHIP_HUNTER">
+				<ship_ai_param TARGET="VAR(PIRATE_LEADER_NAME)"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="RACE_HUNTER">
+				<ship_ai_param TARGET="PIRATE"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SHIP_CLASS_HUNTER">
+				<ship_ai_param TARGET="LIGHT_SCOUT"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="MOB_HUNTER">
+				<ship_ai_param TARGET="TARGET MOB NAME"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SHIP_SPAWNER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param ATT="VAR(UNITY_BASE_SECTOR)"></ship_ai_param>
+				<ship_ai_param EXP="ANY_GEN_SHIP_NAME_HERE"></ship_ai_param>
+				<ship_ai_param EXP="ANY_GEN_SHIP_NAME_HERE_2:ANY_GEN_SHIP_NAME_HERE_3:ANY_GEN_SHIP_NAME_HERE_4"></ship_ai_param>
+				<ship_ai_param DEF="ROGUE_AI_PLATFORM_L2"></ship_ai_param>
+				<ship_ai_param DEF="ROGUE_AI_PLATFORM_L4:ROGUE_AI_PLATFORM_L5:ROGUE_AI_PLATFORM_L6"></ship_ai_param>
+				<ship_ai_param EXP_TIME="10800"></ship_ai_param>
+				<ship_ai_param DEF_TIME="90"></ship_ai_param>
+				<ship_ai_param any_condition="0"></ship_ai_param>
+				<ship_ai_condition type="ANY_CONDITION_AS_FOR_DIALOGUES">
+					<condition_param qty="10"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>			
+			<ship_ai type="SENTRY"></ship_ai>
+			<ship_ai type="EXPLORER">
+				<ship_ai_param DELAY="60"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LEVEL_LOADER"></ship_ai>
+			<ship_ai type="SECTOR_FINDER">
+				<ship_ai_param TARGET="32:12"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SECTOR_FINDER">
+				<ship_ai_param TARGET="VAR(PIRATE_BASE_COORDS)"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="ROGUE_AI_OWNER"></ship_ai>
+			<ship_ai type="PIRATE_OWNER"></ship_ai>
+			<ship_param random_npc_on_ship="1"></ship_param>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_param TIMER="60"></ship_ai_param>
+				<ship_ai_param RAND="1"></ship_ai_param>
+				<ship_ai_param EVENT="EVENT_NAME"></ship_ai_param>
+				<ship_ai_param EVENT="SPANW_PIRATE_SHIP"></ship_ai_param>
+			</ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_is_captain="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_name="Alonso"></npc_param>
+				<npc_param npc_random_race="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_random_pos="1"></npc_param>
+				<npc_param npc_pos="12.4:111.65"></npc_param>
+				<npc_param npc_home_system="SHIELDS"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="SINGULARITY_CAPTAIN"></npc_param>
+				<npc_param npc_remote_dialogue="SINGULARITY_CAPTAIN"></npc_param>
+				<npc_param npc_min_scrap="5"></npc_param>
+				<npc_param npc_max_scrap="13"></npc_param>
+				<npc_param npc_health="13"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_BOARDER"></npc_ai>
+				<npc_ai type="NPC_CLAIMER"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="90"></npc_ai_param>
+					<npc_ai_param any_condition="0"></npc_ai_param>
+					<npc_ai_condition type="ANY_CONDITION_AS_FOR_DIALOGUES">
+						<condition_param qty="10"></condition_param>
+					</npc_ai_condition>
+				</npc_ai>
+				<npc_ai type="NPC_TALKER">
+					<npc_ai_param TIMER="90"></npc_ai_param>
+					<npc_ai_param SHIP="1"></npc_ai_param>
+					<npc_ai_param RAND="1"></npc_ai_param>
+					<npc_ai_param MES="Hello!..."></npc_ai_param>
+					<npc_ai_param MES="Can anyone hear me? I need help!"></npc_ai_param>
+				</npc_ai>
+				<npc_ai type="NPC_EVENT_TRIGGER">
+					<npc_ai_param TIMER="60"></npc_ai_param>
+					<npc_ai_param RAND="1"></npc_ai_param>
+					<npc_ai_param EVENT="EVENT_NAME"></npc_ai_param>
+					<npc_ai_param EVENT="SPANW_PIRATE_SHIP"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="[SECTOR_THREAT]"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="[SECTOR_THREAT]"></ship_randomizer_param>
+				<ship_randomizer_param max_optionals="2"></ship_randomizer_param>
+				<ship_randomizer_param random_weapon="LASER1"></ship_randomizer_param>
+				<ship_randomizer_param random_weapon="LASER2"></ship_randomizer_param>
+				<ship_randomizer_param random_sheld="SHIELD1"></ship_randomizer_param>
+				<ship_randomizer_param random_sheld="SHIELD2"></ship_randomizer_param>
+				<ship_random_systems type="OXYGEN">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+					<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="DOOR_CONTROL">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="DOORS1"></ship_random_systems_param>
+					<ship_random_systems_param model="DOORS2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="ENGINES">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
+					<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="HYPERDRIVE">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+					<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="WEAPONS_CONTROL">
+					<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+					<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+					<ship_random_systems_param model="WEAPONS_CONTROL2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="SENSORS">
+					<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+					<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+					<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="CAPACITOR">
+					<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+					<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+					<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="MEDICAL">
+					<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+					<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+					<ship_random_systems_param model="MEDICAL2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="CLOAKING">
+					<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+					<ship_random_systems_param model="CLOAK1"></ship_random_systems_param>
+					<ship_random_systems_param model="CLOAK2"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+		</add_ship>
+	</event>
+	
+	<event type="SPAWN_NPC" name="Spawn Bob NPC">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+		
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param for_ship_name="FALCON"></event_param>
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param range_min="2"></event_param>
+		<event_param range_max="7"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param random_npc="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_is_captain="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_name="Bob"></npc_param>
+			<npc_param npc_random_race="1"></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_random_pos="1"></npc_param>
+			<npc_param npc_pos="12.4:111.65"></npc_param>
+			<npc_param npc_home_system="SHIELDS"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="SINGULARITY_CAPTAIN"></npc_param>
+			<npc_param npc_remote_dialogue="SINGULARITY_CAPTAIN"></npc_param>
+			<npc_param npc_min_scrap="5"></npc_param>
+			<npc_param npc_max_scrap="13"></npc_param>
+			<npc_param npc_health="13"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_BOARDER"></npc_ai>
+			<npc_ai type="NPC_CLAIMER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+				<npc_ai_param WORK_TIME="90"></npc_ai_param>
+			</npc_ai>
+			<npc_ai type="NPC_TALKER">
+				<npc_ai_param TIMER="90"></npc_ai_param>
+				<npc_ai_param SHIP="1"></npc_ai_param>
+				<npc_ai_param RAND="1"></npc_ai_param>
+				<npc_ai_param MES="Hello!..."></npc_ai_param>
+				<npc_ai_param MES="Can anyone hear me? I need help!"></npc_ai_param>
+				<npc_ai_param any_condition="0"></npc_ai_param>
+				<npc_ai_condition type="ANY_CONDITION_AS_FOR_DIALOGUES">
+					<condition_param var_name="[MOB_ID] GOT HELP"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	
+	<event type="SPAWN_DEBRIS" name="Spawn debris with system">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+		
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param range_min="2"></event_param>
+		<event_param range_max="7"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param random_debris="1"></event_param>
+		<add_debris>
+			<debris_param debris_qty="2"></debris_param>
+			<debris_param debris_owner="Some ship name"></debris_param>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_param debris_on_ship_pos="1"></debris_param>
+			<debris_param debris_pos="212.4:311.65"></debris_param>
+			<debris_param debris_min_scrap="30"></debris_param>
+			<debris_param debris_max_scrap="60"></debris_param>
+			<debris_param debris_min_missiles="30"></debris_param>
+			<debris_param debris_max_missiles="60"></debris_param>
+			<debris_param debris_min_drones="30"></debris_param>
+			<debris_param debris_max_drones="60"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="NAME_OF_SYSTEM_MODEL"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SHIELDS1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL2"></debris_item>
+		</add_debris>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="SER_VAR_JIM_DEAD">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param value_math_expr="0"></event_param>
+		<event_param var_name="[INPUT] [PLAYER_NAME] [NPC_NAME] [MOB_NAME] [MOB_ID] [MOB_POS] [PROJ_POS] [SHIP_POS] [SHIP_NAME] [SHIP_ID] [SECTOR] VAR(PIRATE_BASE) KNOWS_THAT_JIM_IS_DEAD"></event_param>
+		<event_param var_value="[INPUT] [PLAYER_NAME] [NPC_NAME] [MOB_NAME] [MOB_ID] [MOB_POS] [PROJ_POS] [SHIP_POS] [SHIP_NAME] [SHIP_ID] [SECTOR] VAR(PIRATE_BASE) OK"></event_param>
+		<event_param var_value="1"></event_param>
+		<event_param var_value="++"></event_param>
+		<event_param var_value="--"></event_param>
+		<event_param var_value="+=10"></event_param>
+		<event_param var_value="-=5"></event_param>
+	</event>
+	
+	<event type="MODIFY_MOB" name="Modify mob">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param give_scrap="143"></event_param>
+		<event_param take_scrap="32"></event_param>
+		<event_param give_health="500"></event_param>
+		<event_param take_health="200"></event_param>
+		<event_param give_oxygen="600"></event_param>
+		<event_param take_oxygen="243"></event_param>
+		<event_param random_pos="0"></event_param>
+		<event_param pos="212.4:311.65"></event_param>
+	</event>
+	
+	<event type="MODIFY_SECTOR" name="Set level type to 13">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param range_min="2"></event_param>
+		<event_param range_max="7"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param sector_type="13"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+	
+	<event type="START_LOCATION" name="Pirates spawn point">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param sector="100:500"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param area_start="10:3"></event_param>
+		<event_param area_end="15:4"></event_param>
+		<event_param random_pos="1"></event_param>
+		<event_param pos="3050:2041"></event_param>
+		<event_param location_name="Pirates main base"></event_param>
+		<event_param race="PIRATE"></event_param>
+	</event>
+	
+	<event type="REMOVE_SHIP" name="Remove ship">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+		
+		<event_param for_ship_name="FALCON"></event_param>
+		<event_param for_owner="Owner name"></event_param>
+		<event_param for_crew_name="Crew name"></event_param>
+		<event_param for_race="HUMAN"></event_param>
+		<event_param for_ship_class="CREATURE"></event_param>		
+		<event_param for_pos_area_start="500:2000"></event_param>
+		<event_param for_pos_area_end="600:3000"></event_param>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="Modify ship">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param chain_events_to_modified="0"></event_param>
+		<event_param clear_created_by_children="1"></event_param>
+		<event_param for_ship_name="FALCON"></event_param>
+		<event_param for_owner="Owner name"></event_param>
+		<event_param for_crew_name="Crew name"></event_param>
+		<event_param for_race="HUMAN"></event_param>
+		<event_param for_ship_class="CREATURE"></event_param>		
+		<event_param for_pos_area_start="500:2000"></event_param>
+		<event_param for_pos_area_end="600:3000"></event_param>
+		<event_param all_mob_ships="0"></event_param>
+		<event_param ignore_passenger_access="0"></event_param>
+		<event_param safe_zone="0"></event_param>
+		<event_param free_doors="1"></event_param>
+		<event_param free_oxygen="1"></event_param>
+		<event_param free_medical="1"></event_param>
+		<event_param free_sensors="0"></event_param>
+		<event_param hack_alert="0"></event_param>
+		<event_param boarders_alert="0"></event_param>
+		<event_param repair_breaches="0"></event_param>
+		<event_param put_out_fires="0"></event_param>
+		<event_param random_pos="0"></event_param>
+		<event_param pos="212.4:311.65"></event_param>
+		<event_param charge_hd="100"></event_param>
+		<event_param decharge_hd="100"></event_param>
+		<event_param charge_engines="100"></event_param>
+		<event_param decharge_engines="100"></event_param>
+		<event_param charge_weapons="100"></event_param>
+		<event_param decharge_weapons="100"></event_param>
+		<event_param charge_cloak="100"></event_param>
+		<event_param decharge_cloak="100"></event_param>
+		<event_param decharge_system_type="TELEPORT:50"></event_param>
+		<event_param charge_system_type="TELEPORT:100"></event_param>
+		<event_param decharge_system_model="TELEPORT1:50"></event_param>
+		<event_param charge_system_model="TELEPORT1:100"></event_param>
+		<event_param give_scrap="143"></event_param>
+		<event_param take_scrap="32"></event_param>
+		<event_param give_hull="500"></event_param>
+		<event_param take_hull="200"></event_param>
+		<event_param give_shields="99999"></event_param>
+		<event_param take_shields="99999"></event_param>
+		<event_param give_missiles="3"></event_param>
+		<event_param take_missiles="1"></event_param>
+		<event_param give_drones="4"></event_param>
+		<event_param take_drones="2"></event_param>
+		<event_param remove_system_type_from_cargo="SHIELDS"></event_param>
+		<event_param remove_system_model_from_cargo="BASIC_LASER1"></event_param>
+		<event_param remove_system_type="SHIELDS"></event_param>
+		<event_param remove_system_model="BASIC_LASER1"></event_param>
+		<event_param uninstall_system_type="SHIELDS"></event_param>
+		<event_param uninstall_system_model="BASIC_LASER1"></event_param>
+		<event_param add_random_cargo="0"></event_param>		
+		<event_param add_system_model_to_cargo="BASIC_DOORS1"></event_param>
+		<event_param install_random_system="0"></event_param>
+		<event_param install_system_model="BEAM1"></event_param>
+		<event_param install_system_model="BEAM2"></event_param>
+		<event_param install_random_direct_system="0"></event_param>
+		<event_param install_system_model_direct="BEAM1:10:15"></event_param>
+		<event_param install_system_model_direct="BEAM2:13:4"></event_param>
+		<event_param break_system_type="OXYGEN"></event_param>
+		<event_param repair_system_type="PILOTING"></event_param>
+		<event_param break_system_model="BRIDGE"></event_param>
+		<event_param repair_system_model="LASER3"></event_param>
+		<event_param add_explored_sector="100:200"></event_param>
+		<event_param add_explored_sector="100:220"></event_param>
+		<event_param add_explored_sector="VAR(USC_SECTOR)"></event_param>
+		<event_param remove_explored_sector="100:200"></event_param>
+		<event_param remove_explored_sector="100:220"></event_param>
+		<event_param remove_explored_sector="VAR(USC_SECTOR)"></event_param>
+		<event_param add_crew="Mark"></event_param>
+		<event_param add_crew="VAR(Pirate_Leader)"></event_param>
+		<event_param remove_crew="Mark"></event_param>
+		<event_param remove_crew="VAR(Pirate_Leader)"></event_param>
+		<event_param set_owner="Mark"></event_param>
+		<event_param hyper_jump="VAR(Pirate_base_sector)"></event_param>
+		<event_param hyper_jump="100:200"></event_param>
+		<event_param ship_color="10:50:100"></event_param>
+		<event_param shield_color="100:10:10"></event_param>
+		<event_param new_name="New Ship name"></event_param>
+		<event_param remove_ship_ai_type="ENEMY_SHOOTER"></event_param>
+		<ship_ai type="POSITIONER">
+			<ship_ai_param TARGET="3200:2400"></ship_ai_param>
+			<ship_ai_param LEEWAY="100"></ship_ai_param>
+		</ship_ai>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="[SECTOR_THREAT]/2"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="[SECTOR_THREAT]"></ship_randomizer_param>
+			<ship_randomizer_param max_optionals="2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="LASER2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELD1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELD2"></ship_randomizer_param>
+			<ship_random_systems type="OXYGEN">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="DOOR_CONTROL">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOORS2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="ENGINES">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="HYPERDRIVE">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="REACTOR">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="REACTOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="REACTOR2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="PILOTING">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+				<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="WEAPONS_CONTROL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="SENSORS">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CAPACITOR">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="MEDICAL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CLOAKING">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CLOAK1"></ship_random_systems_param>
+				<ship_random_systems_param model="CLOAK2"></ship_random_systems_param>
+			</ship_random_systems>
+		</ship_randomizer>
+		<event_param eject_direction="UP"></event_param>
+		<event_param eject_system_type_from_cargo="SHIELDS"></event_param>
+		<event_param eject_system_model_from_cargo="BASIC_LASER1"></event_param>
+		<event_param random_eject_direction="1"></event_param>
+		<event_param eject_all_cargo="1"></event_param>
+		<event_param eject_scrap="999"></event_param>
+		<event_param eject_missiles="100"></event_param>
+		<event_param eject_drones="500"></event_param>
+		<!-- <event_param eject_magnets="35"></event_param> -->
+		<event_param remove_system_model="BASIC_LASER1"></event_param>
+		<event_param remove_ship_ai_id="abc123"></event_param>
+	</event>
+
+	<event type="PLAY_AUDIO" name="MUSIC_TEST">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event=""></event_param>
+
+		<event_param track="X1:X1"></event_param>
+		<event_param music="1"></event_param>
+		<event_param all_players="1"></event_param>
+		<event_param for_ship_name="Falcon"></event_param>
+		<event_param for_ship_class="CRUISER"></event_param>
+		<event_param sector="100:200"></event_param>
+		<event_param for_name="Spektor"></event_param>
+		<event_param for_race="HUMAN"></event_param>
+		<event_param for_pos_area_start="500:2000"></event_param>
+		<event_param for_pos_area_end="600:3000"></event_param>
+	</event>
+</events>

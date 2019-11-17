@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="EMP">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see an android with a crown on his head">
+			<reply id="R1" text="[SKIP]..." next="M2">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMPIRE_ACCESS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="SCORCHERS_HQ_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMPIRE_CRYSTAL_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[SKIP]..." next="M1">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="EMPIRE_ACCESS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="[SKIP]..." next="M20">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="SCORCHERS_HQ_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="M20" text="Greetings, [PLAYER_NAME]. Is the Scorchers base destroyed?">
+			<reply id="R1" text="Not yet." next="M21">
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="0"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="Can you remind me please where's the Scorchers base?" next="M22">
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="0"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="Yes, I have brought their emblem as proof." next="M23" any_condition="1">
+				<condition type="SHIP_CARGO_PRESENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SHIP_CARGO_PRESENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="S_EMBLEM"></condition_param>
+					<condition_param target_player="0"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="M23" text="Excelent! Finally we can relax for a while.">
+			<reply id="R1" text="[SKIP]..." next="M24"></reply>
+		</message>
+		
+		<message id="M24" text="I will order to transfer the HAK86 crystal to your ship.">
+			<event id="REMOVE_S_EMBLEM" target="PLAYER"></event>
+			<event id="REMOVE_S_EMBLEM" target="NPC"></event>
+			<event id="ADD_CRYSTAL" target="PLAYER"></event>
+			<event id="STOP_SCORCHERS_HQ_QUEST" target="PLAYER"></event>
+			<event id="REMOVE_EMPIRE_ACCESS" target="PLAYER"></event>
+			<event id="STOP_EMPIRE_CRYSTAL_QUEST" target="PLAYER"></event>
+			<reply id="R1" text="Thank you."></reply>
+		</message>
+		
+		<message id="M22" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+
+		<message id="M22" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+		
+		<message id="M21" text="Well don't waste time.">
+			<reply id="R1" text="I'm workin on it."></reply>
+		</message>
+
+		<message id="M2" text="Greetings, I am EmpError leader of the androids. And who are you?">
+			<reply id="R1" text="I am [PLAYER_NAME]." next="M3"></reply>
+		</message>
+		<message id="M3" text="So you are looking for a HAK86 crystal?">
+			<reply id="R1" text="That's right.  And I was told that you might have one." next="M4"></reply>
+		</message>
+		<message id="M4" text="Well it's your lucky day, because I do have a such a crystal.">
+			<reply id="R1" text="[SKIP]..." next="M5"></reply>
+		</message>
+		<message id="M5" text="And I'm even willing to give it away.">
+			<reply id="R1" text="[SKIP]..." next="M6"></reply>
+		</message>
+		<message id="M6" text="But, I will need something from you in return.">
+			<reply id="R1" text="What's that?" next="M7"></reply>
+		</message>
+		<message id="M7" text="Not long ago a new pirate gang appeared in this region.">
+			<reply id="R1" text="[SKIP]..." next="M8"></reply>
+		</message>
+		<message id="M8" text="They call themselves The Scorchers. And they are quite some trouble.">
+			<reply id="R1" text="OK, how can I help?" next="M9"></reply>
+		</message>
+		<message id="M9" text="We are planning to wipe their entire base, but we need more ships.">
+			<reply id="R1" text="[SKIP]..." next="M10"></reply>
+		</message>
+		<message id="M10" text="I see that your ship has quite some fire power.">
+			<reply id="R1" text="And you want me to fight the pirates?" next="M11"></reply>
+		</message>
+		<message id="M11" text="If you join my fleet in the upcomming battle, I will give you the crystall.">
+			<reply id="R1" text="It's a deal!" next="M12"></reply>
+		</message>
+		<message id="M12" text="Good. Then here's the plan.">
+			<reply id="R1" text="[SKIP]..." next="M13"></reply>
+		</message>
+		<message id="M13" text="My fleet will start the fight and lure most of their ships out of their base sector.">
+			<reply id="R1" text="[SKIP]..." next="M14"></reply>
+		</message>
+		<message id="M14" text="Then you and several of my ships will strike at their base.">
+			<reply id="R1" text="Sounds like a plan. Let's do it!" next="M15"></reply>
+		</message>
+		<message id="M15" text="Destroy their base and bring me their base emblem as proof.">
+			<reply id="R1" text="[SKIP]..." next="M16"></reply>
+		</message>
+		<message id="M16" text="Then I will give you the crystall.">
+			<reply id="R1" text="OK." next="M17_1">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="S_HQ_SPAWNED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+			<reply id="R2" text="OK." next="M17_2">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="S_HQ_SPAWNED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+		</message>
+		<message id="M17_1" text="The Scorchers base is at sector [SECTOR]">
+			<event id="SPAWN_S_HQ" target="PLAYER"></event>
+			<event id="MAKE_S_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M18"></reply>
+		</message>
+		<message id="M17_2" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+			<reply id="R1" text="[SKIP]..." next="M18"></reply>
+		</message>
+
+		<message id="M18" text="I have ordered several of my ships to follow you.  Go now!">
+			<event id="START_SCORCHERS_HQ_QUEST" target="PLAYER"></event>
+			<reply id="R1" text="We're on our way." next="M19"></reply>
+		</message>
+		<message id="M19" text="Good luck."></message>
+
+		<message id="M1" text="[ACTION]This person will not talk to you.">
+			<event id="REMOVE_S_EMBLEM" target="PLAYER"></event>
+			<event id="REMOVE_S_EMBLEM" target="NPC"></event>
+		</message>		
+	</dialogue>
+	
+	<dialogue name="EMP_REMOTE">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You are unable to establish a connection"></message>
+	</dialogue>
+
+	<dialogue name="RECEPTION">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see a busy looking android doing several things at once.">
+			<reply id="R1" text="[SKIP]..." next="M1">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMPIRE_ACCESS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[SKIP]..." next="M2">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMPIRE_CRYSTAL_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="EMPIRE_ACCESS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="[SKIP]..." next="M8">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="EMPIRE_CRYSTAL_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="M8" text="Please do not distract me."></message>		
+
+		<message id="M2" text="Greetings, please state your business.">
+			<reply id="R1" text="I am looking for a HAK86 crystal." next="M3"></reply>
+		</message>		
+		<message id="M3" text="And?">
+			<reply id="R1" text="I have information that the Empire may have one." next="M4"></reply>
+		</message>		
+		<message id="M4" text="And?">
+			<reply id="R1" text="I would like to negotiate a trade." next="M5"></reply>
+		</message>		
+		<message id="M5" text="Please hold while I process your request.">
+			<reply id="R1" text="[SKIP]..." next="M6"></reply>
+		</message>
+		<message id="M6" text="The EmpError wishes to speak with you.">
+			<reply id="R1" text="[SKIP]..." next="M7"></reply>
+		</message>
+		<message id="M7" text="But you will have to come and talk to him in person.">
+			<event id="GRANT_EMPIRE_ACCESS" target="PLAYER"></event>
+			<reply id="R1" text="Thank you."></reply>
+		</message>		
+
+		<message id="M1" text="Please talk to the EmpError."></message>
+	</dialogue>
+</dialogues>

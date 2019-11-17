@@ -1,0 +1,19 @@
+Modding:
+1. In dialogues you can now have a player type in their reply.
+Example: <reply id="T3" text="[INPUT]Input your name." regex="^[a-zA-Z0-9 -]+$" next="Test125"/>
+2. In the modify ship event remove_system_type and remove_system_model now completely remove the system from the ship.
+In order to simply uninstall a ships system into it's cargo hold you can now use uninstall_system_type and uninstall_system_model
+3. If npc's dialogue message starts with [SKIP] then it won't be shown in the dialogue lines.
+4. If a dialogue reply text ends with [AUTO] then that dialogue reply will be selected automatically.
+
+Bug fixes:
+1. Unable to move while in HS onboard ai ship.
+2. Ejecting a specific system type from cargo via modify ship event was ejecting everything.
+3. Door control/shields/sensors and other system screens were broken in non default resolution.
+4. Slaver ships were not fighting back
+5. You can no longer hack a broken system
+
+Features:
+1. Added ip info to the server console /online command
+2. Music files in the playlist.dat now can be marked to have a parallel transition between ambient and battle (like in FTL)
+3. New door sounds for enery doors - (Thanks Arilou Lalee'lay)

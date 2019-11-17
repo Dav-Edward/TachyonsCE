@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SECTOR_EVENT" name="PIRATE_AMBUSH_S0x">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param trigger_message="You have run into an ambush set up by pirates."></event_param>
+		<event_param broadcast_message="Sensors indicate that a new ship entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="0"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="MODIFY_SHIP" name="RANDOMIZE_INTx">
+		<event_param chain_event="FILL_SHIELDS"></event_param>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="VAR(RANDOM_SHIP_LEVEL)+VAR(DIF_MOD)+VAR(FLEET_MOD)"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+			<ship_randomizer_param max_optionals="2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_random_systems type="OXYGEN">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="DOOR_CONTROL">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="ENGINES">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="HYPERDRIVE">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="WEAPONS_CONTROL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="SENSORS">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CAPACITOR">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="MEDICAL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+			</ship_random_systems>
+		</ship_randomizer>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREATx">
+		<event_param var_name="RANDOM_SHIP_LEVELx"></event_param>
+		<event_param var_value="[SECTOR_THREAT]"></event_param>
+	</event>
+</events>

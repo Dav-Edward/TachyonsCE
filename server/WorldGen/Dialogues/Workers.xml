@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="WORKER_SKILLS">
+		<start>M0</start>
+		<message id="M0" text="[NPC_NAME] reporting for duty!">
+			<reply id="R1" text="What skills are you proficient with?" next="M1"></reply>
+		</message>
+		<message id="M1" text="Here's a list of my skills.">
+			<reply id="R1" text="Thanks.">
+			</reply>
+		</message>
+	</dialogue>
+</dialogues>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_H_TRADER">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="INST_TRADER_SYS1"></event_param>
+		<event_param chain_event="INST_TRADER_SYS2"></event_param>
+		<event_param chain_event="INST_TRADER_SYS3"></event_param>
+		<event_param chain_event="INST_TRADER_SYS4"></event_param>
+		<event_param chain_event="INST_TRADER_SYS5"></event_param>
+		<event_param chain_event="INST_TRADER_SYS6"></event_param>
+		<event_param chain_event="INST_TRADER_SYS7"></event_param>
+		<event_param chain_event="INST_TRADER_SYS8"></event_param>
+		<event_param chain_event="INST_TRADER_SYS9"></event_param>
+		<event_param chain_event="INST_TRADER_SYS10"></event_param>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param transparent_cells="0"></ship_param>
+			<ship_param ship_model="H_CARGO"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Unity Trader ship"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="6"></ship_param>
+			<ship_param max_drone_ammo="12"></ship_param>
+			<ship_param min_scrap="100"></ship_param>
+			<ship_param max_scrap="200"></ship_param>
+			<ship_param min_health="10"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING3"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+		</add_ship>
+	</event>
+
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS1">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="SHIELDS2"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="SYS_SHOP"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="MEDICAL2"></event_param>
+		<event_param install_system_model="ENGINES4"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Heavy_laser3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS2">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="SHIELDS2"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="MEDICAL2"></event_param>
+		<event_param install_system_model="ENGINES4"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Heavy_laser3"></event_param>
+		<event_param install_system_model="MIS_SHOP"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS3">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="SHIELDS2"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="MEDICAL2"></event_param>
+		<event_param install_system_model="ENGINES4"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Heavy_laser3"></event_param>
+		<event_param install_system_model="DRONE_SHOP"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS4">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="ENGINES4"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="DRONE_SHOP2"></event_param>
+		<event_param install_system_model="REPAIR2"></event_param>
+		<event_param install_system_model="MIS_SHOP2"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS5">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SYS_SHOP2"></event_param>
+		<event_param install_system_model="MIS_SHOP"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS6">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="SYS_SHOP2"></event_param>
+		<event_param install_system_model="MIS_SHOP2"></event_param>
+		<event_param install_system_model="DRONE_SHOP"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS7">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="MIS_SHOP2"></event_param>
+		<event_param install_system_model="MIS_SHOP2"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS8">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="DRONE_SHOP"></event_param>
+		<event_param install_system_model="DRONE_SHOP2"></event_param>
+		<event_param install_system_model="DRONE_SHOP2"></event_param>
+		<event_param install_system_model="DRONE_SHOP2"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS9">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="DRONE_SHOP2"></event_param>
+		<event_param install_system_model="MIS_SHOP2"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="SYS_SHOP"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_TRADER_SYS10">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE2"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES3"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="SYS_SHOP2"></event_param>
+		<event_param install_system_model="SYS_SHOP2"></event_param>
+		<event_param install_system_model="MIS_SHOP"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="INST_REP_SYS">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="REACTOR3"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="Dual_laser1"></event_param>
+		<event_param install_system_model="CAPACITOR3"></event_param>
+		<event_param install_system_model="OXYGEN1"></event_param>
+		<event_param install_system_model="SENSORS1"></event_param>
+		<event_param install_system_model="DOOR_CONTROL1"></event_param>
+		<event_param install_system_model="HYPERDRIVE1"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="ENGINES2"></event_param>
+		<event_param install_system_model="SHIELDS3"></event_param>
+		<event_param install_system_model="REPAIR2"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="REPAIR1"></event_param>
+		<event_param install_system_model="CAPACITOR1"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_H_REPAIR">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="INST_REP_SYS"></event_param>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param ship_model="H_CARGO"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Unity Repair platform"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="6"></ship_param>
+			<ship_param max_drone_ammo="12"></ship_param>
+			<ship_param min_scrap="100"></ship_param>
+			<ship_param max_scrap="200"></ship_param>
+			<ship_param min_health="10"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING3"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_TRADE_STATION">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_ship="1"></event_param>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param transparent_cells="0"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION1"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION2"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION3"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Trading Station"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="20"></ship_param>
+			<ship_param max_missile_ammo="30"></ship_param>
+			<ship_param min_drone_ammo="12"></ship_param>
+			<ship_param max_drone_ammo="20"></ship_param>
+			<ship_param min_scrap="200"></ship_param>
+			<ship_param max_scrap="300"></ship_param>
+			<ship_param min_health="30"></ship_param>
+			<ship_param max_health="40"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="4"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_TRADE_STATION_WITH_HR">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_ship="1"></event_param>
+		<add_ship>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="0"></ship_param>
+			<ship_param transparent_cells="0"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION1"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION2"></ship_param>
+			<ship_param gen_ship_model="TRADE_STATION3"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Trading Station"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="20"></ship_param>
+			<ship_param max_missile_ammo="30"></ship_param>
+			<ship_param min_drone_ammo="12"></ship_param>
+			<ship_param max_drone_ammo="20"></ship_param>
+			<ship_param min_scrap="200"></ship_param>
+			<ship_param max_scrap="300"></ship_param>
+			<ship_param min_health="30"></ship_param>
+			<ship_param max_health="40"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="SENSORS"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="HR_AGENT"></npc_param>
+				<npc_param npc_remote_dialogue="HR_AGENT"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SENSORS" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="4"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_UNITY_GUARD">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="RANDOMIZE_CRUISER"></event_param>
+		<add_ship>
+			<ship_param ship_model="H_CRUS1"></ship_param>
+			<ship_param ship_model="H_CRUS2"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Unity Guard Cruiser"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="6"></ship_param>
+			<ship_param min_scrap="60"></ship_param>
+			<ship_param max_scrap="160"></ship_param>
+			<ship_param min_health="16"></ship_param>
+			<ship_param max_health="26"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="MOB_HUNTER">
+				<ship_ai_param TARGET="THE_BEARS"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="MOB_HUNTER">
+				<ship_ai_param TARGET="THE_SCORCHERS"></ship_ai_param>
+			</ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	
+</events>

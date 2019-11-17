@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="HR_AGENT">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]A busy man reading some data sheets.">
+			<reply id="R1" text="[SKIP]..." next="M1"></reply>
+		</message>
+
+		<message id="M1" text="Greetings! Welcome to the Space Engineering Agency!">
+			<reply id="R1" text="[SKIP]..." next="M2"></reply>
+		</message>
+
+		<message id="M3" text="Unfortunately all the employees we had at this station are already hired.">
+			<reply id="R1" text="[SKIP]..." next="M4"></reply>
+		</message>
+		<message id="M4" text="Try checking on another trading station, we have offices in most of them.">
+			<reply id="R1" text="Thank you."></reply>
+		</message>
+			
+		<message id="M2" text=" My name is [NPC_NAME]. How can I help you?">
+			<reply id="R1" text="Hello. I would like to hire an engineer." next="M5">
+				<condition type="SERVER_VARIABLE_SMALLER">
+					<condition_param var_name="[SECTOR] SLAVES_SOLD"></condition_param>
+					<condition_param var_value="3"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="Hello. I would like to hire an engineer." next="M3">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param var_name="[SECTOR] SLAVES_SOLD"></condition_param>
+					<condition_param var_value="2"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="M5" text="Excellent! I think I can find someone that will suit you. The contract price is 300.">
+			<reply id="R1" text="[SKIP]Transfer 300 scrap." next="M7">
+				<condition type="SHIP_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="I don't have that much right now. I will get back to you later." next="M6">
+				<condition type="SHIP_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="M6" text="Have a nice day."></message>
+
+		<message id="M7" text="Thank you. Your new engineer is on his way to your ship.">
+			<event id="REMOVE_SLAVE_PRICE_FROM_PLAYER" target="PLAYER"></event>
+			<event id="SPAWN_WORKER_ON_SHIP" target="PLAYER"></event>
+			<event id="SECTOR_SLAVES_SOLD" target="PLAYER"></event>
+		</message>
+		
+	</dialogue>
+</dialogues>

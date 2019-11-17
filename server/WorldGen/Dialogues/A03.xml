@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="A03">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see a scientist in a lab coat.">
+			<reply id="R1" text="Hello, I'm here to pick up the EMP Cannon." next="M1">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param qty="1"></condition_param>
+					<condition_param owner="THE_BEARS"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="Hello, I'm here to pick up the EMP Cannon." next="M2">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param qty="1"></condition_param>
+					<condition_param owner="THE_BEARS"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="EMP_CANNON_COLLECTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>				
+			</reply>
+			<reply id="R3" text="[SKIP]..." next="M3">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param qty="1"></condition_param>
+					<condition_param owner="THE_BEARS"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMP_CANNON_COLLECTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+
+		<message id="M3" text="Don't forget to pick up the Super Sensors at USC. And good luck to you!">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+
+		<message id="M1" text="Are you nuts? There are pirates here! Let's talk after we survive!"></message>
+		
+		<message id="M2" text="Whew, that was close! I will order to transfer the EMP Cannon to you.">
+			<event id="ADD_EMP_CANNON_TO_PLAYER" target="PLAYER"></event>
+			<event id="REMOVE_EMP_CANNON_FROM_A03" target="PLAYER"></event>
+			<event id="EMP_CANNON_COLLECTED" target="PLAYER"></event>
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+	</dialogue>
+</dialogues>

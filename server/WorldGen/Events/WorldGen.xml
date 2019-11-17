@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<!-- <event type="WORLD_GEN" name="1_CORE_WORLD_GEN"> -->
+		<!-- <event_param chain_event="SPAWN_SINGULARITY"></event_param> -->
+	<!-- </event> -->
+	
+	<event type="WORLD_GEN" name="10_CORE_WORLD_GEN">
+		<event_param chain_event="PLAYER_SHIP_NAME"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="SET_DIFFICULTY_NORMAL"></event_param>
+		<event_param chain_event="STARTING_SECTOR_VAR"></event_param>
+		<event_param chain_event="HUMAN_SPAWN"></event_param>
+		<event_param chain_event="CYBORG_SPAWN"></event_param>
+		<event_param chain_event="SPAWN_D31"></event_param>
+		<event_param chain_event="STARTING_SECTOR_TYPE"></event_param>
+		<event_param chain_event="DF_NAME"></event_param>
+	</event>
+		
+	<event type="START_LOCATION" name="HUMAN_SPAWN">
+		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
+		<event_param pos="5900:6310"></event_param>
+		<event_param location_name="Main spawn"></event_param>
+		<event_param race="HUMAN"></event_param>
+	</event>
+		
+	<event type="START_LOCATION" name="CYBORG_SPAWN">
+		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
+		<event_param pos="6080:6310"></event_param>
+		<event_param location_name="Main spawn"></event_param>
+		<event_param race="CYBORG"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="STARTING_SECTOR_VAR">
+		<event_param var_name="STARTING_SECTOR"></event_param>
+		<event_param var_value="12:31"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="SET_DIFFICULTY_VERY_EASY">
+		<event_param var_name="DIF_MOD"></event_param>
+		<event_param var_value="-2"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_DIFFICULTY_EASY">
+		<event_param var_name="DIF_MOD"></event_param>
+		<event_param var_value="-1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_DIFFICULTY_NORMAL">
+		<event_param var_name="DIF_MOD"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_DIFFICULTY_HARD">
+		<event_param var_name="DIF_MOD"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="DF_NAME">
+		<event_param var_name="DF_NAME"></event_param>
+		<event_param var_value="D.F. Prototype"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="PLAYER_SHIP_NAME">
+		<event_param var_name="PLAYER_SHIP_NAME"></event_param>
+		<event_param var_value="Falcon"></event_param>
+	</event>
+
+	<event type="MODIFY_SECTOR" name="STARTING_SECTOR_TYPE">
+		<event_param nonstop="1"></event_param>
+		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
+		<event_param sector_type="14"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+
+</events>

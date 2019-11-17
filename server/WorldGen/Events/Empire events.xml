@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_EMPIRE_HQ">
+		<event_param nonstop="1"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param area_start="67:39"></event_param>
+		<event_param area_end="83:54"></event_param>
+		<event_param chain_event="EMPIRE_HQ_SPAWNED_VAR"></event_param>
+		<event_param chain_event="EMPIRE_HQ_SECTOR_VAR"></event_param>
+		<event_param chain_event="EMPIRE_SECTOR_UPDATE"></event_param>
+		<event_param chain_event="EMPIRE_SPAWN_SPIKE"></event_param>
+		<event_param chain_event="SPAWN_EMPIRE_PALACE"></event_param>
+		<event_param chain_event="SPAWN_EMPIRE_SHIPS"></event_param>
+		<event_param chain_event="SPAWN_PLAYER_GUARDS"></event_param>
+	</event>
+	
+	<event type="SPAWN_SHIP" name="SPAWN_EMPIRE_PALACE">
+		<event_param nonstop="1"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="EMPIRE_HQ"></ship_param>
+			<ship_param ship_owner="ANDROID_EMPIRE"></ship_param>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param safe_zone="1"></ship_param>
+			<ship_param ship_name="Android  Empire  Space  Palace"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="200"></ship_param>
+			<ship_param max_health="300"></ship_param>
+			<ship_param min_missile_ammo="100"></ship_param>
+			<ship_param max_missile_ammo="200"></ship_param>
+			<ship_param min_drone_ammo="0"></ship_param>
+			<ship_param max_drone_ammo="10"></ship_param>
+			<ship_param min_scrap="10"></ship_param>
+			<ship_param max_scrap="1000"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="Emp_Error "></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="EMP"></npc_param>
+				<npc_param npc_remote_dialogue="EMP_REMOTE"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="60"></npc_ai_param>
+					<npc_ai_param any_condition="0"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="Receptionist"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="SENSORS"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="RECEPTION"></npc_param>
+				<npc_param npc_remote_dialogue="RECEPTION"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param WORK_TIME="60"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="17"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="14"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_EMPIRE_SHIPS">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created_by_children="1"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT"></event_param>
+		<event_param chain_event="SPAWN_I_CRUS"></event_param>
+		<event_param chain_event="SPAWN_I_CRUS"></event_param>
+		<event_param chain_event="SPAWN_I_CARGO"></event_param>
+		<event_param chain_event="SPAWN_I_CARGO"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT2"></event_param>
+		<event_param chain_event="SPAWN_I_SCOUT"></event_param>
+		<event_param chain_event="SPAWN_I_SCOUT"></event_param>
+		<event_param chain_event="SPAWN_I_INT"></event_param>
+		<event_param chain_event="SPAWN_I_INT"></event_param>
+		<event_param chain_event="SPAWN_I_INT"></event_param>
+		<event_param chain_event="GIVE_PALACE_GUARD_AI"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_PLAYER_GUARDS">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created_by_children="1"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT"></event_param>
+		<event_param chain_event="SPAWN_I_CRUS"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT2"></event_param>
+		<event_param chain_event="SPAWN_I_SCOUT"></event_param>
+		<event_param chain_event="SPAWN_I_SCOUT"></event_param>
+		<event_param chain_event="GIVE_PLAYER_GUARD_AI"></event_param>
+	</event>
+
+	<event type="THREAT_SPIKE" name="EMPIRE_SPAWN_SPIKE">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param radius_min="35"></event_param>
+		<event_param radius_max="35"></event_param>
+		<event_param threat_min="10"></event_param>
+		<event_param threat_max="10"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="EMPIRE_HQ_SPAWNED_VAR">
+		<event_param var_name="EMPIRE_HQ_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="EMPIRE_HQ_SECTOR_VAR">
+		<event_param var_name="EMPIRE_HQ_SECTOR"></event_param>
+		<event_param var_value="[SECTOR]"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="START_SCORCHERS_HQ_QUEST">
+		<event_param var_name="SCORCHERS_HQ_QUEST_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_SCORCHERS_HQ_QUEST">
+		<event_param chain_event="USC_SPIKE_2"></event_param>
+		<event_param var_name="SCORCHERS_HQ_QUEST_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="GRANT_EMPIRE_ACCESS">
+		<event_param var_name="EMPIRE_ACCESS" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="REMOVE_EMPIRE_ACCESS">
+		<event_param var_name="EMPIRE_ACCESS"/> 
+		<event_param var_value="0"/>
+	</event>
+
+	<event type="MODIFY_SECTOR" name="EMPIRE_SECTOR_UPDATE">
+		<event_param nonstop="1"></event_param>
+		<event_param sector_type="32"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="REMOVE_S_EMBLEM">
+		<event_param remove_system_model_from_cargo="S_EMBLEM"></event_param>
+	</event>	
+
+	<event type="SPAWN_SHIP" name="SPAWN_I_CRUS">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="RANDOMIZE_CRUISER"></event_param>
+		<add_ship>
+			<ship_param ship_model="I_CRUS1"></ship_param>
+			<ship_param ship_model="I_CRUS2"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param ship_owner="ANDROID_EMPIRE"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="6"></ship_param>
+			<ship_param min_scrap="60"></ship_param>
+			<ship_param max_scrap="160"></ship_param>
+			<ship_param min_health="16"></ship_param>
+			<ship_param max_health="26"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_I_CARGO">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="RANDOMIZE_SCOUT"></event_param>
+		<add_ship>
+			<ship_param ship_model="I_CARGO"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param ship_owner="ANDROID_EMPIRE"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="8"></ship_param>
+			<ship_param max_missile_ammo="16"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="6"></ship_param>
+			<ship_param min_scrap="40"></ship_param>
+			<ship_param max_scrap="120"></ship_param>
+			<ship_param min_health="12"></ship_param>
+			<ship_param max_health="18"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_I_SCOUT">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="RANDOMIZE_SCOUT"></event_param>
+		<add_ship>
+			<ship_param ship_model="I_HS1"></ship_param>
+			<ship_param ship_model="I_HS2"></ship_param>
+			<ship_param ship_model="I_HS3"></ship_param>
+			<ship_param ship_model="I_LS"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param ship_owner="ANDROID_EMPIRE"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="6"></ship_param>
+			<ship_param max_missile_ammo="14"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="6"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="90"></ship_param>
+			<ship_param min_health="9"></ship_param>
+			<ship_param max_health="14"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_I_INT">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SET_FLEET_MOD_0"></event_param>
+		<event_param chain_event="RANDOMIZE_INT"></event_param>
+		<add_ship>
+			<ship_param ship_model="I_INT"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param ship_owner="ANDROID_EMPIRE"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="4"></ship_param>
+			<ship_param max_missile_ammo="10"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="4"></ship_param>
+			<ship_param min_scrap="10"></ship_param>
+			<ship_param max_scrap="70"></ship_param>
+			<ship_param min_health="6"></ship_param>
+			<ship_param max_health="8"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="CYBORG"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+
+	<event type="MODIFY_SHIP" name="GIVE_PALACE_GUARD_AI">
+		<event_param clear_created_by_children="1"></event_param>
+		<event_param remove_ship_ai_type="SENTRY"></event_param>
+		<ship_ai type="SHIP_GUARD">
+			<ship_ai_param GNAME="Android  Empire  Space  Palace"></ship_ai_param>
+			<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+				<condition_param var_name="SCORCHERS_HQ_QUEST_STARTED"></condition_param>
+				<condition_param var_value="1"></condition_param>
+			</ship_ai_condition>
+		</ship_ai>
+	</event>
+
+	<event type="MODIFY_SHIP" name="GIVE_PLAYER_GUARD_AI">
+		<event_param clear_created_by_children="1"></event_param>
+		<event_param remove_ship_ai_type="SENTRY"></event_param>
+		<ship_ai type="SHIP_GUARD">
+			<ship_ai_param GNAME="VAR(PLAYER_SHIP_NAME)"></ship_ai_param>
+			<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+				<condition_param var_name="SCORCHERS_HQ_QUEST_STARTED"></condition_param>
+				<condition_param var_value="1"></condition_param>
+			</ship_ai_condition>
+		</ship_ai>
+	</event>
+
+</events>

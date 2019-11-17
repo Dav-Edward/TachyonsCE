@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_DF">
+		<event_param nonstop="1"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param area_start="1:80"></event_param>
+		<event_param area_end="35:99"></event_param>
+		<event_param chain_event="DF_SPAWNED_VAR"></event_param>
+		<event_param chain_event="DF_SECTOR_VAR"></event_param>
+		<event_param chain_event="DF_SPAWN_SPIKE"></event_param>
+		<event_param chain_event="SPAWN_DF_GUARD"></event_param>
+		<event_param chain_event="SPAWN_DF_GUARD"></event_param>
+		<event_param chain_event="SPAWN_DF_GUARD"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="DF"></ship_param>
+			<ship_param ship_owner="THE_BEARS"></ship_param>
+			<ship_param ship_name="VAR(DF_NAME)"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="50"></ship_param>
+			<ship_param max_health="50"></ship_param>
+			<ship_param min_missile_ammo="500"></ship_param>
+			<ship_param max_missile_ammo="500"></ship_param>
+			<ship_param min_drone_ammo="20"></ship_param>
+			<ship_param max_drone_ammo="30"></ship_param>
+			<ship_param min_scrap="1000"></ship_param>
+			<ship_param max_scrap="1000"></ship_param>
+			<ship_ai type="AUTOREPAIR">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LIFE_SUPPORT">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>			<ship_ai type="EVADER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="SENTRY">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param TIMER="60"></ship_ai_param>
+				<ship_ai_param EVENT="FILL_SHIELDS"></ship_ai_param>
+				<ship_ai_condition type="SHIP_SHIELDS_PRESENT">
+					<condition_param qty="4000"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="EXPLORER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param DELAY="180"></ship_ai_param>
+				<ship_ai_condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="VAR(PLAYER_SHIP_NAME)"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="EXPLORER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param DELAY="60"></ship_ai_param>
+				<ship_ai_condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="VAR(PLAYER_SHIP_NAME)"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="DF_TOOK_DAMAGE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="LEVEL_LOADER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="The Black Bear"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
+					<npc_ai_param SYSTEMS="WEAPONS_CONTROL"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="15"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="17"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="2"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<ship_param jump_event="DROP_DF_TOOK_DAMAGE"></ship_param>			
+			<ship_param jump_event="REPAIR_HULL_1"></ship_param>			
+			<ship_param damage_event="DF_TOOK_DAMAGE"></ship_param>			
+		</add_ship>
+	</event>
+	
+	<event type="THREAT_SPIKE" name="DF_SPAWN_SPIKE">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param radius_min="26"></event_param>
+		<event_param radius_max="34"></event_param>
+		<event_param threat_min="17"></event_param>
+		<event_param threat_max="17"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="DF_SPAWNED_VAR">
+		<event_param var_name="DF_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="DF_SECTOR_VAR">
+		<event_param var_name="DF_SECTOR"></event_param>
+		<event_param var_value="[SECTOR]"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="DROP_DF_TOOK_DAMAGE">
+		<event_param var_name="DF_TOOK_DAMAGE"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="DF_TOOK_DAMAGE">
+		<event_param var_name="DF_TOOK_DAMAGE"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="MODIFY_SECTOR" name="MAKE_DF_SECTOR_EXPLORED">
+		<event_param sector="VAR(DF_SECTOR)"></event_param>
+		<event_param sector_type="22"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_DF_GUARD">	
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT5"></event_param>
+		<event_param chain_event="RANDOMIZE_INT"></event_param>
+		<add_ship>
+			<ship_param ship_model="B_INT"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="1"></ship_param>
+			<ship_param ship_owner="THE_BEARS"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="4"></ship_param>
+			<ship_param max_missile_ammo="10"></ship_param>
+			<ship_param min_drone_ammo="2"></ship_param>
+			<ship_param max_drone_ammo="4"></ship_param>
+			<ship_param min_scrap="10"></ship_param>
+			<ship_param max_scrap="70"></ship_param>
+			<ship_param min_health="6"></ship_param>
+			<ship_param max_health="8"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="SHIP_GUARD">
+				<ship_ai_param GNAME="VAR(DF_NAME)"></ship_ai_param>
+			</ship_ai>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+
+	<event type="SECTOR_ENTER" name="FRESH_DF_GUARDS">
+		<event_param level="0"></event_param>
+		<event_param chance="2000"></event_param>
+		<event_param chain_event="SPAWN_DF_GUARD"></event_param>
+		<event_param trigger_message="You have found the VAR(DF_NAME)"></event_param>
+		<event_param broadcast_message="Sensors indicate that a new ship entered this sector"></event_param>
+		<condition type="SECTOR_SHIPS_PRESENT">
+			<condition_param ship_name="VAR(DF_NAME)"></condition_param>
+			<condition_param owner="THE_BEARS"></condition_param>
+			<condition_param qty="1"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_PRESENT">
+			<condition_param ship_name="VAR(PLAYER_SHIP_NAME)"></condition_param>
+			<condition_param qty="1"></condition_param>
+		</condition>
+	</event>		
+
+</events>

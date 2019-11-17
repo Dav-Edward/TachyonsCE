@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SECTOR_EVENT" name="PIRATE_AMBUSH_S0">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param trigger_message="You have run into an ambush set up by pirates."></event_param>
+		<event_param broadcast_message="Sensors indicate that a new ship entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="0"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="PIRATES_FIGHTING_SANY">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_B_FORCE"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_S_FORCE"></event_param>
+		<event_param trigger_message="You have run into a fight between two pirate groups. Sadly they have noticed you."></event_param>
+		<event_param trigger_message="And they are not going to let you just sit and watch. You are being targeted."></event_param>
+		<event_param broadcast_message="Sensors have detected new ships, pirate ships, fighting each other."></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="ASTEROIDS_S1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="80"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_ASTEROID_BELT"></event_param>
+		<event_param trigger_message="You have entered an asteroid field."></event_param>
+		<event_param broadcast_message="Some asteroids have drifted to a location near you."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="PIRATES_IN_ASTEROIDS_S1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="80"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_ASTEROID_BELT"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param trigger_message="You've stumbled upon some pirates in an asteroid field."></event_param>
+		<event_param broadcast_message="Some asteroids have drifted to a location near you."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="PIRATES_FIGHTING_IN_ASTEROIDS_S1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="70"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_ASTEROID_BELT"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_B_FORCE"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_S_FORCE"></event_param>
+		<event_param trigger_message="You have run into a fight between two pirate groups. Sadly they have noticed you."></event_param>
+		<event_param trigger_message="And they are not going to let you just sit and watch. You are being targeted."></event_param>
+		<event_param broadcast_message="Sensors have detected new ships, pirate ships, fighting each other."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="CRUISER_AND_PIRATES_IN_ASTEROIDS_S1-4_L8">
+		<event_param level="8"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_ASTEROID_BELT"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT2"></event_param>
+		<event_param chain_event="SPAWN_UNITY_GUARD"></event_param>
+		<event_param trigger_message="You detect a lone Unity guard force ship trying evade pirates in an asteroid belt."></event_param>
+		<event_param trigger_message="You recieve a message comming from the Unity ship: "></event_param>
+		<event_param trigger_message="We are outnumbered and could really use your help."></event_param>
+		<event_param trigger_message="We have nothing to pay you with, but whatever our enemies have - you can keep it."></event_param>
+		<event_param broadcast_message="Sensors have detected new ships approaching this sector."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>	
+	<event type="SECTOR_EVENT" name="TRADER_AND_PIRATES_IN_ASTEROIDS_S1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_ASTEROID_BELT"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param chain_event="SPAWN_H_TRADER"></event_param>
+		<event_param trigger_message="You detect a trader ship tying to hide from pirates in an asteroid belt."></event_param>
+		<event_param trigger_message="You recieve 2 messages comming the ships."></event_param>
+		<event_param trigger_message="The message from the pirates is: - Oh sweet, more loot! You're next pal!"></event_param>
+		<event_param trigger_message="The trader ship's message reads: HEEEEEEEEEEEEEELP!"></event_param>
+		<event_param broadcast_message="Sensors have detected new ships approaching this sector."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>	
+	<event type="SECTOR_EVENT" name="TRADER_CARAVAN_S!0-4">
+		<event_param level="0"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_events_to_created_by_children="1"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT2"></event_param>
+		<event_param chain_event="SPAWN_H_TRADER"></event_param>
+		<event_param chain_event="SPAWN_H_TRADER"></event_param>
+		<event_param chain_event="SPAWN_UNITY_GUARD"></event_param>
+		<event_param chain_event="SPAWN_UNITY_GUARD"></event_param>
+		<event_param chain_event="GIVE_PEACE_KEEPER_AI"></event_param>
+		<event_param trigger_message="You've stumbled upon a trading caravan."></event_param>
+		<event_param trigger_message="Immediately you recieve a message from one of the guard ships:"></event_param>
+		<event_param trigger_message=" - No shooting in this sector!"></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="0"></condition_param>
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="TRADER_SHIP_S!0-4">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_H_TRADER"></event_param>
+		<event_param trigger_message="You've stumbled upon a trader ship."></event_param>
+		<event_param broadcast_message="Sensors indicate that a trader ship has entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="0"></condition_param>
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="REPAIR_SHIP_SANY">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_H_REPAIR"></event_param>
+		<event_param trigger_message="After arriving to this sector you detect a mobile repair platform."></event_param>
+		<event_param broadcast_message="Sensors indicate that a mobile repair platform entered this sector"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="PIRATE_ATTACK_TRADER_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_PIRATE_FORCE"></event_param>
+		<event_param chain_event="SPAWN_H_TRADER"></event_param>
+		<event_param trigger_message="You have run into some pirates harassing a trader."></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="TRADER_STATION_S!0-4">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="SPAWN_TRADE_STATION"></event_param>
+		<event_param trigger_message="You found a trading station in this sector."></event_param>
+		<event_param broadcast_message="Now where did that trading station appear from?"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="0"></condition_param>
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="TRADER_STATION_WITH_HR_S!0-4">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="SPAWN_TRADE_STATION_WITH_HR"></event_param>
+		<event_param trigger_message="You found a trading station in this sector."></event_param>
+		<event_param broadcast_message="Now where did that trading station appear from?"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="0"></condition_param>
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+
+	<event type="SECTOR_EVENT" name="DEBRIS_SYS_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="15"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_SYS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T1_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="15"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T1"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T2_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="15"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T2"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T3_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="15"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T3"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T4_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="15"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T4"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T5_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T5"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_WEAP_T6_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T6"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="DEBRIS_SYS_FULL_T4_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="10"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_RANDOM_SYS_FULL"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param trigger_message="Upon arriving to this sector, you detect some debris floating in space."></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+
+	<event type="SECTOR_EVENT" name="SHIP_GRAVEYARD_S0">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param random_chain_event="0"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_SCRAP"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_MIS"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param chain_event="SPAWN_DEBRIS_WITH_DRONES"></event_param>
+		<event_param chain_event="SHIP_GRAVEYARD_SPAWNED"></event_param>
+		<event_param trigger_message="Looks like you have found a graveyard of ships."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="0"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_SMALLER">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="SHIP_GRAVEYARD_SPAWNED"></condition_param>
+			<condition_param var_value="3"></condition_param>
+		</condition>
+	</event>
+	<event type="SERVER_VARIABLE" name="SHIP_GRAVEYARD_SPAWNED">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="SHIP_GRAVEYARD_SPAWNED"></event_param>
+		<event_param var_value="++"></event_param>
+	</event>
+
+	<event type="SECTOR_EVENT" name="PIRATES_FIGHT_IGNORE_SANY">
+		<event_param level="0"></event_param>
+		<event_param chance="30"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_S_RIVAL_FORCE"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_B_RIVAL_FORCE"></event_param>
+		<event_param chain_event="PIR_FIG_IGNORE"></event_param>
+		<event_param trigger_message="You enter a sector and see a big battle going on."></event_param>
+		<event_param trigger_message="Looks like there are two pirate clans fighting each other."></event_param>
+		<event_param trigger_message="They do notice your ship, but seem to ignore it."></event_param>
+		<event_param trigger_message="Soon you recieve a message from both sides."></event_param>
+		<event_param trigger_message="If you ignore the rude language of the pirates, the point of the message is the following:"></event_param>
+		<event_param trigger_message=" - This is none of your business, get the hell out of here untill we change our minds."></event_param>
+		<event_param broadcast_message="Sensors have detected lots of new ships, pirate ships, fighting each other."></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_SMALLER">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="PIR_FIG_IGNORE"></condition_param>
+			<condition_param var_value="5"></condition_param>
+		</condition>
+	</event>		
+	<event type="SERVER_VARIABLE" name="PIR_FIG_IGNORE">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="PIR_FIG_IGNORE"></event_param>
+		<event_param var_value="++"></event_param>
+	</event>
+
+	<event type="SECTOR_EVENT" name="B_SLAVERS_S!1-4">
+		<event_param level="0"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER_GUARD1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER_GUARD2"></event_param>
+		<event_param trigger_message="You have run into a pirate slaver ship. It doesn't look like he's hostile."></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="B_SLAVER_HOSTILE_S!1-4_L8">
+		<event_param level="8"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER"></event_param>
+		<event_param chain_event="SECTOR_SLAVER_PROVOKED"></event_param>
+		<event_param trigger_message="You have run into a pirate slaver ship."></event_param>
+		<event_param trigger_message="They broadcast a message: Haha! More slaves!"></event_param>
+		<event_param trigger_message="Sensors indicate that the pirate ship is charging weapons."></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="B_SLAVER_HOSTILE_WB_S!1-4_L10">
+		<event_param level="10"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER"></event_param>
+		<event_param chain_event="SECTOR_SLAVER_PROVOKED"></event_param>
+		<event_param chain_event="PIRATE_BOARDERS_SANY_L0"></event_param>
+		<event_param trigger_message="You have run into a pirate slaver ship."></event_param>
+		<event_param trigger_message="They broadcast a message: Haha! More slaves!"></event_param>
+		<event_param trigger_message="WARNING! Intruders detected!"></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="B_SLAVERS_ATATCKED_BY_UNITY_S!1-4_L0">
+		<event_param level="0"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER_GUARD1"></event_param>
+		<event_param chain_event="SPAWN_B_SLAVER_GUARD2"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT2"></event_param>
+		<event_param chain_event="SPAWN_UNITY_GUARD"></event_param>
+		<event_param chain_event="RANDOM_SHIP_LEVEL_SECTOR_THREAT"></event_param>
+		<event_param chain_event="SPAWN_UNITY_GUARD"></event_param>
+		<event_param trigger_message="You have run into Unity guard force fighting a group of slavers."></event_param>
+		<event_param broadcast_message="Sensors indicate that new ships entered this sector"></event_param>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+
+	<event type="SECTOR_EVENT" name="SHIP_PARTS_IN_ASTEROIDS_S1-4_L0">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_5_10"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P1"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P2"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P3"></event_param>
+		<event_param trigger_message="You found remains of a ship crashed by asteroids."></event_param>
+		<event_param broadcast_message="Sensors detected incomming asteroids."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="SHIP_PARTS_WITH_SYS_IN_ASTEROIDS_S1-4_L0">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_5_10"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P1"></event_param>
+		<event_param chain_event="ADD_RANDOM_SYSTEM_TO_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P2"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P3"></event_param>
+		<event_param trigger_message="You found remains of a ship crashed by asteroids."></event_param>
+		<event_param broadcast_message="Sensors detected incomming asteroids."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>		
+	<event type="SECTOR_EVENT" name="SHIP_PARTS_WITH_WEAP_IN_ASTEROIDS_S1-4_L0">
+		<event_param level="0"></event_param>
+		<event_param chance="50"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_ASTEROID_BELT_5_10"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P1"></event_param>
+		<event_param chain_event="ADD_RANDOM_WEAPON_TO_DEAD_SHIP_PART"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P2"></event_param>
+		<event_param chain_event="SPAWN_SHIP_PARTS_IN_ASTEROIDS_P3"></event_param>
+		<event_param trigger_message="You found remains of a ship crashed by asteroids."></event_param>
+		<event_param broadcast_message="Sensors detected incomming asteroids."></event_param>
+		<condition type="SECTOR_TYPE_PRESENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param target_player="1"></condition_param>
+			<condition_param var_name="[SECTOR]_ASTEROIDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>		
+
+	<event type="MODIFY_SHIP" name="RANDOMIZE_CRUISER">
+		<event_param chain_event="FILL_SHIELDS"></event_param>
+		<event_param chain_event="BOARDERS_CHANCE"></event_param>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="VAR(RANDOM_SHIP_LEVEL)+VAR(DIF_MOD)+VAR(FLEET_MOD)"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+			<ship_randomizer_param max_optionals="3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_EMP_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_EMP_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_HULL_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_HULL_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_HULL_BEAM3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Single_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Single_emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Single_emp3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Single_emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="EMP_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="EMP_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="HULL_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="HULL_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="HULL_BEAM3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_emp3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Single_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Single_emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Single_emp3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Single_emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Burst1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Burst2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Burst3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Burst4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Cannon1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Cannon2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Cannon3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Cannon4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Cluster_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Cluster_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Cluster_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_random_systems type="OXYGEN">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN3"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="DOOR_CONTROL">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL2"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL3"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL4"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL5"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="ENGINES">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES4"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES5"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES6"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES7"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES8"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="HYPERDRIVE">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE3"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE4"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="WEAPONS_CONTROL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="SENSORS">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS3"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS4"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CAPACITOR">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR3"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR4"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR5"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="MEDICAL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CLOAKING">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CLOAK2"></ship_random_systems_param>
+			</ship_random_systems>
+		</ship_randomizer>
+	</event>
+	<event type="MODIFY_SHIP" name="RANDOMIZE_SCOUT">
+		<event_param chain_event="FILL_SHIELDS"></event_param>
+		<event_param chain_event="BOARDERS_CHANCE"></event_param>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="VAR(RANDOM_SHIP_LEVEL)+VAR(DIF_MOD)+VAR(FLEET_MOD)"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+			<ship_randomizer_param max_optionals="2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_CAN_OPENER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_FIRE_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_PLASMA_CUTTER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Single_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="CAN_OPENER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="FIRE_BEAM2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="PLASMA_CUTTER2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Single_emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Quad_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Burst1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Plasma_Cannon1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Railgun2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Cluster_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_random_systems type="OXYGEN">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="DOOR_CONTROL">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL2"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL3"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL4"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="ENGINES">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES4"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES5"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="HYPERDRIVE">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE3"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="WEAPONS_CONTROL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="SENSORS">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS3"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CAPACITOR">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR3"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR4"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="MEDICAL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL2"></ship_random_systems_param>
+			</ship_random_systems>
+		</ship_randomizer>
+	</event>
+	<event type="MODIFY_SHIP" name="RANDOMIZE_INT">
+		<event_param chain_event="FILL_SHIELDS"></event_param>
+		<event_param chain_event="BOARDERS_CHANCE"></event_param>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="VAR(RANDOM_SHIP_LEVEL)+VAR(DIF_MOD)+VAR(FLEET_MOD)"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+			<ship_randomizer_param max_optionals="2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_flamer2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="GAT_LASER1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_Dual_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Heavy_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Pierce_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Triple_laser2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Advanced_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML2"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Basic_ML3"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Breacher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Dual_Launcher1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Emp1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Hull_Breaker1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm1"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="Napalm2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_random_systems type="OXYGEN">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				<ship_random_systems_param model="OXYGEN2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="DOOR_CONTROL">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL1"></ship_random_systems_param>
+				<ship_random_systems_param model="DOOR_CONTROL2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="ENGINES">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="HYPERDRIVE">
+				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="WEAPONS_CONTROL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="WEAPONS_CONTROL1"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="SENSORS">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				<ship_random_systems_param model="SENSORS2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="CAPACITOR">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR1"></ship_random_systems_param>
+				<ship_random_systems_param model="CAPACITOR2"></ship_random_systems_param>
+			</ship_random_systems>
+			<ship_random_systems type="MEDICAL">
+				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
+				<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+			</ship_random_systems>
+		</ship_randomizer>
+	</event>
+
+	<event type="MODIFY_SHIP" name="BOARDERS_CHANCE">
+		<event_param random_chain_event="1"></event_param>
+		<event_param chain_event="DUD_EVENT"></event_param>
+		<event_param chain_event="DUD_EVENT"></event_param>
+		<event_param chain_event="ADD_BOARDING_SET"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_BOARDING_SET">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_event="ADD_BOARDING_CREW"></event_param>
+		<event_param install_system_model="BOU_TELEPORT2"></event_param>
+		<ship_ai type="BOARDING_MANAGER">
+			<ship_ai_param CREWLESS="0"></ship_ai_param>
+		</ship_ai>
+	</event>
+	<event type="SPAWN_NPC" name="ADD_BOARDING_CREW">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="2"></event_param>
+		<event_param max_event_qty="3"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_race="PIRATE"></npc_param>
+			<npc_param npc_home_system="TELEPORT"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_BOARDER"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="TELEPORT"></npc_ai_param>
+				<npc_ai_param WORK_TIME="30"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	
+	<event type="MODIFY_SECTOR" name="DUD_EVENT">
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREAT">
+		<event_param var_name="RANDOM_SHIP_LEVEL"></event_param>
+		<event_param var_value="[SECTOR_THREAT]"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREAT2">
+		<event_param var_name="RANDOM_SHIP_LEVEL"></event_param>
+		<event_param var_value="[SECTOR_THREAT]/2"></event_param>
+		<event_param value_math_expr="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREAT3">
+		<event_param var_name="RANDOM_SHIP_LEVEL"></event_param>
+		<event_param var_value="[SECTOR_THREAT]/3"></event_param>
+		<event_param value_math_expr="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREAT4">
+		<event_param var_name="RANDOM_SHIP_LEVEL"></event_param>
+		<event_param var_value="[SECTOR_THREAT]/4"></event_param>
+		<event_param value_math_expr="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="RANDOM_SHIP_LEVEL_SECTOR_THREAT5">
+		<event_param var_name="RANDOM_SHIP_LEVEL"></event_param>
+		<event_param var_value="[SECTOR_THREAT]/5"></event_param>
+		<event_param value_math_expr="1"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="SET_FLEET_MOD_0">
+		<event_param var_name="FLEET_MOD"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_FLEET_MOD_1">
+		<event_param var_name="FLEET_MOD"></event_param>
+		<event_param var_value="-1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_FLEET_MOD_2">
+		<event_param var_name="FLEET_MOD"></event_param>
+		<event_param var_value="-2"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SET_FLEET_MOD_3">
+		<event_param var_name="FLEET_MOD"></event_param>
+		<event_param var_value="-3"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="GIVE_PEACE_KEEPER_AI">
+		<event_param clear_created_by_children="1"></event_param>
+		<ship_ai type="PEACE_KEEPER"></ship_ai>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="FILL_SHIELDS">
+		<event_param give_shields="99999"></event_param>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="REPAIR_HULL_1">
+		<event_param give_hull="1"></event_param>
+	</event>
+
+</events>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_D31">
+		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
+		<event_param chain_event="SPAWN_PLAYER_SHIP"></event_param>
+		<!-- <event_param chain_event="SPAWN_CUSTOM_PLAYER_SHIP"></event_param> -->
+		<event_param chain_event="MAIN_SPIKE"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="SS_D31"></ship_param>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param safe_zone="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param ship_name="Science  station  D31"></ship_param>
+			<ship_param pos="6000:6000"></ship_param>
+			<ship_param min_health="10"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_captain="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="DOOR_CONTROL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="TUTORIAL"></npc_param>
+				<npc_param npc_remote_dialogue="TUTORIAL"></npc_param>
+				<npc_ai type="NPC_TALKER">
+					<npc_ai_param TIMER="15"></npc_ai_param>
+					<npc_ai_param SHIP="1"></npc_ai_param>
+					<npc_ai_param RAND="1"></npc_ai_param>
+					<npc_ai_param MES="Hello? Can anyone hear me?"></npc_ai_param>
+					<npc_ai_param MES="If anyone can hear me, please come to the Door control room!"></npc_ai_param>
+					<npc_ai_param MES="Somebody please help!"></npc_ai_param>
+					<npc_ai_param MES="Press F1 if you don't know how to move."></npc_ai_param>
+					<npc_ai_param MES="Oh, I hope that beam in the cargo hold didn't burn up..."></npc_ai_param>
+					<npc_ai_param MES="What a mess..."></npc_ai_param>
+					<npc_ai_param MES="How did I get into this mess..."></npc_ai_param>
+					<npc_ai_condition type="SERVER_VARIABLE_ABSENT">
+						<condition_param var_name="SS31_STOP_CALLING_HELP"></condition_param>
+						<condition_param var_value="1"></condition_param>
+					</npc_ai_condition>
+				</npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER">
+					<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+						<condition_param var_name="HJ_TUTORIAL_STARTED"></condition_param>
+						<condition_param var_value="1"></condition_param>
+					</npc_ai_condition>
+				</npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param WORK_TIME="30"></npc_ai_param>
+					<npc_ai_param any_condition="0"></npc_ai_param>
+					<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+						<condition_param var_name="SS31_GO_TO_SENSORS"></condition_param>
+						<condition_param var_value="1"></condition_param>
+					</npc_ai_condition>
+				</npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="LASER_WEAPONS"></npc_ai_param>
+					<npc_ai_param WORK_TIME="30"></npc_ai_param>
+					<npc_ai_param any_condition="0"></npc_ai_param>
+					<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+						<condition_param var_name="SS31_GO_TO_LASER"></condition_param>
+						<condition_param var_value="1"></condition_param>
+					</npc_ai_condition>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_PLAYER_SHIP">
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="PREPARE_PLAYER_SHIP"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="FALCON"></ship_param>
+			<ship_param ship_name="VAR(PLAYER_SHIP_NAME)"></ship_param>
+			<ship_param pos="6000:6900"></ship_param>
+			<ship_param min_health="50"></ship_param>
+			<ship_param max_health="50"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_CUSTOM_PLAYER_SHIP">
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="PREPARE_CUSTOM_PLAYER_SHIP"></event_param>
+		<event_param chain_event="PREPARE_PLAYER_SHIP"></event_param>
+		<add_ship>
+			<ship_param ship_model="FALCON"></ship_param>
+			<ship_param ship_name="VAR(PLAYER_SHIP_NAME)"></ship_param>
+			<ship_param pos="6000:6900"></ship_param>
+			<ship_param min_health="50"></ship_param>
+			<ship_param max_health="50"></ship_param>
+		</add_ship>
+	</event>
+	<event type="MODIFY_SHIP" name="PREPARE_CUSTOM_PLAYER_SHIP">
+		<event_param install_system_model="PILOTING1"></event_param>
+		<event_param install_system_model="FALCON_SHIELDS"></event_param>
+		<event_param install_system_model="FALCON_REACTOR"></event_param>
+		<event_param install_system_model="FALCON_ENGINES"></event_param>
+		<event_param install_system_model="WEAPONS_CONTROL1"></event_param>
+		<event_param install_system_model="FALCON_SENSORS"></event_param>
+		<event_param install_system_model="CAPACITOR1"></event_param>
+		<event_param install_system_model="MEDICAL1"></event_param>
+		<event_param install_system_model="FALCON_O2"></event_param>
+		<event_param install_system_model="FALCON_DC"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="PREPARE_PLAYER_SHIP">
+		<event_param safe_zone="0"></event_param>
+		<event_param take_hull="45"></event_param>
+		<event_param break_system_type="PILOTING"></event_param>
+		<event_param break_system_type="SHIELDS"></event_param>
+		<event_param break_system_type="REACTOR"></event_param>
+		<event_param break_system_type="ENGINES"></event_param>
+		<event_param break_system_type="WEAPONS_CONTROL"></event_param>
+		<event_param break_system_type="SENSORS"></event_param>
+		<event_param break_system_type="CAPACITOR"></event_param>
+		<event_param break_system_type="MISSILE_WEAPONS"></event_param>
+		<event_param break_system_type="MEDICAL"></event_param>
+		<event_param add_system_model_to_cargo="Basic_ML1"></event_param>
+		<!-- <event_param add_system_model_to_cargo="SHIPYARD"></event_param> -->
+		<!-- <event_param give_scrap="1000"></event_param> -->
+		<!-- <event_param give_drones="100"></event_param> -->
+		<!-- <event_param add_system_model_to_cargo="CLOAK1"></event_param> -->
+		<!-- <event_param add_system_model_to_cargo="TELEPORT2"></event_param> -->
+	</event>
+	
+	<event type="SPAWN_NPC" name="SPAWN_NPC_CREW_2">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="PLAYER_CREW_SPAWNED"></event_param>
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param random_npc="0"></event_param>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param var_name="PLAYER_CREW_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+		<condition type="SECTOR_PLAYERS_ABSENT">
+			<condition_param qty="3"></condition_param>
+		</condition>
+		<condition type="SECTOR_PLAYERS_PRESENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_race="CYBORG"></npc_param>
+			<npc_param npc_home_system="MEDICAL"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER" SYSTEMS="ENGINES:SHIELDS:REACTOR:HYPERDRIVE:MISSILE_WEAPONS:LASER_WEAPONS:" WORK_TIME="30"></npc_ai>
+		</spawn_npc>
+	</event>
+	<event type="SPAWN_NPC" name="SPAWN_NPC_CREW_3">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="PLAYER_CREW_SPAWNED"></event_param>
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param random_npc="0"></event_param>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param var_name="PLAYER_CREW_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+		<condition type="SECTOR_PLAYERS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<spawn_npc>
+			<npc_param npc_qty="2"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_race="CYBORG"></npc_param>
+			<npc_param npc_home_system="MEDICAL"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER" SYSTEMS="ENGINES:SHIELDS:REACTOR:HYPERDRIVE:MISSILE_WEAPONS:LASER_WEAPONS:" WORK_TIME="30"></npc_ai>
+		</spawn_npc>
+	</event>
+	<event type="SERVER_VARIABLE" name="PLAYER_CREW_SPAWNED">
+		<event_param var_name="PLAYER_CREW_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_ASTEROIDS">
+		<event_param random_ship="1"></event_param>
+		<event_param min_event_qty="3"></event_param>
+		<event_param max_event_qty="3"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="2"></ship_param>
+			<ship_param max_health="3"></ship_param>
+			<ship_param min_scrap="120"></ship_param>
+			<ship_param max_scrap="120"></ship_param>
+		</add_ship>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_HD_PARTS">
+		<add_debris>
+			<debris_param debris_qty="1"></debris_param>
+			<debris_param debris_owner="Science  station  D31"></debris_param>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="TACSTAB"></debris_item>
+		</add_debris>
+		<add_debris>
+			<debris_param debris_qty="1"></debris_param>
+			<debris_param debris_owner="Science  station  D31"></debris_param>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="TACCHAMB"></debris_item>
+		</add_debris>
+		<add_debris>
+			<debris_param debris_qty="1"></debris_param>
+			<debris_param debris_owner="Science  station  D31"></debris_param>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="TACACC"></debris_item>
+		</add_debris>
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_D31_SAFEZONE">
+		<event_param for_ship_name="Science  station  D31"></event_param>
+		<event_param remove_system_type_from_cargo="LASER_WEAPONS"></event_param>
+		<event_param remove_system_type_from_cargo="CAPACITOR"></event_param>
+		<event_param add_system_model_to_cargo="FIRE_BEAM5"></event_param>
+		<event_param safe_zone="0"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="SS31_STOP_CALLING_HELP">
+		<event_param var_name="SS31_STOP_CALLING_HELP" /> 
+		<event_param var_value="1" />
+	</event>
+	<event type="SERVER_VARIABLE" name="START_TUTORIALS">
+		<event_param var_name="TUTORIALS_STARTED" /> 
+		<event_param var_value="1" /> 
+	</event>
+	<event type="SERVER_VARIABLE" name="START_REPAIR_TUTORIAL">
+		<event_param var_name="REPAIR_TUTORIAL_STARTED" /> 
+		<event_param var_value="1" /> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_REPAIR_TUTORIAL">
+		<event_param var_name="REPAIR_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="SS31_GO_TO_SENSORS">
+		<event_param var_name="SS31_GO_TO_SENSORS" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="SS31_STOP_GO_TO_SENSORS">
+		<event_param var_name="SS31_GO_TO_SENSORS" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="START_CLAIM_TUTORIAL">
+		<event_param var_name="CLAIM_TUTORIAL_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_CLAIM_TUTORIAL">
+		<event_param var_name="CLAIM_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="SS31_GO_TO_LASER">
+		<event_param var_name="SS31_GO_TO_LASER" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="SS31_STOP_GO_TO_LASER">
+		<event_param var_name="SS31_GO_TO_LASER" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="START_LJ_TUTORIAL">
+		<event_param var_name="LJ_TUTORIAL_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_LJ_TUTORIAL">
+		<event_param var_name="LJ_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="START_INST_TUTORIAL">
+		<event_param var_name="INST_TUTORIAL_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_INST_TUTORIAL">
+		<event_param var_name="INST_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_STATION_LASER">
+		<event_param for_ship_name="Science  station  D31"></event_param>
+		<event_param uninstall_system_type="LASER_WEAPONS"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="START_FIGHT_TUTORIAL">
+		<event_param var_name="FIGHT_TUTORIAL_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_FIGHT_TUTORIAL">
+		<event_param var_name="FIGHT_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="START_HJ_TUTORIAL">
+		<event_param var_name="HJ_TUTORIAL_STARTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_HJ_TUTORIAL">
+		<event_param var_name="HJ_TUTORIAL_STARTED" /> 
+		<event_param var_value="0"/> 
+	</event>
+	<event type="SPAWN_SHIP" name="SPAWN_TUT_PIRATE">
+		<add_ship>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="5"></ship_param>
+			<ship_param max_health="7"></ship_param>
+		</add_ship>
+		<add_ship>
+			<ship_param gen_ship_model="TUT_PIRATE"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Pirate scavenger"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_missile_ammo="20"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_health="6"></ship_param>
+			<ship_param max_health="6"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_captain="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_name="Pirate "></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_TALKER">
+					<npc_ai_param TIMER="30"></npc_ai_param>
+					<npc_ai_param RAND="1"></npc_ai_param>
+					<npc_ai_param MES="I'm gona destroy you!"></npc_ai_param>
+					<npc_ai_param MES="I'm gona blow you to small pieces!"></npc_ai_param>
+					<npc_ai_param MES="Your ship will make good scrap!"></npc_ai_param>
+					<npc_ai_param MES="I'm going to salvage what's left of your ship!"></npc_ai_param>
+					<npc_ai_param MES="I'm going to use the scrap from your ship to upgrade my Poop deck!"></npc_ai_param>
+				</npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="SHIELDS:PILOTING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="10"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="Pirate "></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="OXYGEN"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="DOOR_CONTROL:OXYGEN"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="Pirate "></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="SHIELDS"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="SHIELDS:LASER_WEAPONS"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_name="Pirate "></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="ENGINES"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="ENGINES:HYPERDRIVE"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>	
+	<event type="MODIFY_SHIP" name="ADD_LASER_TO_PLAYER">
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param add_system_model_to_cargo="Triple_laser1"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_HD_TO_PLAYER">
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param add_system_model_to_cargo="FALCON_HD"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="ADD_CRYSTAL">
+		<event_param all_mob_ships="0"></event_param>
+		<event_param ignore_passenger_access="0"></event_param>
+		<event_param add_system_model_to_cargo="CRYSTAL"></event_param>
+		<event_param chain_event="INC_CRYSTALS_COLLECTED"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="SET_PLAYER_OWNER">
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param add_crew="[PLAYER_NAME]"></event_param>
+		<event_param set_owner="[PLAYER_NAME]"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="SKIP_TUTORIAL">
+		<event_param for_ship_name="VAR(PLAYER_SHIP_NAME)"></event_param>
+		<event_param add_system_model_to_cargo="FALCON_HD"></event_param>
+		<event_param add_system_model_to_cargo="Triple_laser1"></event_param>
+		<event_param give_scrap="45"></event_param>
+		<event_param give_hull="45"></event_param>
+		<event_param give_missiles="4"></event_param>
+		<event_param repair_breaches="1"></event_param>
+		<event_param put_out_fires="1"></event_param>
+ 		<event_param repair_system_type="PILOTING"></event_param>
+		<event_param repair_system_type="ENGINES"></event_param>
+		<event_param repair_system_type="CAPACITOR"></event_param>
+		<event_param repair_system_type="REACTOR"></event_param>
+		<event_param repair_system_type="SHIELDS"></event_param>
+		<event_param repair_system_type="WEAPONS_CONTROL"></event_param>
+		<event_param repair_system_type="SENSORS"></event_param>
+		<event_param repair_system_type="MEDICAL"></event_param>
+		<event_param chain_event="START_TUTORIALS"></event_param>
+		<event_param chain_event="SS31_STOP_CALLING_HELP"></event_param>
+		<event_param chain_event="SS31_GO_TO_SENSORS"></event_param>
+		<event_param chain_event="START_HJ_TUTORIAL"></event_param>
+		<event_param chain_event="SKIP_TUTORIAL2"></event_param>
+		<event_param chain_event="SPAWN_NPC_CREW_3"></event_param>
+		<event_param chain_event="SPAWN_NPC_CREW_2"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="SKIP_TUTORIAL2">
+		<event_param repair_breaches="1"></event_param>
+		<event_param repair_system_model="REPAIR1"></event_param>
+		<event_param repair_system_type="OXYGEN"></event_param>
+		<event_param repair_system_type="SHIELDS"></event_param>
+		<event_param repair_system_type="CAPACITOR"></event_param>
+		<event_param repair_system_type="LASER_WEAPONS"></event_param>
+		<event_param uninstall_system_type="LASER_WEAPONS"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="SKIP_TUTORIAL0">
+		<event_param put_out_fires="1"></event_param>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="INC_CRYSTALS_COLLECTED">
+		<event_param var_name="CRYSTALS_COLLECTED"></event_param>
+		<event_param var_value="++"></event_param>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="DROP_CRYSTALS_COLLECTED">
+		<event_param var_name="CRYSTALS_COLLECTED"></event_param>
+		<event_param var_value="0"></event_param>
+	</event>
+
+	<event type="THREAT_SPIKE" name="MAIN_SPIKE">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
+		<event_param random_sector="0"></event_param>
+		<event_param radius_min="20"></event_param>
+		<event_param radius_max="20"></event_param>
+		<event_param threat_min="0"></event_param>
+		<event_param threat_max="0"></event_param>
+	</event>
+</events>

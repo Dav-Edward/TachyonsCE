@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SECTOR_EVENT" name="SAFE_PRISON_GETAWAY">
+		<event_param level="0"></event_param>
+		<event_param chance="150"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SHIP_NAME_PRESENT">
+			<condition_param ship_name="Civilian transport TN-719"></condition_param>
+		</condition>
+	</event>
+
+	<event type="SECTOR_EVENT" name="PRISON">
+		<event_param level="12"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param chain_event="SPAWN_PRISON"></event_param>
+		<event_param chain_event="SPAWN_GETAWAY"></event_param>
+		<event_param chain_event="PRISON_EVENT_FLAG"></event_param>
+		<event_param trigger_message="You have stumbled upon a high security prison station."></event_param>
+		<event_param broadcast_message="What is this? A prison station? How did you not notice it before?"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+		<condition type="SECTOR_TYPE_ABSENT">
+			<condition_param sector_type="1"></condition_param>
+			<condition_param sector_type="2"></condition_param>
+			<condition_param sector_type="3"></condition_param>
+			<condition_param sector_type="4"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param var_name="PRISON_EVENT_FLAG"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_GETAWAY">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="GETAWAY_SLEEP"></event_param>
+		<event_param chain_event="GETAWAY_PAINT"></event_param>
+		<add_ship>
+			<ship_param ship_owner="THE_FOUNDATION"></ship_param>
+			<ship_param ship_crew="[Prisoner] D-9341"></ship_param>
+			<ship_param ship_model="PIRATE_LS1"></ship_param>
+			<ship_param ship_name="Civilian transport TN-719"></ship_param>
+			<ship_param pos="5000:5000"></ship_param>
+			<ship_param min_health="20"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_ai type="BOARDING_MANAGER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param ship_class="STATION"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="EVADER">
+				<ship_ai_param CREWLESS="1"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="SHIP_HUNTER">
+				<ship_ai_param TARGET="Iron Grasp Maximum Security Prison"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="EXPLORER">
+				<ship_ai_param DELAY="2"></ship_ai_param>
+				<ship_ai_condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param ship_class="STATION"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param EVENT="GETAWAY_WAKEUP"></ship_ai_param>
+				<ship_ai_param EVENT="GETAWAY_WAKE_CHARGE"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param EVENT="GETAWAY_SLEEP"></ship_ai_param>
+			</ship_ai>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param EVENT="GETAWAY_CHARGE_TP"></ship_ai_param>
+			</ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_is_captain="0"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_name="[Agent] "></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="PRISON_AGENT"></npc_param>
+				<npc_param npc_remote_dialogue="PRISON_AGENT_REMOTE"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="60"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_is_captain="0"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_name="[Agent] "></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="HYPERDRIVE"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="HYPERDRIVE:CLOAKING"></npc_ai_param>
+					<npc_ai_param WORK_TIME="60"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<ship_randomizer>
+				<ship_randomizer_param ship_level_min="0"></ship_randomizer_param>
+				<ship_randomizer_param ship_level_max="0"></ship_randomizer_param>
+				<ship_random_systems type="PILOTING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="PILOTING3"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="REACTOR">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="REACTOR2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="OXYGEN">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="DOOR_CONTROL">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="DOOR_CONTROL2"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="ENGINES">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="HYPERDRIVE">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="SENSORS">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="SENSORS1"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="MEDICAL">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="MEDICAL1"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="CLOAKING">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_CLOAK1"></ship_random_systems_param>
+				</ship_random_systems>
+				<ship_random_systems type="TELEPORT">
+					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_TELEPORT2"></ship_random_systems_param>
+				</ship_random_systems>
+			</ship_randomizer>
+		</add_ship>
+	</event>
+	<event type="MODIFY_SHIP" name="GETAWAY_PAINT">
+		<event_param ship_color="70:70:100"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="GETAWAY_WAKEUP">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] GETAWAY_AWAKE"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="GETAWAY_SLEEP">
+		<event_param nonstop="1"></event_param>
+		<event_param decharge_engines="100"></event_param>
+		<event_param decharge_weapons="100"></event_param>
+		<event_param charge_cloak="100"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="GETAWAY_WAKE_CHARGE">
+		<event_param nonstop="1"></event_param>
+		<event_param charge_engines="98"></event_param>
+		<event_param decharge_cloak="90"></event_param>
+		<event_param charge_hd="94"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="GETAWAY_CHARGE_TP">
+		<event_param nonstop="1"></event_param>
+		<event_param charge_system_type="TELEPORT:100"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_PRISON">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="SPAWN_PRISONERS"></event_param>
+		<event_param chain_event="OUTFIT_PRISON"></event_param>
+		<event_param chain_event="REMOVE_PRISON_CELL"></event_param>
+		<event_param chain_event="CHARGE_PRISON_SHIELDS"></event_param>
+		<event_param chain_event="SPAWN_PRISON_PERSONNEL"></event_param>
+		<add_ship>
+			<ship_param distress="A faint encrypted message, turned out to be an S.O.S."></ship_param>
+			<ship_param ship_model="PRIS"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param ship_name="Iron Grasp Maximum Security Prison"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param pos="5000:5000"></ship_param>
+			<ship_param min_missile_ammo="100"></ship_param>
+			<ship_param max_missile_ammo="200"></ship_param>
+			<ship_param min_drone_ammo="20"></ship_param>
+			<ship_param max_drone_ammo="60"></ship_param>
+			<ship_param min_scrap="800"></ship_param>
+			<ship_param max_scrap="1000"></ship_param>
+			<ship_param min_health="200"></ship_param>
+			<ship_param max_health="200"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER">
+				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+			</ship_ai>
+			<ship_ai type="EVENT_TRIGGER">
+				<ship_ai_condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_condition type="SHIP_SHIELDS_ABSENT">
+					<condition_param qty="1"></condition_param>
+				</ship_ai_condition>
+				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param EVENT="START_PRISON_RIOT"></ship_ai_param>
+			</ship_ai>
+		</add_ship>
+	</event>
+	<event type="MODIFY_SHIP" name="OUTFIT_PRISON">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model="PRISON_CONTROL"></event_param>
+		<event_param install_system_model="REACTOR6"></event_param>
+		<event_param install_system_model="REACTOR6"></event_param>
+		<event_param install_system_model="SHIELDS5"></event_param>
+		<event_param install_system_model="SHIELDS5"></event_param>
+		<event_param install_system_model="OXYGEN3"></event_param>
+		<event_param install_system_model="SENSORS4"></event_param>
+		<event_param install_system_model="DOOR_CONTROL4"></event_param>
+		<event_param install_system_model="CAPACITOR5"></event_param>
+		<event_param install_system_model="CAPACITOR5"></event_param>
+		<event_param install_system_model="WEAPONS_CONTROL2"></event_param>
+		<event_param install_system_model="MEDICAL3"></event_param>
+		<event_param ship_color="80:50:50"></event_param>
+		<ship_randomizer>
+			<ship_randomizer_param ship_level_min="20"></ship_randomizer_param>
+			<ship_randomizer_param ship_level_max="20"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_GAT_LASER4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_emp4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Pierce_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Quad_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Triple_laser4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Burst4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Plasma_Cannon4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Railgun4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Dual_Launcher4"></ship_randomizer_param>
+			<ship_randomizer_param random_weapon="BOU_Napalm4"></ship_randomizer_param>
+		</ship_randomizer>
+	</event>
+	<event type="MODIFY_SHIP" name="CHARGE_PRISON_SHIELDS">
+		<event_param nonstop="1"></event_param>
+		<event_param give_shields="99999"></event_param>
+	</event>
+	<event type="SPAWN_NPC" name="SPAWN_PRISONERS">
+		<event_param nonstop="1"></event_param>
+		<event_param chain_events_to_created="1"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL1"></event_param>
+		<event_param chain_event="SPAWN_PRISONER"></event_param>
+		<event_param chain_event="REMOVE_PRISON_CELL"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL2"></event_param>
+		<event_param chain_event="SPAWN_PRISONER"></event_param>
+		<event_param chain_event="REMOVE_PRISON_CELL"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL3"></event_param>
+		<event_param chain_event="SPAWN_PRISONER"></event_param>
+		<event_param chain_event="REMOVE_PRISON_CELL"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL4"></event_param>
+		<event_param chain_event="SPAWN_PRISONER"></event_param>
+		<event_param chain_event="REMOVE_PRISON_CELL"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL5"></event_param>
+		<event_param chain_event="SPAWN_Q_PRISONER"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL1"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL2"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL3"></event_param>
+		<event_param chain_event="ADD_PRISON_CELL4"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_PRISON_CELL1">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model_direct="PRISONCELL:7:12"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_PRISON_CELL2">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model_direct="PRISONCELL:8:13"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_PRISON_CELL3">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model_direct="PRISONCELL:10:9"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_PRISON_CELL4">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model_direct="PRISONCELL:12:10"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_PRISON_CELL5">
+		<event_param nonstop="1"></event_param>
+		<event_param install_system_model_direct="PRISONCELL:12:4"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_PRISON_CELL">
+		<event_param nonstop="1"></event_param>
+		<event_param remove_system_model="PRISONCELL"></event_param>
+	</event>
+	<event type="SPAWN_NPC" name="SPAWN_Q_PRISONER">
+		<event_param nonstop="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="0"></npc_param>
+			<npc_param npc_name="[Prisoner] D-9341"></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_home_system="CAPACITOR"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="PRISONER"></npc_param>
+			<npc_param npc_remote_dialogue="PRISONER_REMOTE"></npc_param>
+			<npc_param npc_health="290"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_BOARDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+				<npc_ai_param WORK_TIME="120"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	<event type="SPAWN_NPC" name="SPAWN_PRISONER">
+		<event_param nonstop="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="0"></npc_param>
+			<npc_param npc_name="[Prisoner] "></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_race="PIRATE"></npc_param>
+			<npc_param npc_home_system="CAPACITOR"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_BOARDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+				<npc_ai_param WORK_TIME="120"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	<event type="SPAWN_NPC" name="SPAWN_PRISON_PERSONNEL">
+		<event_param nonstop="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="2"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_name="[Guard] "></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_home_system="SHIELDS"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="PRISON_GUARD"></npc_param>
+			<npc_param npc_remote_dialogue="PRISON_GUARD_REMOTE"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:LASER_WEAPONS"></npc_ai_param>
+				<npc_ai_param WORK_TIME="60"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+		<spawn_npc>
+			<npc_param npc_qty="2"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_name="[Guard] "></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_home_system="WEAPONS_CONTROL"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="PRISON_GUARD"></npc_param>
+			<npc_param npc_remote_dialogue="PRISON_GUARD_REMOTE"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:LASER_WEAPONS"></npc_ai_param>
+				<npc_ai_param WORK_TIME="60"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+		<spawn_npc>
+			<npc_param npc_qty="2"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_name="[Guard] "></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_home_system="REACTOR"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="PRISON_GUARD"></npc_param>
+			<npc_param npc_remote_dialogue="PRISON_GUARD_REMOTE"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="REACTOR:OXYGEN:MEDICAL:DOOR_CONTROL"></npc_ai_param>
+				<npc_ai_param WORK_TIME="60"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_is_crew="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_name="[Warden] "></npc_param>
+			<npc_param npc_race="HUMAN"></npc_param>
+			<npc_param npc_home_system="PILOTING"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_param npc_dialogue="PRISON_WARDEN"></npc_param>
+			<npc_param npc_remote_dialogue="PRISON_WARDEN_REMOTE"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER">
+				<npc_ai_condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</npc_ai_condition>
+			</npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="PILOTING:MEDICAL"></npc_ai_param>
+				<npc_ai_param WORK_TIME="60"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	<event type="SERVER_VARIABLE" name="START_PRISON_RIOT">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] RIOT_STARTED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PROVKE_PRISON">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRISON_PROVOKED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="STOP_PRISON_COMMS">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRISON_COMMS_DISABLED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PRIS_TALKED_TO_WARDEN">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRIS_TALKED_TO_WARDEN"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PRIS_TALKED_TO_AGENTS">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRIS_TALKED_TO_AGENTS"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	
+	<event type="MODIFY_SHIP" name="GIVE_PRISON_CLOAK">
+		<event_param nonstop="1"></event_param>
+		<event_param add_system_model_to_cargo="CLOAK1"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="GIVE_PRISON_TELEPORT">
+		<event_param nonstop="1"></event_param>
+		<event_param add_system_model_to_cargo="TELEPORT1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PRISON_AWARDED_VAR">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRISON_AWARDED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PRISON_EVENT_FLAG">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="PRISON_EVENT_FLAG"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="PROVOKE_PRISON">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] PRISON_PROVOKED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="TALKED_TO_PRISON_AGENTS">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="TALKED_TO_PRISON_AGENTS_2">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS_2"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="TALKED_TO_PRISON_WARDEN">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="TALKED_TO_PRISON_WARDEN_2">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN_2"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+
+</events>

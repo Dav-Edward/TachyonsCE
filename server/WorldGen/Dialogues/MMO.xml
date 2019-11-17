@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="GATE_OPERATOR">
+		<start>M0</start>
+		<message id="M0" text="StarGate operator online">
+			<reply id="R1" text="[ACTION]Show StarGate Destination coords" next="CHANGE_COORDS0" any_condition="1">
+				<condition type="SERVER_VARIABLE_SMALLER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_SMALLER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[ACTION]Show StarGate Destination coords." next="CHANGE_COORDS1">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="[ACTION]Show Home coords" next="SHOW_HOME_COORDS">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R4" text="Activate StarGate. Destination [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]" next="ACTIVATE_STAR_GATE">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>				
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param ship_name="Star_Gate_Inghibitor"></condition_param>
+					<condition_param sector="VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R5" text="Activate StarGate. Destination [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]" next="ACTIVATE_STAR_GATE_FAILED">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>				
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param ship_name="Star_Gate_Inghibitor"></condition_param>
+					<condition_param sector="VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R6" text="Activate StarGate. Destination [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]" next="NO_SCRAP_TO_ACTIVATE_STAR_GATE">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>				
+			</reply>
+			<reply id="R7" text="[ACTION]Build StarGate" next="NO_SCRAP_TO_BUILD_STAR_GATE">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_ABSENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="1000"></condition_param>
+				</condition>				
+			</reply>
+			<reply id="R8" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_1">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R9" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_2">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="2"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R10" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_3">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="2"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="3"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R11" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_4">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="3"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="4"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R12" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_5">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="4"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="5"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R13" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_6">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="5"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="6"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R14" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_7">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="6"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="7"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R15" text="[ACTION]Build StarGate" next="SPAWN_STAR_GATE_FULL">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="7"></condition_param>
+				</condition>
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Star_Gate"></condition_param>
+					<condition_param race="ALL"></condition_param>
+					<condition_param ship_class="PLATFORM"></condition_param>
+					<condition_param qty="8"></condition_param>
+				</condition>
+				<condition type="MOB_SCRAP_PRESENT">
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="300"></condition_param>
+				</condition>
+			</reply>
+		</message>
+
+		<message id="SPAWN_STAR_GATE_1" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 1" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_2" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 2" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_3" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 3" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_4" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 4" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_5" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 5" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_6" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 6" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_7" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate 7" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+		<message id="SPAWN_STAR_GATE_FULL" text="[ACTION]Done">
+			<event id="Take StarGate construction price from player" target="PLAYER"></event>
+			<event id="Spawn StarGate Full" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+
+		<message id="NO_SCRAP_TO_BUILD_STAR_GATE" text="You need 1000 Scrap to build the next StarGate part.">
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+
+		<message id="NO_SCRAP_TO_ACTIVATE_STAR_GATE" text="You need 300 Scrap to activate the StarGate.">
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+
+		<message id="ACTIVATE_STAR_GATE_FAILED" text="StarGate activation failed. Something in sector [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)] is blocking it.">
+			<reply id="R1" text="[SKIP]..." next="M0"></reply>
+		</message>
+
+		<message id="ACTIVATE_STAR_GATE" text="[ACTION]StarGate activated. Destination [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<event id="Take StarGate activation price from player" target="PLAYER"></event>
+			<event id="Activate StarGate" target="PLAYER"></event>
+		</message>
+		
+		<message id="SHOW_HOME_COORDS" text="[ACTION]Home coords [VAR([PLAYER_NAME] HOME COORDS)]">
+			<reply id="R0" text="[SKIP]Back" next="M0"></reply>
+			<reply id="R1" text="[ACTION]Set Home coords = Temp coords" next="SET_HOME_COORDS" any_condition="1">
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP X"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_BIGGER">
+					<condition_param target_player="1"></condition_param>
+					<condition_param var_name="[PLAYER_NAME] TEMP Y"></condition_param>
+					<condition_param var_value="0"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		<message id="SET_HOME_COORDS" text="[ACTION]Home set to [VAR([PLAYER_NAME] HOME COORDS)]">
+			<reply id="R0" text="[SKIP]Back" next="M0"></reply>
+			<event id="SET_PLAYER_HOME" target="PLAYER"></event>
+		</message>
+
+		<message id="CHANGE_COORDS0" text="[ACTION]LOADING...">
+			<reply id="R1" text="[SKIP]..." next="CHANGE_COORDS1"></reply>
+			<event id="PTX0" target="PLAYER"></event>
+			<event id="PTY0" target="PLAYER"></event>
+		</message>
+		<message id="CHANGE_COORDS1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<reply id="R0" text="[SKIP]Done" next="M0"></reply>
+			<reply id="R1" text="[SKIP]Change X" next="CHANGE_COORDS_CX1"></reply>
+			<reply id="R2" text="[SKIP]Change Y" next="CHANGE_COORDS_CY1"></reply>
+		</message>
+		
+		<message id="CHANGE_COORDS_CX1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		
+		<message id="CHANGE_COORDS_CXI1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXI1" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CXD1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXD1" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CXI10" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXI10" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CXD10" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXD10" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CXI100" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXI100" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CXD100" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTXD100" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CXI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CXD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CXI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CXD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CXI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CXD100"></reply>
+		</message>
+		
+		<message id="CHANGE_COORDS_CY1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		
+		<message id="CHANGE_COORDS_CYI1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYI1" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CYD1" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYD1" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CYI10" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYI10" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CYD10" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYD10" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CYI100" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYI100" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+		<message id="CHANGE_COORDS_CYD100" text="[ACTION]Temp coords [VAR([PLAYER_NAME] TEMP X):VAR([PLAYER_NAME] TEMP Y)]">
+			<random_event>0</random_event>
+			<event id="PTYD100" target="PLAYER"></event>
+			<reply id="R0" text="[SKIP]Done" next="CHANGE_COORDS1"></reply>
+			<reply id="R1" text="[SKIP]Increase by 1" next="CHANGE_COORDS_CYI1"></reply>
+			<reply id="R2" text="[SKIP]Decrease by 1" next="CHANGE_COORDS_CYD1"></reply>
+			<reply id="R3" text="[SKIP]Increase by 10" next="CHANGE_COORDS_CYI10"></reply>
+			<reply id="R4" text="[SKIP]Decrease by 10" next="CHANGE_COORDS_CYD10"></reply>
+			<reply id="R5" text="[SKIP]Increase by 100" next="CHANGE_COORDS_CYI100"></reply>
+			<reply id="R6" text="[SKIP]Decrease by 100" next="CHANGE_COORDS_CYD100"></reply>
+		</message>
+	</dialogue>	
+
+	<dialogue name="Mechanic">
+		<start>M0</start>
+		<message id="M0" text="How can I help you [PLAYER_NAME]?">
+			<reply id="R5" text="[ACTION]Spawn Clone" next="SPAWN_CLONE">
+			</reply>
+			<reply id="R6" text="[ACTION]Spawn StarGate operator" next="SPAWN_STAR_GATE_OPERATOR">
+			</reply>
+		</message>
+
+		<message id="SPAWN_CLONE" text="Clone spawned">
+			<event id="Spawn Mechanic" target="PLAYER"></event>
+		</message>
+
+		<message id="SPAWN_STAR_GATE_OPERATOR" text="StarGate operator spawned">
+			<event id="Spawn StarGate Operator" target="PLAYER"></event>
+		</message>
+	</dialogue>	
+</dialogues>

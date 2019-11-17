@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<dialogues>
+	<dialogue name="PRISONER_REMOTE">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]Connecting">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="AWAKE" text="[SKIP]..." next="AW1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SAVED" text="[SKIP]..." next="SA1" any_condition="0">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="SA1" text="Thanks again for you help [PLAYER_NAME].">
+			<reply id="R1" text="You're welcome." next="SA2" any_condition="0">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] PRISON_AWARDED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		<message id="SA2" text="Now about that reward. We can give you either a cloaking device, or a teleporter.">
+			<reply id="R2" text="Cloaking" next="SAC" any_condition="0"></reply>
+			<reply id="R3" text="Teleporter" next="SAT" any_condition="0"></reply>
+		</message>
+		<message id="SAC" text="Alright, we've sent it to your ship.">
+			<random_event>0</random_event>
+			<event id="GIVE_PRISON_CLOAK" target="PLAYER"></event>
+			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<reply id="R1" text="Thanks." any_condition="0"></reply>
+		</message>
+		<message id="SAT" text="Alright, we've sent it to your ship.">
+			<random_event>0</random_event>
+			<event id="GIVE_PRISON_TELEPORT" target="PLAYER"></event>
+			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<reply id="R1" text="Thanks." any_condition="0"></reply>
+		</message>
+
+		<message id="AW1" text="Unable to establish a connection.">
+		</message>
+
+		<message id="SL1" text="[ACTION]The signal is very weak, but you manage to establish a connection.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL2" any_condition="0"></reply>
+		</message>
+		<message id="SL2" text="[ACTION]There is no video feed available, and the voice communication is frequently interrupted by static.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL3" any_condition="0"></reply>
+		</message>
+		<message id="SL3" text="He..o, ca.. you ..ar me?">
+			<reply id="SLEEPING" text="Yes, who are you?" next="SL4" any_condition="0"></reply>
+		</message>
+		<message id="SL4" text="I ca..t spea.. long, they m...t detect my sig..l.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL5" any_condition="0"></reply>
+		</message>
+		<message id="SL5" text="Lis.en, there .. a sh..ip hidden right ne..r the s..ation. You ..eed to co..tact it.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL6" any_condition="0"></reply>
+		</message>
+		<message id="SL6" text="They wi.. ..plain every..g.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL7" any_condition="0"></reply>
+		</message>
+		<message id="SL7" text="[ACTION]The connection is lost.">
+		</message>
+	</dialogue>
+	<dialogue name="PRISONER">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see a person in prisoner uniform">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="AWAKE" text="[SKIP]..." next="AW1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SAVED" text="[SKIP]..." next="SA1" any_condition="0">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		
+		<message id="SA1" text="Thanks again for you help [PLAYER_NAME].">
+			<reply id="R1" text="You're welcome." next="SA2" any_condition="0">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] PRISON_AWARDED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		<message id="SA2" text="Now about that reward. We can give you either a cloaking device, or a teleporter.">
+			<reply id="R2" text="Cloaking" next="SAC" any_condition="0"></reply>
+			<reply id="R3" text="Teleporter" next="SAT" any_condition="0"></reply>
+		</message>
+		<message id="SAC" text="Alright, we've sent it to your ship.">
+			<random_event>0</random_event>
+			<event id="GIVE_PRISON_CLOAK" target="PLAYER"></event>
+			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<reply id="R1" text="Thanks." any_condition="0"></reply>
+		</message>
+		<message id="SAT" text="Alright, we've sent it to your ship.">
+			<random_event>0</random_event>
+			<event id="GIVE_PRISON_TELEPORT" target="PLAYER"></event>
+			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<reply id="R1" text="Thanks." any_condition="0"></reply>
+		</message>
+
+		<message id="AW1" text="You can't talk to this person right now.">
+		</message>
+
+		<message id="SL1" text="What are you doing here? If they find us, we're dead!">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL2" any_condition="0"></reply>
+		</message>
+		<message id="SL2" text="There's no time to explain, listen carefully.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL3" any_condition="0"></reply>
+		</message>
+		<message id="SL3" text="There's a ship hidden right near the station. You need to contact it. They will explain everything.">
+		</message>
+	</dialogue>
+
+	<dialogue name="PRISON_GUARD">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see a person in a prison guard uniform.">
+			<reply id="R1" text="[SKIP]..." next="M1" any_condition="0">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] PRISON_PROVOKED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[SKIP]..." next="M2" any_condition="0">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] PRISON_PROVOKED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		<message id="M1" text="Hey! Who are you and how did you get here?! Alarm! Intruders!">
+			<random_event>0</random_event>
+			<event id="PROVOKE_PRISON" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]Oops."></reply>
+		</message>
+		<message id="M2" text="This person will not talk to you.">
+		</message>
+	</dialogue>
+	<dialogue name="PRISON_GUARD_REMOTE">
+		<start>M0</start>
+		<message id="M0" text="[ACTION] - You have, reached the voicemail of [NPC_NAME].">
+			<reply id="R1" text="[SKIP]..." next="M1" any_condition="0"></reply>
+		</message>
+		<message id="M1" text="[ACTION] - I am not available at the moment. Please leave a message.">
+			<reply id="R1" text="[SKIP]Disconnect"></reply>
+		</message>
+	</dialogue>
+
+	<dialogue name="PRISON_WARDEN">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see warden of the prison. The warden is unusually ugly.">
+			<reply id="R1" text="[SKIP]..." next="M1" any_condition="0">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] PRISON_PROVOKED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[SKIP]..." next="M2" any_condition="0">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] PRISON_PROVOKED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+		<message id="M1" text="Hey! Who are you and how did you get here?! Alarm! Intruders!">
+			<random_event>0</random_event>
+			<event id="PROVOKE_PRISON" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]Oops."></reply>
+		</message>
+		<message id="M2" text="This person will not talk to you.">
+		</message>
+	</dialogue>
+	<dialogue name="PRISON_WARDEN_REMOTE">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]Connecting">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL1" any_condition="0">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN_2"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SLEEPING_AT" text="[SKIP]..." next="SL_AT1" any_condition="0">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN_2"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="AWAKE" text="[SKIP]..." next="AW1" any_condition="1">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_WARDEN_2"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+
+		<message id="AW1" text="Unable to establish a connection.">
+		</message>
+
+		<message id="SL_AT1" text="Ah it's you again, what do you want now?">
+			<reply id="SLEEPING" text="Well, I just wanted to make sure one more time, that everything is fine." next="SL_AT2" any_condition="0"></reply>
+		</message>
+		<message id="SL_AT2" text="I told you, we are fine. Now stop wasting my time!">
+			<reply id="SLEEPING" text="[SKIP](Station guard background) Check if warden knows the basic security protocols." next="SL_AT3" any_condition="0"></reply>
+			<reply id="SLEEPING2" text="Alright, alright, sorry." any_condition="0"></reply>
+		</message>
+		<message id="SL_AT3" text="[ACTION]After some questions, you conclude that this person is anyone but a prison warden.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL_AT4" any_condition="0"></reply>
+		</message>
+		<message id="SL_AT4" text="Is there anything else you need?">
+			<random_event>0</random_event>
+			<event id="TALKED_TO_PRISON_WARDEN_2" target="PLAYER"></event>
+			<reply id="SLEEPING" text="Nothing else thank you. We will prociede on our way." next="SL_AT5" any_condition="0"></reply>
+		</message>
+	
+		<message id="SL1" text="Yeah, who is this?">
+			<reply id="SLEEPING" text="Hello, our ship is detecting a distress call incomming from this sector." next="SL2" any_condition="0"></reply>
+		</message>
+		<message id="SL2" text="My name is [NPC_NAME], and I am in charge of this prison.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL3" any_condition="0"></reply>
+		</message>
+		<message id="SL3" text="We have no imergencies and did not send any disstress calls.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL4" any_condition="0"></reply>
+		</message>
+		<message id="SL4" text="So it must be some mistake.">
+			<reply id="SLEEPING" text="Are you sure?" next="SL5" any_condition="0"></reply>
+		</message>
+		<message id="SL5" text="Absolutely! If there was some trouble, we would call for backup.">
+			<reply id="SLEEPING" text="Ok then, good day to you." next="SL6" any_condition="0"></reply>
+		</message>
+		<message id="SL6" text="Yeah, bye.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL7" any_condition="0"></reply>
+		</message>
+		<message id="SL7" text="You can't get rid of a feeling that something is not right here.">
+			<random_event>0</random_event>
+			<event id="TALKED_TO_PRISON_WARDEN" target="PLAYER"></event>
+		</message>
+	</dialogue>
+
+	<dialogue name="PRISON_AGENT">
+		<start>M0</start>
+		<message id="M0" text="This person will not talk to you.">
+		</message>
+	</dialogue>
+	<dialogue name="PRISON_AGENT_REMOTE">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]Connecting">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SLEEPING2" text="[SKIP]..." next="SL8_2" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS_2"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SLEEPING3" text="[SKIP]..." next="SL10_2" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] TALKED_TO_PRISON_AGENTS_2"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="AWAKE" text="[SKIP]..." next="AW1" any_condition="0">
+				<condition type="SECTOR_SHIPS_PRESENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="SAVED" text="[SKIP]..." next="SA1" any_condition="0">
+				<condition type="SECTOR_SHIPS_ABSENT">
+					<condition_param ship_name="Iron Grasp Maximum Security Prison"></condition_param>
+					<condition_param qty="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+
+		<message id="AW1" text="Follow us as soon as we extract our agent.">
+		</message>
+
+		<message id="SL1" text="At last! Someone had finally answered our call.">
+			<reply id="SLEEPING" text="Who are you and what is going on here?" next="SL2" any_condition="0"></reply>
+		</message>
+		<message id="SL2" text="Thre's no time for details, but situation is the following:">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL3" any_condition="0"></reply>
+		</message>
+		<message id="SL3" text="This station is a classified prison for some of the most dangerous criminals.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL4" any_condition="0"></reply>
+		</message>
+		<message id="SL4" text="There was a prison break and the convicts have taken control of the station.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL5" any_condition="0"></reply>
+		</message>
+		<message id="SL5" text="Former guards are now held up in prison cells. As is one of our special agents.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL6" any_condition="0"></reply>
+		</message>
+		<message id="SL6" text="I'm guessing he was the one who told you how to contact us.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL7" any_condition="0"></reply>
+		</message>
+		<message id="SL7" text="That agent has some information that is verry important to us.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL8" any_condition="0"></reply>
+		</message>
+		<message id="SL8" text="We need your help to extract him.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL9" any_condition="0"></reply>
+		</message>
+
+		<message id="SL8_2" text="Hello again. Have you decided to help us?">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL9" any_condition="0"></reply>
+		</message>
+
+		<message id="SL9" text="We are willing to offer you a reward for your help.">
+			<reply id="SLEEPING" text="Uh, I need to think about it." next="SL10" any_condition="0"></reply>
+			<reply id="SLEEPING2" text="Ok, how can I help?" next="SL11" any_condition="0"></reply>
+		</message>
+		<message id="SL10" text="Ok. But please hurry up. Time is of the essence.">
+			<random_event>0</random_event>
+			<event id="TALKED_TO_PRISON_AGENTS" target="PLAYER"></event>
+		</message>
+
+		<message id="SL10_2" text="Please hurry up. Time is of the essence.">
+			<reply id="SLEEPING" text="Can you please remind me, what's our plan again?" next="SL11" any_condition="0"></reply>
+			<reply id="SLEEPING2" text="I'm working on it."></reply>
+		</message>
+		<message id="SL11" text="We need you to hit the station and lower it's shields to 0.">
+			<event id="TALKED_TO_PRISON_AGENTS" target="PLAYER"></event>
+			<reply id="SLEEPING" text="[SKIP]..." next="SL12" any_condition="0"></reply>
+		</message>
+		<message id="SL12" text="Then will use our teleport to send over some weapons to arm the guards.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL13" any_condition="0"></reply>
+		</message>
+		<message id="SL13" text="After that we will teleport out our agent to this ship.">
+			<reply id="SLEEPING" text="[SKIP]..." next="SL14" any_condition="0"></reply>
+		</message>
+		<message id="SL14" text="Once our agent is safe onboard with us, we will try to escape this sector.">
+			<reply id="SLEEPING" text="Sounds like a plan." next="SL15" any_condition="0"></reply>
+		</message>
+		<message id="SL15" text="Follow us to the sector we jump to, and we'll talk about your reward.">
+			<random_event>0</random_event>
+			<event id="TALKED_TO_PRISON_AGENTS_2" target="PLAYER"></event>
+			<reply id="SLEEPING" text="Alright." any_condition="0"></reply>
+		</message>
+
+		<message id="SA1" text="Thanks for your help.">
+		</message>
+	</dialogue>
+
+</dialogues>

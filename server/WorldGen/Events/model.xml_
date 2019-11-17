@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event type="SECTOR_EVENT" name="Trader attacked by pirate">
+	<level>1</level>	//Event level - only events with level same or lower than the SHIP'S level are applied
+	<chance>10</chance>	//% of probability of event being applied
+	<only_empty>1</only_empty>	//Will make event only be applied if the sector is empty
+	<sector>8:19</sector>	//Sector coordinates where event may take place
+	<sector_type>14</sector_type>	//Sector type where event may take place
+	<exclude_sector_types>0</exclude_sector_types> //If this is set to 1 then the <sector_type> filter will be inverted - meaning this event will NOT take place in these sectors
+	<random_ship>1</random_ship>	//If set to 0 then all ships will be added, if to 1 then only 1 randomly taken.
+	<random_npc>1</random_npc>	//If set to 0 then all npcs will be added, if to 1 then only 1 randomly taken. (This is for spawn_npc not for spawn_npc_on_ship)
+	<min_event_qty>3</min_event_qty>	//Minimal count of applying this event at the same time
+	<max_event_qty>7</max_event_qty>	//Maximal count of applying this event at the same time
+	//When current event is selected to be applied - it will be applied a random amount of times selected between min_event_qty and max_event_qty
+	//So if you want it to be applied only once then set min_event_qty and max_event_qty to 1
+	//This does not limit the amount of times the event can appear in the game
+	<trigger_message>You have run into</trigger_message>	//These messages will be sent to the passengers of the ship that triggered the event
+	<trigger_message>a ber</trigger_message>	//These messages will be sent to the passengers of the ship that triggered the event
+	<broadcast_message>Hear me all</broadcast_message>	//These messages will be sent to everyone who is in the sector to which the event is applied
+	<broadcast_message>Tis I the pongo bob</broadcast_message>	//These messages will be sent to everyone who is in the sector to which the event is applied
+	<free_doors>1</free_doors>	//Allow dor usage on this ship to anyone, regardless of who is the ship owner
+	<free_med>1</free_med>	//Allow replenishing health in the med bay on this ship to anyone, regardless of who is the ship owner
+	<free_oxygen>1</free_oxygen>	//Allow refilling oxygen in the O2 system on this ship to anyone, regardless of who is the ship owner
+	<add_ship>
+		<gen_ship_model>GEN_SHIP_MODEL_NAME1</gen_ship_model>	//When the ship is generated - it will use 1 random model of gen ship from this list
+		<gen_ship_model>GEN_SHIP_MODEL_NAME2</gen_ship_model>	//When the ship is generated - it will use 1 random model of gen ship from this list
+		<ship_qty>1</ship_qty>	//How many ships to add
+		<ship_name>Trader</ship_name>
+		<ship_crew>Trader Bobby</ship_crew>
+		<ship_crew>Trader Smithy</ship_crew>
+		<ship_owner>Trader Bobby</ship_owner>
+		<random_pos>1</random_pos>	//1 for random ship position in sector
+		<pos>12.4:111.65</pos>	//if random pos is not selected then ship position will be this
+		<min_missile_ammo>6</min_missile_ammo>
+		<max_missile_ammo>12</max_missile_ammo>
+		<min_drone_ammo>6</min_drone_ammo>
+		<max_drone_ammo>12</max_drone_ammo>
+		<min_scrap>5</min_scrap>
+		<max_scrap>13</max_scrap>
+		<min_health>10</min_health>
+		<max_health>20</max_health>
+		<distress>Someone help! We are being attacked by pirates!</distress>	//This message will be used when distress messages can be seen on the map
+		<ai type="AUTOREPAIR"></ai>	//CONSTANTLY REPAIRS SHIP AND SYSTEMS
+		<ai type="LIFE_SUPPORT"></ai>	//TRUNS ON AUTO DOORS CLOSE, ALL O2 AND MEDICAL SYSTEMS 
+		<ai type="ANTI_LIFE_SUPPORT"></ai>	//TRUNS OFF ALL O2 AND MEDICAL SYSTEMS 
+		<ai type="SHIP_HUNTER">	//ATTACKS ANY SHIP IF IT'S NAME IS THE TARGET NAME
+			<ship_ai_param>TARGET=TARGET SHIP NAME</ship_ai_param>//Target parameter defines the name of the hunted ship
+		</ai>
+		<ai type="SHIP_CLASS_HUNTER">	//ATTACKS ANY SHIP IF IT'S CLASS IS THE TARGET CLASS
+			<ship_ai_param>TARGET=LIGHT_SCOUT</ship_ai_param>//Target parameter defines the class of the hunted ship
+		</ai>
+		<ai type="MOB_HUNTER">	//ATTACKS SHIP IF IT HAS THE TARGET NAME AS CREW OWNER, OR PASSENGER
+			<ship_ai_param>TARGET=TARGET SHIP NAME</ship_ai_param>//Target parameter defines the name of the hunted mob
+		</ai>
+		<ai type="SHIP_SPAWNER">//IF the ship is not under attack this AI will randomly spawn either an attack force(1-3 ships) or an explorer ship.
+			//Attack force flies directly to specified sector. Explorer ship just randomly jumps around.
+			//If the ship is under attack then this AI will spawn defence ships to protect it.
+			<ship_ai_param>ATT=124:38</ship_ai_param>//ATT parameter defines to which sector will the attack force go(X:Y).
+			<ship_ai_param>EXP=ANY_GEN_SHIP_NAME_HERE</ship_ai_param>//EXP parameter defines a list of GEN_SHIP_NAMEs to add to the list(separated with :) of possible gen ships that can be created as either attack force of explorer ship.
+			<ship_ai_param>EXP=ANY_GEN_SHIP_NAME_HERE_2:ANY_GEN_SHIP_NAME_HERE_3:ANY_GEN_SHIP_NAME_HERE_4</ship_ai_param>
+			<ship_ai_param>DEF=ROGUE_AI_PLATFORM_L2</ship_ai_param>//DEF parameter defines a list of GEN_SHIP_NAMEs to add to the list(separated with :) of possible gen ships that can be created as defenders.
+			<ship_ai_param>DEF=ROGUE_AI_PLATFORM_L4:ROGUE_AI_PLATFORM_L5:ROGUE_AI_PLATFORM_L6</ship_ai_param>
+			<ship_ai_param>EXP_TIME=10800</ship_ai_param>//Timer in seconds how often to spawn the Attack or explorer expedition.
+			<ship_ai_param>DEF_TIME=90</ship_ai_param>//Timer in seconds how often to spawn defenders
+		</ai>			
+		<ai type="SENTRY">
+			//SHOOTS EVERYONE EXCEPT:
+			//if(!host.owner.isEmpty() && s.isCrewOrOwner(host.owner))
+			//if(!s.owner.isEmpty() && host.isCrewOrOwner(s.owner))
+			//if(isFriend(s.owner))
+			//if(isFriend(s.ID))
+		</ai>
+		<ai type="EXPLORER"></ai>	//CHARGES HD TO FULL THEN JUMPS IN RANDOM DIRECTION
+		<ai type="LEVEL_LOADER"></ai>	//LOADS SECTOR LEVEL WHEN SERVER STARTS, AND KEEPS IT LOADED, AS IF A PLAYER IS ONLINE IN THAT SECTOR
+		<ai type="SECTOR_FINDER">	//CONSTANTLY ADVANCES TOWARDS THE TARGET SECTOR, CAN RETREAT IF ARRIVES TO A SECTOR WITH THREAT LEVEL HIGHER THAN SHIPS LEVEL.
+			<ship_ai_param>TARGET=32:12</ship_ai_param>	//TARGET parameter defines the destination sector (X:Y)
+		</ai>
+		<ai type="ENEMY_SHOOTER"></ai>	//ATTACKS ANY SHIP IF IT IS IN ENEMY LIST OR IF CREW OR OWNER OF THAT SHIP IS IN ENEMY LIST
+		<ai type="ROGUE_AI_OWNER"></ai>	//CONSTANTLY GIVES OWNERSHIP OF THE SHIP TO THE ROGUE AI
+		<ai type="PIRATE_OWNER"></ai>	//CONSTANTLY GIVES OWNERSHIP OF THE SHIP TO THE PIRATES
+		<random_npc_on_ship>1</random_npc_on_ship>	//If set to 0 then all npcs will be added on ship, if to 1 then only 1 randomly taken.
+		<spawn_npc_on_ship> //spawn_npc_on_ship is almost the same as spawn_npc but it is used to spawn npcs on a ship and it allows to use additional parameters(npc_is_crew, npc_is_captain, npc_spawn_at_home).
+			<npc_qty>1</npc_qty>//How many NPCs to add
+			<npc_is_crew>1</npc_is_crew>//When NPC is spawned, he will be added as crew to the ship.
+			<npc_is_captain>1</npc_is_captain>//When NPC is spawned he will be set as the captain of the ship.
+			<npc_random_name>1</npc_random_name>//If set to 1 NPC will be given a random Name
+			<npc_name>Alonso</npc_name>//NPC Name
+			<npc_random_race>1</npc_random_race>//Give NPC random Race
+			<npc_race>HUMAN</npc_race>//NPC Race
+			<npc_random_pos>1</npc_random_pos>//Spawn NPC in random place in sector
+			<npc_pos>12.4:111.65</npc_pos>//Spawn NPC at this position in sector
+			<npc_home_system>SHIELDS</npc_home_system>//NPC's home system type.
+			<npc_spawn_at_home>1</npc_spawn_at_home>//Spawn NPC on this ship inside the room with his Home system. If Home system type is not specified and npc_spawn_at_home is set to 1, then NPC will be spawned in a random system room.
+			//Priority of determining which parameter to use to define the NPC's spawn position is this(npc_spawn_at_home then npc_random_pos then npc_pos)
+			<npc_min_scrap>5</npc_min_scrap>//npc min scrap
+			<npc_max_scrap>13</npc_max_scrap>//npc max scrap. when npc is created he will get random scrap amount between min and max
+			<npc_health>13</npc_health>//how much health npc will have when it is spawned - can't be more than max hp of NPC Race
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>//This AI constantly checks for NPC's health and oxygen, if HP drop below 30% it sends the NPC to nearest working med bay, if Oxygen goes bellow 20% then it sends to nearest working O2 room.
+ 			<npc_ai type="NPC_FIREMAN"></npc_ai>//Fireman will run around the ship putting out fires
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>//Repairman will run around the ship fixing any damaged systems and breaches
+			<npc_ai type="NPC_WORKER">//Worker AI sends NPC to random rooms of specified types, where he stays for some time looking like his working there.
+				<npc_ai_param>SYSTEMS=WEAPONS_CONTROL:SHIELDS:PILOTING</npc_ai_param>//System types where worker can work. If this field is empty or abscent then worker will work at any system
+				<npc_ai_param>WORK_TIME=90</npc_ai_param>//Time in seconds how long will Worker 'work' in each system before going to next one.
+			</npc_ai>
+			//THE ORDER IN WHICH AIs ARE ADDED TO THE NPC IS IMPORTANT.
+			//BECAUSE IF SOME AI TAKES CONTROL OF THE NPC OTHER AIs WILL NOT BE ABLE TO CONTROL IT.
+			//FOR EXAMPLE: In this current set up we have 4 AIs added to our NPC: Life support, Fireman, Repairman and Worker.
+			//So Every server update(tick)(by default its 40times/second) We will go through all AIs and see which one takes control of the NPC during this server update(tick).
+			//First we have the Lifesupport - it checks if our npc needs to go heal up or replenish O2. Let's say he doesn't.
+			//Then we continue to the next AI in the list: Fireman - it checks if there are any Fires on the ship, let's say there are none.
+			//Then we get to the repairman AI, it checks for any damaged systems on the ship, let's say that our Shields sys is damaged,
+			//The Repairman AI tries to take control of th NPC and send him to repair the Shields system. First it tries to find a path for our NPC to get to that system.
+			//If it can not find a path to the damaged system then it will not take control of the NPC, let's say that we do find a path.
+			//Then the Repairman AI takes control and our NPC is sent to the Shields system to repair it.
+			//Now the next AI in the list - Worker AI will not even be allowed to try to take control of the NPC because it was take earlier by the Repairman AI.
+			//So the next server update we again start from the top - Again Lifesupport doesn't need to take control(NPC is still at full HP and O2), Fireman also skips(Still no fires on the ship)
+			//Repairman AI still sees that broken Shields system, but it also sees that our NPC already has a path set to follow. So it just sends him on his way.
+			//And the Worker AI again doesn't get the chance to take control.
+			//And so it continues untill our NPC arrives to the Shields system.
+			//Now the path is finished, and our Repairman AI sees that the room our NPC is in has a damaged system, so it tells our NPC to repair it.
+			//Now let's suppose that while repairing the Shields system, We suddenly get a fire started in our Engines room.
+			//What will happen? Will our NPC continue reparing the system or will he stop repairing and go for the Fire?
+			//Next server update We again start from the top of the AI list and see that our Life support is still not needed (NPS is still at full HP and O2).
+			//Next AI in the list is the Fireman, but this time we do have a fire on our ship. So the Fireman AI will now take control, and send our NPC to the nearest fire to put it our.
+			//Now let's suppose that our NPC got to the fire and started to put it our, and while doing so he lost so much HP that it is now under 30%.
+			//What will happen is that next server update our Lifesupport AI will take control of the NPC and will try to send it to the nearest med bay.
+			//But let's suppose that there is no working med bay - or rather there is a med bay, it is not damaged, but it's not powered.
+			//In this case Lifesupport AI will not take control of the NPC, and so it will skip it's turn at controlling the NPC this server update.
+			//Next one is the Fireman AI which will continue telling the NPC to put out the fires.
+			//Let's say that to our luck, our NPC managed to put out the fires before burning to death. So now there are no more fires on the ship.
+			//So next server update our NPC will be controlled by the Repairman AI because we still have those broken shields to repair - remember :)
+			//NPC will be sent to the shields room, ther he will again start repairing the shields.
+			//Now let's pretend that while reparing the shields for the second time - some smart guy Captain - remembered that he has his med bay powered down, he went there and powered it back up.
+			//What will happen is that since our NPC is still at low HP, next server update the Lifesupport AI will take control, because it no does have a path to a working med bay.
+			//So once again our NPC will stop repairing the Shileds and go for the med bay to get some HP back.
+			//NPC will syat in the medbay untill he has full hp, and then when Lifesupport no longer takes control of our NPC, no fires present, 
+			//The Repairman AI will send our NPC to repair the shields again.
+			//Now when the shields are repaired, and there are no more damaged systems or breaches on the ship, there are no fires, HP is above 30% O2 is above 20%
+			//Then there is no work for the Lifesupport, Fireman, or Repairman, AIs
+			//So the Worker AI will finally get the chance to take control of the NPC.
+			//And what it will do is that it will send the NPC to work(just visually) at a random system(<npc_ai_param>SYSTEMS=WEAPONS_CONTROL:SHIELDS:PILOTING</npc_ai_param>)
+			//Where he will work for (<npc_ai_param>WORK_TIME=90</npc_ai_param>) seconds.
+			//And then to another one and so on endlessly. The Worker AI always takes contorl of the NPC when he get's the chance. So make sure that it is last one in the AI list.
+			//Now if youo would have put the Lifesupport AI second one in the list after the Fireman - then NPC would never go healing or replenishing O2 untill there are no fires on the ship that he can put out.
+		</spawn_npc_on_ship>
+	</add_ship>
+	<spawn_npc>//Spawn NPC in sector - almost same as spawn_npc_on_ship, only you don't need to spawn a ship in this case. And you can't use additional parameters(npc_is_crew, npc_is_captain, npc_spawn_at_home).
+			<npc_qty>1</npc_qty>
+			<npc_random_name>1</npc_random_name>
+			<npc_name>Alonso</npc_name>
+			<npc_random_race>1</npc_random_race>
+			... and so on
+	</spawn_npc>
+	<add_debris>//Add a debris piece in space
+		<debris_qty>2</debris_qty>//amount of debris to be added
+		<debris_owner>Some ship name</debris_owner>//Name of the ship that these debris are part of - or were jettisoned from
+		<debris_random_pos>1</debris_random_pos>//if set to 1 debris piece will get random position
+		<debris_pos>212.4:311.65</debris_pos>//position in sector where to spawn debris
+		<debris_min_scrap>30</debris_min_scrap>//min scrap amount
+		<debris_max_scrap>60</debris_max_scrap>//max scrap amount
+		<debris_min_missiles>30</debris_min_missiles>//min missiles amount
+		<debris_max_missiles>60</debris_max_missiles>//max missiles amount
+		<debris_min_drones>30</debris_min_drones>//min drones amount
+		<debris_max_drones>60</debris_max_drones>//max drones amount
+		<debris_item item_type="SHIP_SYSTEM" system_model="NAME_OF_SYSTEM_MODEL"></debris_item>//List of items that this debris can contain - it will have only one randomly chosen
+		<debris_item item_type="SHIP_SYSTEM" system_model="SHIELDS1"></debris_item>
+		<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL2"></debris_item>
+	</add_debris>
+	<add_ship model="ANOTHER_GEN_SHIP_MODEL_NAME">
+		...
+	</add_ship>
+</event>
+
+<event type="ENTER_SECTOR">
+	//JUST LIKE SECTOR EVENT - but applied only on entering the sector
+</event>
+<event type="SCAN_SECTOR">
+	//JUST LIKE SECTOR EVENT - but applied only on scanning the sector. Not yet implemented!
+</event>
+
+<event type="ADD_SHIP_WG">	//THESE EVENTS ARE APPLIED ON UNIVERSE GENERATION
+	//SAME AS IN SECTOR EVENT
+	//BUT NO sector_type parameter
+	//And + has random_sector parameter
+	<add_ship model="GEN_SHIP_MODEL_NAME">
+		//SAME AS IN SECTOR EVENT
+	</add_ship>
+</event>
+

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_SYS">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="PILOTING1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="PILOTING2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS4"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T1">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML2"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T2">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML4"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T3">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp2"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T4">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp4"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T5">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun2"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_WEAP_T6">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun4"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_RANDOM_SYS_FULL">
+		<event_param nonstop="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="CAPACITOR5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="DOOR_CONTROL5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="MEDICAL3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="OXYGEN3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="PILOTING1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="PILOTING2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="SENSORS4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Triple_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Quad_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Heavy_Dual_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Pierce_laser5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Basic_ML5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Advanced_ML5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Breacher5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Dual_Launcher5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Emp5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Hull_Breaker5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Napalm5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Railgun5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Burst5"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon1"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon2"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon3"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon4"></debris_item>
+			<debris_item item_type="SHIP_SYSTEM" system_model="Plasma_Cannon5"></debris_item>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_SCRAP">
+		<event_param nonstop="1"></event_param>
+		<event_param random_debris="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_param debris_min_scrap="5"></debris_param>
+			<debris_param debris_max_scrap="50"></debris_param>
+		</add_debris>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_param debris_min_scrap="10"></debris_param>
+			<debris_param debris_max_scrap="30"></debris_param>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_MIS">
+		<event_param nonstop="1"></event_param>
+		<event_param random_debris="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_param debris_min_missiles="1"></debris_param>
+			<debris_param debris_max_missiles="8"></debris_param>
+		</add_debris>
+	</event>
+	<event type="SPAWN_DEBRIS" name="SPAWN_DEBRIS_WITH_DRONES">
+		<event_param nonstop="1"></event_param>
+		<event_param random_chain_event="1"></event_param>
+		<event_param random_debris="1"></event_param>
+		<add_debris>
+			<debris_param debris_random_pos="1"></debris_param>
+			<debris_param debris_min_drones="1"></debris_param>
+			<debris_param debris_max_drones="6"></debris_param>
+		</add_debris>
+	</event>
+	
+	
+</events>

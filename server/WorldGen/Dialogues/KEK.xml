@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogues>
+	<dialogue name="SERG">
+		<start>M0</start>
+		<message id="M0" text="[ACTION]You see a very nervous man.">
+			<reply id="R1" text="Hello. Are you [NPC_NAME]?" next="M1">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="KEK_SENSORS_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="[SKIP]..." next="M19">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="BEARS_HQ_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="[SKIP]..." next="M31">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="EMPIRE_CRYSTAL_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R4" text="[SKIP]..." next="M33">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="KEK_LAST_RAIDED_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R5" text="Can you tell me again where was the last caravan raided?" next="M37">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="LAST_FISHING_QUEST_STARTED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>
+			</reply>
+		</message>
+
+		<message id="M37" text="Last caravan was raided in sector VAR(DF_SECTOR)">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+		
+		<message id="M33" text="Hello again [PLAYER_NAME], were you able to find the last crystal?">
+			<reply id="R1" text="Hello [NPC_NAME], yes, we now have averything we need to stop that pirate ship." next="M34"></reply>
+		</message>
+		<message id="M34" text="That's good news. Because if you don't stop it, my business will be ruined.">
+			<reply id="R1" text="Can you tell me where was the last caravan raided?" next="M35"></reply>
+		</message>
+		<message id="M35" text="Sure, last caravan was raided in sector [SECTOR]">
+			<event id="SPAWN_DF" target="PLAYER"></event>
+			<event id="MAKE_DF_SECTOR_EXPLORED" target="PLAYER"></event>
+			<event id="STOP_KEK_LAST_RAIDED_QUEST" target="PLAYER"></event>
+			<event id="START_LAST_FISHING_QUEST" target="PLAYER"></event>
+			<reply id="R1" text="Thanks.  Wish me luck!" next="M36"></reply>
+		</message>
+		<message id="M36" text="Good luck.  Turn those bastards to space dust!"></message>
+
+
+		<message id="M31" text="Hi [PLAYER_NAME]. Hope the search for the third crystal is going well.">
+			<reply id="R1" text="I'm working on it."></reply>
+			<reply id="R2" text="Can you please remind me, where's the Empire base?" next="M32"></reply>
+		</message>
+		<message id="M32" text="The Empire main base is located in sector VAR(EMPIRE_HQ_SECTOR)">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+		
+		<message id="M22" text="Good, I hope that now KeK can reclaim that asteroid belt.">
+			<reply id="R1" text="Did you find any information about the third piece?" next="M23"></reply>
+		</message>
+		<message id="M23" text="As a matter of fact I did. Though it's not 100% accurate.">
+			<reply id="R1" text="[SKIP]..." next="M24"></reply>
+		</message>
+		<message id="M24" text="I did a search in our database, and found some interesting old reports.">
+			<reply id="R1" text="What do they say?" next="M25"></reply>
+		</message>
+		<message id="M25" text="They say that we were going to check out an asteroid belt, ">
+			<reply id="R1" text="[SKIP]..." next="M26"></reply>
+		</message>
+		<message id="M26" text="that was supposed to have an asteroid with a HAK86 in it.">
+			<reply id="R1" text="[SKIP]..." next="M27"></reply>
+		</message>
+		<message id="M27" text="But when we arrived the belt was clean picked.">
+			<reply id="R1" text="So, who mined it?" next="M28"></reply>
+		</message>
+		<message id="M28" text="We scanned the sector and found trails of Emperial ships.">
+			<reply id="R1" text="So you think that Empire might have another crystal?" next="M29"></reply>
+		</message>
+		<message id="M29" text="I think they might. And this is the only info I was able to find.">
+			<reply id="R1" text="I guess I'll have to check it out then." next="M30"></reply>
+		</message>
+		<message id="M30" text="Their base is located in sector [SECTOR]">
+			<event id="SPAWN_EMPIRE_HQ" target="PLAYER"></event>
+			<event id="MAKE_EMPIRE_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
+			<event id="STOP_BEARS_HQ_QUEST" target="PLAYER"></event>
+			<event id="START_EMPIRE_CRYSTAL_QUEST" target="PLAYER"></event>
+			<event id="INC_CRYSTALS_COLLECTED" target="PLAYER"></event>
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+		<message id="M19" text="[PLAYER_NAME], Did you already get the second crystal?">
+			<reply id="R1" text="No, not yet." next="M20">
+				<condition type="SHIP_CARGO_ABSENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="CRYSTAL"></condition_param>
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="2"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R2" text="Yes, I have it." next="M22">
+				<condition type="SHIP_CARGO_PRESENT">
+					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
+					<condition_param system_model="CRYSTAL"></condition_param>
+					<condition_param target_player="1"></condition_param>
+					<condition_param qty="2"></condition_param>
+				</condition>
+			</reply>
+			<reply id="R3" text="Can you remind me please where is that asteroid belt?" next="M21"></reply>
+		</message>
+		<message id="M20" text="Well then get on to it!">
+			<reply id="R1" text="I'm working on it."></reply>
+		</message>
+		<message id="M21" text="The asteroid belt is located at sector VAR(B_HQ_SECTOR)">
+			<reply id="R1" text="Thanks."></reply>
+		</message>
+		
+		<message id="M1" text="Yes? Who are you and what do you want? Cant you see I'm busy here!">
+			<reply id="R1" text="[SKIP]..." next="M2"></reply>
+		</message>
+		<message id="M2" text="[ACTION]You hear a voice in the background: 6occ,  KTO-TO  Orpa6uJl  KOPOBAH  nr.8!">
+			<reply id="R1" text="[SKIP]..." next="M3"></reply>
+		</message>
+		<message id="M3" text="Shit! Another one of my caravans just got raided.">
+			<reply id="R1" text="[SKIP]..." next="M4"></reply>
+		</message>
+		<message id="M4" text="Unbelievable... This is the 5th one already!">
+			<reply id="R1" text="[SKIP]..." next="M5"></reply>
+		</message>
+		<message id="M5" text="And the worst part is, I have no idea who's doing this, and how!">
+			<reply id="R1" text="I think I might know what is going on." next="M6"></reply>
+		</message>
+		<message id="M6" text="Oh really? And who are you to know anything about this?">
+			<reply id="R1" text="Let me explain..." next="M7"></reply>
+		</message>
+		<message id="M7" text="[ACTION]The man skeptically raises his eyebrow but is listening">
+			<reply id="R1" text="[SKIP]Explain to him the deal with the stolen prototype" next="M8"></reply>
+		</message>
+		<message id="M8" text="So, you think that these pirates are using this prototype ship to raid my caravans?">
+			<reply id="R1" text="Yes, I think this is what's happening to them." next="M9"></reply>
+		</message>
+		<message id="M9" text="OK then, how do we stop it?">
+			<reply id="R1" text="The USC needs 3 HAK86 crystals. They think that you have them." next="M10"></reply>
+		</message>
+		<message id="M10" text="HAK86! Do you even know how rare this thing is?">
+			<reply id="R1" text="Yes, but it's the only way we can stop that ship." next="M11"></reply>
+		</message>
+		<message id="M11" text="In any case, I only have one piece. And a potential location for another one.">
+			<reply id="R1" text="Well, that's a start." next="M12_1">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="CR1_ADDED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+			<reply id="R2" text="Well, that's a start." next="M12_2">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="CR1_ADDED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+		</message>
+		<message id="M12_1" text="Alright, I will order to transfer the one I have to your ship.">
+			<event id="ADD_CRYSTAL" target="PLAYER"></event>
+			<event id="ADD_CR1" target="PLAYER"></event>		
+			<reply id="R1" text="Good, and the second one?" next="M13"></reply>
+		</message>
+		<message id="M12_2" text="Alright, I will order to transfer the one I have to your ship.">
+			<reply id="R1" text="Good, and the second one?" next="M13"></reply>
+		</message>
+		<message id="M13" text="I have information about an asteroid belt that has an asteroid with HAK86 inside.">
+			<reply id="R1" text="[SKIP]..." next="M14"></reply>
+		</message>
+		<message id="M14" text="But there's a problem, that belt was recently occupied by pirates.">
+			<reply id="R1" text="[SKIP]..." next="M15"></reply>
+		</message>
+		<message id="M15" text="If you can clear them out. You can get one more crystal.">
+			<reply id="R1" text="I think it's worth a shot. Where is it?" next="M16_1">
+				<condition type="SERVER_VARIABLE_ABSENT">
+					<condition_param var_name="B_HQ_SPAWNED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+			<reply id="R2" text="I think it's worth a shot. Where is it?" next="M16_2">
+				<condition type="SERVER_VARIABLE_PRESENT">
+					<condition_param var_name="B_HQ_SPAWNED"></condition_param>
+					<condition_param var_value="1"></condition_param>
+				</condition>			
+			</reply>
+		</message>
+		<message id="M16_1" text="The asteroid belt is located at sector [SECTOR]">
+			<event id="SPAWN_B_HQ" target="PLAYER"></event>
+			<event id="MAKE_B_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
+			<event id="START_BEARS_HQ_QUEST" target="PLAYER"></event>
+			<event id="STOP_KEK_SENSORS_QUEST" target="PLAYER"></event>
+			<reply id="R1" text="[SKIP]..." next="M17"></reply>
+		</message>
+		<message id="M16_2" text="The asteroid belt is located at sector VAR(B_HQ_SECTOR)">
+			<reply id="R1" text="[SKIP]..." next="M17"></reply>
+		</message>
+		<message id="M17" text="While you're at it, I will try to find some information on more crystals.">
+			<reply id="R1" text="Thanks." next="M18"></reply>
+		</message>
+		<message id="M18" text="Talk to me again once you've got the second crystal">
+		</message>
+		
+	</dialogue>
+</dialogues>

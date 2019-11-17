@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_NPC" name="Spawn boarder">
+		<event_param nonstop="1"></event_param>
+		<event_param random_npc="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_random_race="1"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_CLAIMER"></npc_ai>
+			<npc_ai type="NPC_BOARDER"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+				<npc_ai_param WORK_TIME="90"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	
+	<event type="SPAWN_NPC" name="Spawn plague boarder">
+		<event_param nonstop="1"></event_param>
+		<event_param random_npc="1"></event_param>
+		<spawn_npc>
+			<npc_param npc_qty="1"></npc_param>
+			<npc_param npc_name="[sick]"></npc_param>
+			<npc_param npc_random_name="1"></npc_param>
+			<npc_param npc_random_race="1"></npc_param>
+			<npc_param npc_spawn_at_home="1"></npc_param>
+			<npc_ai type="NPC_EVENT_TRIGGER">
+				<npc_ai_param TIMER="5"></npc_ai_param>
+				<npc_ai_param EVENT="plague_effect"></npc_ai_param>
+			</npc_ai>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_CLAIMER"></npc_ai>
+			<npc_ai type="NPC_BOARDER"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_FIREMAN"></npc_ai>
+			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+			<npc_ai type="NPC_WORKER">
+				<npc_ai_param SYSTEMS="WEAPONS_CONTROL:SHIELDS:PILOTING"></npc_ai_param>
+				<npc_ai_param WORK_TIME="90"></npc_ai_param>
+			</npc_ai>
+		</spawn_npc>
+	</event>
+	
+	<event type="SECTOR_ENTER" name="PIRATE_BOARDERS_SANY_L0">
+		<event_param level="0"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="2"></event_param>
+		<event_param max_event_qty="4"></event_param>
+		<event_param chain_event="Spawn boarder"></event_param>
+		<event_param trigger_message="INTRUDERS ON BOARD!"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	
+	<event type="SECTOR_ENTER" name="PIRATE_BOARDERS_SANY_L10">
+		<event_param level="10"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="3"></event_param>
+		<event_param max_event_qty="5"></event_param>
+		<event_param chain_event="Spawn boarder"></event_param>
+		<event_param trigger_message="INTRUDERS ON BOARD!"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+	
+	<event type="SECTOR_ENTER" name="PIRATE_BOARDERS_SANY_L14">
+		<event_param level="14"></event_param>
+		<event_param chance="40"></event_param>
+		<event_param nonstop="0"></event_param>
+		<event_param min_event_qty="4"></event_param>
+		<event_param max_event_qty="6"></event_param>
+		<event_param chain_event="Spawn boarder"></event_param>
+		<event_param trigger_message="INTRUDERS ON BOARD!"></event_param>
+		<condition type="SECTOR_SHIPS_ABSENT">
+			<condition_param qty="2"></condition_param>
+		</condition>
+	</event>		
+
+
+</events>

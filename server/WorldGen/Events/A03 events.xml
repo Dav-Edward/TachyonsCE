@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_A03">
+		<event_param nonstop="1"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param area_start="34:1"></event_param>
+		<event_param area_end="47:13"></event_param>
+		<event_param chain_event="A03_SPAWNED_VAR"></event_param>
+		<event_param chain_event="A03_SECTOR_VAR"></event_param>
+		<event_param chain_event="A03_SECTOR_UPDATE"></event_param>
+		<event_param chain_event="ADD_EMP_CANNON_TO_A03"></event_param>
+		<event_param chain_event="A03_SPAWN_SPIKE"></event_param>
+		<event_param chain_event="SPAWN_RANDOM_B_FORCE"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="SS_A03"></ship_param>
+			<ship_param free_doors="1"></ship_param>
+			<ship_param free_med="1"></ship_param>
+			<ship_param free_oxygen="1"></ship_param>
+			<ship_param safe_zone="1"></ship_param>
+			<ship_param free_sensors="1"></ship_param>
+			<ship_param ship_name="Science  Station  A03"></ship_param>
+			<ship_param ship_owner="THE_UNITY"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="20"></ship_param>
+			<ship_param max_health="30"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="0"></ship_param>
+			<ship_param max_drone_ammo="10"></ship_param>
+			<ship_param min_scrap="10"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
+			<ship_ai type="TRADER"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="PILOTING"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_param npc_dialogue="A03"></npc_param>
+				<npc_param npc_remote_dialogue="A03"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
+					<npc_ai_param SYSTEMS="WEAPONS_CONTROL"></npc_ai_param>
+					<npc_ai_param WORK_TIME="40"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="15"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="27"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="20"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="THREAT_SPIKE" name="A03_SPAWN_SPIKE">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param radius_min="20"></event_param>
+		<event_param radius_max="20"></event_param>
+		<event_param threat_min="14"></event_param>
+		<event_param threat_max="14"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="A03_SPAWNED_VAR">
+		<event_param var_name="A03_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="A03_SECTOR_VAR">
+		<event_param var_name="A03_SECTOR"></event_param>
+		<event_param var_value="[SECTOR]"></event_param>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="EMP_CANNON_COLLECTED">
+		<event_param var_name="EMP_CANNON_COLLECTED" /> 
+		<event_param var_value="1"/> 
+	</event>
+
+	<event type="MODIFY_SECTOR" name="A03_SECTOR_UPDATE">
+		<event_param nonstop="1"></event_param>
+		<event_param sector_type="30"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="ADD_EMP_CANNON_TO_PLAYER">
+		<event_param all_mob_ships="0"></event_param>
+		<event_param ignore_passenger_access="0"></event_param>
+		<event_param add_system_model_to_cargo="EMP_Cannon"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_EMP_CANNON_FROM_A03">
+		<event_param for_ship_name="Science  station  D31"></event_param>
+		<event_param remove_system_model_from_cargo="EMP_Cannon"></event_param>
+		<event_param safe_zone="0"></event_param>
+	</event>
+	<event type="MODIFY_SHIP" name="ADD_EMP_CANNON_TO_A03">
+		<event_param for_ship_name="Science  Station  A03"></event_param>
+		<event_param add_system_model_to_cargo="EMP_Cannon"></event_param>
+	</event>
+
+</events>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="SPAWN_SHIP" name="SPAWN_B_HQ">
+		<event_param nonstop="1"></event_param>
+		<event_param random_sector="1"></event_param>
+		<event_param area_start="51:71"></event_param>
+		<event_param area_end="61:83"></event_param>
+		<event_param chain_event="B_HQ_SPAWNED_VAR"></event_param>
+		<event_param chain_event="B_HQ_SECTOR_VAR"></event_param>
+		<event_param chain_event="B_HQ_SECTOR_UPDATE"></event_param>
+		<event_param chain_event="SPAWN_B_HQ_ASTEROIDS"></event_param>
+		<event_param chain_event="ADD_CRYSTAL_TO_B_HQ"></event_param>
+		<event_param chain_event="BHQ_SPAWN_SPIKE"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="BEARS_HQ"></ship_param>
+			<ship_param ship_owner="THE_BEARS"></ship_param>
+			<ship_param ship_name="The  Bears  mining  base"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_health="20"></ship_param>
+			<ship_param max_health="20"></ship_param>
+			<ship_param min_missile_ammo="10"></ship_param>
+			<ship_param max_missile_ammo="20"></ship_param>
+			<ship_param min_drone_ammo="0"></ship_param>
+			<ship_param max_drone_ammo="10"></ship_param>
+			<ship_param min_scrap="200"></ship_param>
+			<ship_param max_scrap="300"></ship_param>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="SENTRY"></ship_ai>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="45"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="67"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+			<spawn_npc_on_ship>
+				<npc_param npc_qty="1"></npc_param>
+				<npc_param npc_is_crew="1"></npc_param>
+				<npc_param npc_random_name="1"></npc_param>
+				<npc_param npc_race="HUMAN"></npc_param>
+				<npc_param npc_home_system="MEDICAL"></npc_param>
+				<npc_param npc_spawn_at_home="1"></npc_param>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
+				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
+				<npc_ai type="NPC_WORKER">
+					<npc_ai_param SYSTEMS="MEDICAL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SHIELDS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="OXYGEN"></npc_ai_param>
+					<npc_ai_param SYSTEMS="SENSORS"></npc_ai_param>
+					<npc_ai_param SYSTEMS="DOOR_CONTROL"></npc_ai_param>
+					<npc_ai_param SYSTEMS="REACTOR"></npc_ai_param>
+					<npc_ai_param SYSTEMS="CAPACITOR"></npc_ai_param>
+					<npc_ai_param WORK_TIME="60"></npc_ai_param>
+				</npc_ai>
+			</spawn_npc_on_ship>
+		</add_ship>
+	</event>
+	<event type="THREAT_SPIKE" name="BHQ_SPAWN_SPIKE">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param radius_min="25"></event_param>
+		<event_param radius_max="25"></event_param>
+		<event_param threat_min="8"></event_param>
+		<event_param threat_max="8"></event_param>
+	</event>
+
+	<event type="SPAWN_SHIP" name="SPAWN_B_HQ_ASTEROIDS">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="5"></event_param>
+		<event_param max_event_qty="10"></event_param>
+		<event_param chain_event="SECTOR_ASTEROIDS_SPAWNED"></event_param>
+		<add_ship>
+			<ship_param gen_ship_model="ASTEROID1"></ship_param>
+			<ship_param gen_ship_model="ASTEROID2"></ship_param>
+			<ship_param gen_ship_model="ASTEROID3"></ship_param>
+			<ship_param gen_ship_model="ASTEROID4"></ship_param>
+			<ship_param gen_ship_model="ASTEROID5"></ship_param>
+			<ship_param gen_ship_model="ASTEROID6"></ship_param>
+			<ship_param gen_ship_model="ASTEROID7"></ship_param>
+			<ship_param gen_ship_model="ASTEROID8"></ship_param>
+			<ship_param gen_ship_model="ASTEROID9"></ship_param>
+			<ship_param gen_ship_model="ASTEROID10"></ship_param>
+			<ship_param gen_ship_model="ASTEROID11"></ship_param>
+			<ship_param gen_ship_model="ASTEROID12"></ship_param>
+			<ship_param gen_ship_model="ASTEROID13"></ship_param>
+			<ship_param gen_ship_model="ASTEROID14"></ship_param>
+			<ship_param gen_ship_model="ASTEROID15"></ship_param>
+			<ship_param gen_ship_model="ASTEROID16"></ship_param>
+			<ship_param gen_ship_model="ASTEROID17"></ship_param>
+			<ship_param gen_ship_model="ASTEROID18"></ship_param>
+			<ship_param gen_ship_model="ASTEROID19"></ship_param>
+			<ship_param gen_ship_model="ASTEROID20"></ship_param>
+			<ship_param ship_qty="1"></ship_param>
+			<ship_param random_ship_name="Asteroid"></ship_param>
+			<ship_param random_pos="1"></ship_param>
+			<ship_param min_scrap="20"></ship_param>
+			<ship_param max_scrap="100"></ship_param>
+			<ship_param min_health="4"></ship_param>
+			<ship_param max_health="10"></ship_param>
+		</add_ship>
+	</event>
+
+	<event type="SERVER_VARIABLE" name="B_HQ_SPAWNED_VAR">
+		<event_param nonstop="1"></event_param>
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
+		<event_param var_name="B_HQ_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="B_HQ_SECTOR_VAR">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="B_HQ_SECTOR"></event_param>
+		<event_param var_value="[SECTOR]"></event_param>
+	</event>
+	
+	<event type="SERVER_VARIABLE" name="B_HQ_GUARDS_SPAWNED_VAR">
+		<event_param nonstop="1"></event_param>
+		<event_param var_name="B_HQ_GUARDS_SPAWNED"></event_param>
+		<event_param var_value="1"></event_param>
+	</event>
+	
+	<event type="MODIFY_SECTOR" name="B_HQ_SECTOR_UPDATE">
+		<event_param nonstop="1"></event_param>
+		<event_param sector_type="34"></event_param>
+		<event_param visible_to_all="1"></event_param>
+	</event>
+
+	<event type="MODIFY_SHIP" name="ADD_CRYSTAL_TO_B_HQ">
+		<event_param for_ship_name="The  Bears  mining  base"></event_param>
+		<event_param add_system_model_to_cargo="CRYSTAL"></event_param>
+	</event>	
+
+	<event type="SECTOR_EVENT" name="B_HQ_GUARDS">
+		<event_param level="0"></event_param>
+		<event_param chance="100"></event_param>
+		<event_param chain_event="SPAWN_B_FORCE_4INT"></event_param>
+		<event_param chain_event="B_HQ_GUARDS_SPAWNED_VAR"></event_param>
+		<event_param trigger_message="You find a guarded pirate mining base."></event_param>
+		<event_param broadcast_message="Sensors indicate that a new ship entered this sector"></event_param>
+		<condition type="SECTOR_SHIPS_PRESENT">
+			<condition_param ship_name="The  Bears  mining  base"></condition_param>
+			<condition_param owner="THE_BEARS"></condition_param>
+			<condition_param qty="1"></condition_param>
+		</condition>
+		<condition type="SERVER_VARIABLE_ABSENT">
+			<condition_param var_name="B_HQ_GUARDS_SPAWNED"></condition_param>
+			<condition_param var_value="1"></condition_param>
+		</condition>
+	</event>		
+	
+</events>
