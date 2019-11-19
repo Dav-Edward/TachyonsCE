@@ -42,7 +42,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 				<condition type="SECTOR_SHIPS_PRESENT">
-					<condition_param qty="3"></condition_param>
+					<condition_param ship_name="Pirate scavenger"></condition_param>
 				</condition>
 			</reply>
 			<reply id="R7" text="[SKIP][AUTO]" next="FIG1">
@@ -51,7 +51,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 				<condition type="SECTOR_SHIPS_ABSENT">
-					<condition_param qty="3"></condition_param>
+					<condition_param ship_name="Pirate scavenger"></condition_param>
 				</condition>
 			</reply>
 			<reply id="R8" text="[SKIP][AUTO]" next="HJ11">
@@ -300,7 +300,7 @@
 			<event id="SPAWN_TUT_PIRATE" target="PLAYER"></event>
 			<reply id="R1" text="I'm on it!"></reply>
 		</message>
-		<message id="INST13" text="Please hurry up and repair the ship." next="INST13">
+		<message id="INST13" text="Please hurry up and repair the ship.">
 			<reply id="R1" text="I'm on it."></reply>
 		</message>
 		

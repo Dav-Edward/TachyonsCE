@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<events>
+	<event type="MODIFY_SHIP" name="EJECT_ALL_CARGO" all_mob_ships="0" random_eject_direction="1" eject_all_cargo="1" /> //Ships or stations to eject all cargo
+
+	<event type="MODIFY_SHIP" name="EJECT_CRYSTAL" all_mob_ships="0" random_eject_direction="1" eject_system_model_from_cargo="CRYSTAL" /> //Ships or stations eject the HAK86 crystal if they have it
+</events>

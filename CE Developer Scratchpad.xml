@@ -1,0 +1,13 @@
+//Eject any cargo from station if there is any
+<ship_ai type="EVENT_TRIGGER" CREWLESS="1" TIMER="30">
+	<ship_ai_condition type="SECTOR_SHIPS_ABSENT" qty="2" />
+		<ship_ai_param EVENT="EJECT_ALL_CARGO" />
+		<ship_ai_condition type="SHIP_CARGO_PRESENT" target_player="0" qty="1" />
+</ship_ai>
+
+//Eject HAK86 crystal from station or ship if it somehow has it
+<ship_ai type="EVENT_TRIGGER" CREWLESS="1" TIMER="30">
+	<ship_ai_condition type="SECTOR_SHIPS_ABSENT" qty="2" />
+		<ship_ai_param EVENT="EJECT_CRYSTAL" />
+		<ship_ai_condition type="SHIP_CARGO_PRESENT" target_player="0" system_model="CRYSTAL" />
+</ship_ai>
