@@ -400,10 +400,10 @@
 			<reply id="R1" text="The station was attacked by pirates, they have stolen the D.F. Prototype." next="M4"></reply>
 		</message>
 		<message id="M4" text="What?! The D.F. Prototype is stolen? This is devastating!">
-			<reply id="R1" text="Communications were cut off, second prototype ship was the only way to deliver the news to you." next="M5"></reply>
+			<reply id="R1" text="All communications were cut off..." next="M5"></reply>
 		</message>
-		<message id="M5" text="What?! The D.F. Prototype is stolen? This is devastating!">
-			<reply id="R1" text="Communications were cut off, second prototype ship was the only way to deliver the news to you." next="M6"></reply>
+		<message id="M5" text="...">
+			<reply id="R1" text="The second prototype ship was the only way to deliver the news to you." next="M6"></reply>
 		</message>
 		<message id="M6" text="This is very horrifying. Can you imagine what those pirates can do with that ship?">
 			<reply id="R1" text="No, I don't. Can't we just send a fleet to find it and destroy it?" next="M7"></reply>
