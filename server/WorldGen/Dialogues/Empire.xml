@@ -31,7 +31,7 @@
 			</reply>
 		</message>
 		
-		<message id="M20" text="Greetings, [PLAYER_NAME]. Is the Scorchers base destroyed?">
+		<message id="M20" text="Greetings, [PLAYER_NAME]. Is the Scorchers' base destroyed?">
 			<reply id="R1" text="Not yet." next="M21">
 				<condition type="SHIP_CARGO_ABSENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
@@ -46,7 +46,7 @@
 					<condition_param qty="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="Can you remind me please where's the Scorchers base?" next="M22">
+			<reply id="R2" text="Please can you remind me where the Scorchers' base is?" next="M22">
 				<condition type="SHIP_CARGO_ABSENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
 					<condition_param system_model="S_EMBLEM"></condition_param>
@@ -76,7 +76,7 @@
 			</reply>
 		</message>
 		
-		<message id="M23" text="Excelent! Finally we can relax for a while.">
+		<message id="M23" text="Excellent! Finally we can relax for a while.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M24"></reply>
 		</message>
 		
@@ -90,19 +90,19 @@
 			<reply id="R1" text="Thank you."></reply>
 		</message>
 		
-		<message id="M22" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+		<message id="M22" text="The Scorchers' base is at sector VAR(S_HQ_SECTOR)">
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 
-		<message id="M22" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+		<message id="M22" text="The Scorchers' base is at sector VAR(S_HQ_SECTOR)">
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 		
 		<message id="M21" text="Well don't waste time.">
-			<reply id="R1" text="I'm workin on it."></reply>
+			<reply id="R1" text="I'm working on it."></reply>
 		</message>
 
-		<message id="M2" text="Greetings, I am EmpError leader of the androids. And who are you?">
+		<message id="M2" text="Greetings, I am EmpError, leader of the androids. And who are you?">
 			<reply id="R1" text="I am [PLAYER_NAME]." next="M3"></reply>
 		</message>
 		<message id="M3" text="So you are looking for a HAK86 crystal?">
@@ -123,13 +123,13 @@
 		<message id="M8" text="They call themselves The Scorchers. And they are quite some trouble.">
 			<reply id="R1" text="OK, how can I help?" next="M9"></reply>
 		</message>
-		<message id="M9" text="We are planning to wipe their entire base, but we need more ships.">
+		<message id="M9" text="We are planning to wipe out their entire base, but we need more ships.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M10"></reply>
 		</message>
-		<message id="M10" text="I see that your ship has quite some fire power.">
+		<message id="M10" text="I see that your ship has quite some fire-power.">
 			<reply id="R1" text="And you want me to fight the pirates?" next="M11"></reply>
 		</message>
-		<message id="M11" text="If you join my fleet in the upcomming battle, I will give you the crystall.">
+		<message id="M11" text="If you join my fleet in the upcoming battle, I will give you the crystal.">
 			<reply id="R1" text="It's a deal!" next="M12"></reply>
 		</message>
 		<message id="M12" text="Good. Then here's the plan.">
@@ -144,7 +144,7 @@
 		<message id="M15" text="Destroy their base and bring me their base emblem as proof.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M16"></reply>
 		</message>
-		<message id="M16" text="Then I will give you the crystall.">
+		<message id="M16" text="Then I will give you the crystal.">
 			<reply id="R1" text="OK." next="M17_1">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="S_HQ_SPAWNED"></condition_param>
@@ -158,16 +158,16 @@
 				</condition>			
 			</reply>
 		</message>
-		<message id="M17_1" text="The Scorchers base is at sector [SECTOR]">
+		<message id="M17_1" text="The Scorchers' base is at sector [SECTOR]">
 			<event id="SPAWN_S_HQ" target="PLAYER"></event>
 			<event id="MAKE_S_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
 			<reply id="R1" text="[SKIP][AUTO]" next="M18"></reply>
 		</message>
-		<message id="M17_2" text="The Scorchers base is at sector VAR(S_HQ_SECTOR)">
+		<message id="M17_2" text="The Scorchers' base is at sector VAR(S_HQ_SECTOR)">
 			<reply id="R1" text="[SKIP][AUTO]" next="M18"></reply>
 		</message>
 
-		<message id="M18" text="I have ordered several of my ships to follow you.  Go now!">
+		<message id="M18" text="I have ordered several of my ships to follow you. Go now!">
 			<event id="START_SCORCHERS_HQ_QUEST" target="PLAYER"></event>
 			<reply id="R1" text="We're on our way." next="M19"></reply>
 		</message>
@@ -228,7 +228,7 @@
 		<message id="M6" text="The EmpError wishes to speak with you.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M7"></reply>
 		</message>
-		<message id="M7" text="But you will have to come and talk to him in person.">
+		<message id="M7" text="But you will have to go and talk to him in person.">
 			<event id="GRANT_EMPIRE_ACCESS" target="PLAYER"></event>
 			<reply id="R1" text="Thank you."></reply>
 		</message>		

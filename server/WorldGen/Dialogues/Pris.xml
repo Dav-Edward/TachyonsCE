@@ -32,7 +32,7 @@
 			</reply>
 		</message>
 		
-		<message id="SA1" text="Thanks again for you help [PLAYER_NAME].">
+		<message id="SA1" text="Thanks again for you help, [PLAYER_NAME].">
 			<reply id="R1" text="You're welcome." next="SA2" any_condition="0">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="[SECTOR] PRISON_AWARDED"></condition_param>
@@ -112,7 +112,7 @@
 			</reply>
 		</message>
 		
-		<message id="SA1" text="Thanks again for you help [PLAYER_NAME].">
+		<message id="SA1" text="Thanks again for you help, [PLAYER_NAME].">
 			<reply id="R1" text="You're welcome." next="SA2" any_condition="0">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="[SECTOR] PRISON_AWARDED"></condition_param>
@@ -176,7 +176,7 @@
 	</dialogue>
 	<dialogue name="PRISON_GUARD_REMOTE">
 		<start>M0</start>
-		<message id="M0" text="[ACTION] - You have, reached the voicemail of [NPC_NAME].">
+		<message id="M0" text="[ACTION] - You have reached the voice-mail of [NPC_NAME].">
 			<reply id="R1" text="[SKIP][AUTO]" next="M1" any_condition="0"></reply>
 		</message>
 		<message id="M1" text="[ACTION] - I am not available at the moment. Please leave a message.">
@@ -254,10 +254,10 @@
 		<message id="AW1" text="Unable to establish a connection.">
 		</message>
 
-		<message id="SL_AT1" text="Ah it's you again, what do you want now?">
-			<reply id="SLEEPING" text="Well, I just wanted to make sure one more time, that everything is fine." next="SL_AT2" any_condition="0"></reply>
+		<message id="SL_AT1" text="Ah, it's you again. What do you want now?">
+			<reply id="SLEEPING" text="Well, I just wanted to make sure, one more time, that everything is fine." next="SL_AT2" any_condition="0"></reply>
 		</message>
-		<message id="SL_AT2" text="I told you, we are fine. Now stop wasting my time!">
+		<message id="SL_AT2" text="I told you, we are fine. Now, stop wasting my time!">
 			<reply id="SLEEPING" text="[SKIP](Station guard background) Check if warden knows the basic security protocols." next="SL_AT3" any_condition="0"></reply>
 			<reply id="SLEEPING2" text="Alright, alright, sorry." any_condition="0"></reply>
 		</message>
@@ -267,16 +267,16 @@
 		<message id="SL_AT4" text="Is there anything else you need?">
 			<random_event>0</random_event>
 			<event id="TALKED_TO_PRISON_WARDEN_2" target="PLAYER"></event>
-			<reply id="SLEEPING" text="Nothing else thank you. We will prociede on our way." next="SL_AT5" any_condition="0"></reply>
+			<reply id="SLEEPING" text="Nothing else, thank you. We will proceed on our way." next="SL_AT5" any_condition="0"></reply>
 		</message>
 	
 		<message id="SL1" text="Yeah, who is this?">
-			<reply id="SLEEPING" text="Hello, our ship is detecting a distress call incomming from this sector." next="SL2" any_condition="0"></reply>
+			<reply id="SLEEPING" text="Hello, our ship is detecting a distress call incoming from this sector." next="SL2" any_condition="0"></reply>
 		</message>
 		<message id="SL2" text="My name is [NPC_NAME], and I am in charge of this prison.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL3" any_condition="0"></reply>
 		</message>
-		<message id="SL3" text="We have no imergencies and did not send any disstress calls.">
+		<message id="SL3" text="We have no emergency, and did not send any distress calls.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL4" any_condition="0"></reply>
 		</message>
 		<message id="SL4" text="So it must be some mistake.">
@@ -373,10 +373,10 @@
 		<message id="AW1" text="Follow us as soon as we extract our agent.">
 		</message>
 
-		<message id="SL1" text="At last! Someone had finally answered our call.">
+		<message id="SL1" text="At last! Someone has finally answered our call.">
 			<reply id="SLEEPING" text="Who are you and what is going on here?" next="SL2" any_condition="0"></reply>
 		</message>
-		<message id="SL2" text="Thre's no time for details, but situation is the following:">
+		<message id="SL2" text="There's no time for details, but the situation is the following:">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL3" any_condition="0"></reply>
 		</message>
 		<message id="SL3" text="This station is a classified prison for some of the most dangerous criminals.">
@@ -385,13 +385,13 @@
 		<message id="SL4" text="There was a prison break and the convicts have taken control of the station.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL5" any_condition="0"></reply>
 		</message>
-		<message id="SL5" text="Former guards are now held up in prison cells. As is one of our special agents.">
+		<message id="SL5" text="Former guards are now held in the prison cells, as is one of our special agents.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL6" any_condition="0"></reply>
 		</message>
 		<message id="SL6" text="I'm guessing he was the one who told you how to contact us.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL7" any_condition="0"></reply>
 		</message>
-		<message id="SL7" text="That agent has some information that is verry important to us.">
+		<message id="SL7" text="That agent has some information that is very important to us.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL8" any_condition="0"></reply>
 		</message>
 		<message id="SL8" text="We need your help to extract him.">
@@ -419,7 +419,7 @@
 			<event id="TALKED_TO_PRISON_AGENTS" target="PLAYER"></event>
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL12" any_condition="0"></reply>
 		</message>
-		<message id="SL12" text="Then will use our teleport to send over some weapons to arm the guards.">
+		<message id="SL12" text="Then will use our teleporter to send over some weapons to arm the guards.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL13" any_condition="0"></reply>
 		</message>
 		<message id="SL13" text="After that we will teleport out our agent to this ship.">

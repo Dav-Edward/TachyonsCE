@@ -10,14 +10,14 @@
 			<reply id="R1" text="[SKIP][AUTO]" next="M2"></reply>
 		</message>
 
-		<message id="M3" text="Unfortunately all the employees we had at this station are already hired.">
+		<message id="M3" text="Unfortunately, all the employees we had at this station are already hired.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M4"></reply>
 		</message>
 		<message id="M4" text="Try checking on another trading station, we have offices in most of them.">
 			<reply id="R1" text="Thank you."></reply>
 		</message>
 			
-		<message id="M2" text=" My name is [NPC_NAME]. How can I help you?">
+		<message id="M2" text="My name is [NPC_NAME]. How can I help you?">
 			<reply id="R1" text="Hello. I would like to hire an engineer." next="M5">
 				<condition type="SERVER_VARIABLE_SMALLER">
 					<condition_param var_name="[SECTOR] SLAVES_SOLD"></condition_param>
