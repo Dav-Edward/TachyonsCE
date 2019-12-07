@@ -523,7 +523,7 @@
 
 	<dialogue name="Mechanic">
 		<start>M0</start>
-		<message id="M0" text="How can I help you [PLAYER_NAME]?">
+		<message id="M0" text="How can I help you, [PLAYER_NAME]?">
 			<reply id="R5" text="[ACTION]Spawn Clone" next="SPAWN_CLONE">
 			</reply>
 			<reply id="R6" text="[ACTION]Spawn StarGate operator" next="SPAWN_STAR_GATE_OPERATOR">

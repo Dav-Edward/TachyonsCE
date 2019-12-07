@@ -3,7 +3,7 @@
 	<dialogue name="BISHOP">
 		<start>M0</start>
 		<message id="M0" text="Yes?">
-			<reply id="R1" text="Hi. you are [NPC_NAME], right?" next="M1">
+			<reply id="R1" text="Hi. You are [NPC_NAME], right?" next="M1">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="SENSORS_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -17,7 +17,7 @@
 					<condition_param var_value="3"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="Hello [NPC_NAME]." next="M9" any_condition="1">
+			<reply id="R2" text="Hello, [NPC_NAME]." next="M9" any_condition="1">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="EMPIRE_CRYSTAL_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -31,7 +31,7 @@
 					<condition_param var_value="3"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R4" text="Hello [NPC_NAME]. How goes the work on the Super sensors?" next="M16">
+			<reply id="R4" text="Hello, [NPC_NAME]. How goes the work on the Super sensors?" next="M16">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="S_EMP_PICKUP_QUEST"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -47,7 +47,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R7" text="Can you remind me please where the KeK headquarters are located?" next="M11">
+			<reply id="R7" text="Can you please remind me where the KeK headquarters are located?" next="M11">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="KEK_LAST_RAIDED_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -68,16 +68,16 @@
 		<message id="M19" text="The sensors will switch to trailing mode.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M20"></reply>
 		</message>
-		<message id="M20" text="In this mode, on the sector map you will see the hyperspace entry points.">
+		<message id="M20" text="In this mode, the sector map will show you the hyperspace entry points.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M21"></reply>
 		</message>
-		<message id="M21" text="Focus on one of the entry points so that it's vissible in the target map screen.">
+		<message id="M21" text="Focus on one of the entry points so that it's visible in the target map screen.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M22"></reply>
 		</message>
-		<message id="M22" text="On the target map screen you will se the details of that entry point.">
+		<message id="M22" text="On the target map screen you will see the details of that entry point.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M23"></reply>
 		</message>
-		<message id="M23" text="What ship left this trail and where it jumped.">
+		<message id="M23" text="What ship left this trail, and where it jumped to.">
 			<reply id="R1" text="Thanks. Where should I start looking for the DF prototype?" next="M24">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="START_KEK_LAST_RAIDED_QUEST"></condition_param>
@@ -91,7 +91,7 @@
 				</condition>
 			</reply>
 		</message>
-		<message id="M24" text="I think it would be best to ask at KeK, where their last caravan was raided.">
+		<message id="M24" text="I think it would be best to ask at KeK; where their last caravan was raided.">
 			<event id="STOP_FINAL_PREP_QUEST" target="PLAYER"></event>
 			<event id="ADD_SUPER_SENSORS" target="PLAYER"></event>
 			<event id="START_KEK_LAST_RAIDED_QUEST" target="PLAYER"></event>
@@ -100,14 +100,14 @@
 
 		<message id="M16" text="I'm working on it."></message>
 		
-		<message id="M9" text="Hello [PLAYER_NAME].">
+		<message id="M9" text="Hello, [PLAYER_NAME].">
 			<reply id="R1" text="I'm still looking for those crystals." next="M10">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="CRYSTALS_COLLECTED"></condition_param>
 					<condition_param var_value="3"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="Can you remind me please where the KeK headquarters are located?" next="M11">
+			<reply id="R2" text="Can you please remind me where the KeK headquarters are located?" next="M11">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="KEK_SENSORS_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -133,7 +133,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R4" text="The HAK86 crystals are transfered to the USC station." next="M13">
+			<reply id="R4" text="The HAK86 crystals have been transferred to the USC station." next="M13">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="CRYSTALS_COLLECTED"></condition_param>
 					<condition_param var_value="3"></condition_param>
@@ -163,7 +163,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R6" text="You've finished the Super Sensors System?" next="M17">
+			<reply id="R6" text="You've finished the Super Sensors system?" next="M17">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="FINAL_PREP_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -171,10 +171,10 @@
 			</reply>
 		</message>
 		
-		<message id="M13" text="Excelent! We now have everything we need to build the super sensors.">
+		<message id="M13" text="Excellent! We now have everything we need to build the Super Sensors.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M14"></reply>
 		</message>
-		<message id="M14" text="This will take some time, contact me some time later.">
+		<message id="M14" text="This will take some time, contact me again later on.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M15"></reply>
 		</message>
 		<message id="M15" text="By the way, Darius was looking for you, please contact him.">
@@ -197,10 +197,10 @@
 		<message id="M1" text="Yes. And you must be [PLAYER_NAME]. Darius messaged that you will contact me.">
 			<reply id="R1" text="Yes." next="M2"></reply>
 		</message>
-		<message id="M2" text="So, I'm guessing we are finally going to try and build the super sensors...">
+		<message id="M2" text="So, I'm guessing we are finally going to try and build the Super Sensors...">
 			<reply id="R1" text="That's right." next="M3"></reply>
 		</message>
-		<message id="M3" text="Well, we have all the parts I will need, right here at USC.">
+		<message id="M3" text="Well, we have all the parts I will need right here at USC.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M4"></reply>
 		</message>
 		<message id="M4" text="The only thing we're missing are the HAK86 crystals.">
@@ -212,7 +212,7 @@
 		<message id="M6" text="I would suggest that you visit the KeK trading company first.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M7"></reply>
 		</message>
-		<message id="M7" text="If im not mistaking they might have some of it.">
+		<message id="M7" text="If I'm not mistaken they have some of it.">
 			<reply id="R1" text="Where are they located?" next="M8"></reply>
 		</message>
 		<message id="M8" text="The KeK headquarters are located at sector [SECTOR]">
@@ -338,15 +338,15 @@
 		<message id="M43" text="Good luck to you! You are our only hope.">
 		</message>
 		
-		<message id="M40" text="Excelent! I see you have retrieved the EMP Cannon.">
+		<message id="M40" text="Excellent! I see you have retrieved the EMP Cannon.">
 			<event id="EMP_CANNON_COLLECTED" target="PLAYER"></event>
-			<reply id="R1" text="Yes we have it." next="M41">
+			<reply id="R1" text="Yes, we have it." next="M41">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="FINAL_PREP_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="Yes we have it." next="M42">
+			<reply id="R2" text="Yes, we have it." next="M42">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="FINAL_PREP_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -363,7 +363,7 @@
 			<reply id="R1" text="OK."></reply>
 		</message>		
 		
-		<message id="M38" text="Hello [PLAYER_NAME]. Have you retrieved the EMP Cannon?">
+		<message id="M38" text="Hello, [PLAYER_NAME]. Have you retrieved the EMP Cannon?">
 			<reply id="R1" text="Not yet. I'm working on it."></reply>
 			<reply id="R2" text="Please remind me where is A03 station located." next="M39"></reply>
 		</message>		
@@ -372,9 +372,9 @@
 		</message>		
 
 		<message id="M34" text="Ah! [PLAYER_NAME]! Finally! I have great news!!!">
-			<reply id="R1" text="What hapened?" next="M35"></reply>
+			<reply id="R1" text="What happened?" next="M35"></reply>
 		</message>		
-		<message id="M35" text="We have found a way to disable the shields on D.F. Prototype!">
+		<message id="M35" text="We have found a way to disable the shields on the D.F. Prototype!">
 			<reply id="R1" text="Really, How?" next="M36"></reply>
 		</message>
 		<message id="M36" text="We were able to build an EMP Cannon that can disable any shields.">
@@ -393,7 +393,7 @@
 		<message id="M1" text="Who are you and why are you flying one of our secret prototype ships?">
 			<reply id="R1" text="[SKIP][AUTO]" next="M2"></reply>
 		</message>
-		<message id="M2" text="Explain yourself immediately or I'm calling in reinforcements!">
+		<message id="M2" text="Explain yourself immediately, or I'm calling in reinforcements!">
 			<reply id="R1" text="My name is [PLAYER_NAME], I am one of the guards at D31." next="M3"></reply>
 		</message>
 		<message id="M3" text="Oh no, did the Empire attack us? Tell me what happened?">
@@ -405,7 +405,7 @@
 		<message id="M5" text="...">
 			<reply id="R1" text="The second prototype ship was the only way to deliver the news to you." next="M6"></reply>
 		</message>
-		<message id="M6" text="This is very horrifying. Can you imagine what those pirates can do with that ship?">
+		<message id="M6" text="This is horrifying! Can you imagine what those pirates can do with that ship?">
 			<reply id="R1" text="No, I don't. Can't we just send a fleet to find it and destroy it?" next="M7"></reply>
 		</message>
 		<message id="M7" text="You see, there are two problems with that ship.">
@@ -417,13 +417,13 @@
 		<message id="M9" text="As you probably know, when a ship goes into hyper space it leaves a trail behind.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M10"></reply>
 		</message>
-		<message id="M10" text="And with a good enough sensors system you can detect this trail.">
+		<message id="M10" text="And with a good enough sensor system you can detect this trail.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M11"></reply>
 		</message>
 		<message id="M11" text="More powerful hyper drives leave a less detectable trail behind.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M12"></reply>
 		</message>
-		<message id="M12" text="So you need a more powerful sensors system to detect it.">
+		<message id="M12" text="So you need a more powerful sensor system to detect it.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M13"></reply>
 		</message>
 		<message id="M13" text="The D.F. Prototype has the newest hyper drive prototype.">
@@ -462,10 +462,10 @@
 		<message id="M24" text="Exactly! That's why we have to find a way to destroy it, ASAP.">
 			<reply id="R1" text="Right..." next="M25"></reply>
 		</message>
-		<message id="M25" text="And apparently, the second prototype ship is now our only hope now.">
+		<message id="M25" text="And apparently, the second prototype ship is now our only hope.">
 			<reply id="R1" text="Why?" next="M26"></reply>
 		</message>
-		<message id="M26" text="Because only it has the potential to standup to the D.F. Prototype and survive.">
+		<message id="M26" text="Because only it has the potential to stand up to the D.F. Prototype and survive.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M27"></reply>
 		</message>
 		<message id="M27" text="It is our older prototype ship, it has very high upgrading capabilities.">
@@ -474,19 +474,19 @@
 		<message id="M28" text="The systems on it can be upgraded many times.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M29"></reply>
 		</message>
-		<message id="M29" text="Unlike our other common ships. So I guess your'e in for the ride.">
+		<message id="M29" text="Unlike our other common ships. So I guess you're in for a ride.">
 			<reply id="R1" text="So what do we do now?" next="M30"></reply>
 		</message>
-		<message id="M30" text="Please speak to doctor Bishop, he is our sensors specialist.">
+		<message id="M30" text="Please speak to Dr. Bishop, he is our sensors specialist.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M31"></reply>
 		</message>
 		<message id="M31" text="He can tell you more about his super sensors theory.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M32"></reply>
 		</message>
-		<message id="M32" text="Meanwhile I will arrange the meeting with other scientists.">
+		<message id="M32" text="Meanwhile, I will arrange a meeting with the other scientists.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M33"></reply>
 		</message>
-		<message id="M33" text="Hopefully we will be able to figure out how to break through the super shields.">
+		<message id="M33" text="Hopefully, we will be able to figure out how to break through the super shields.">
 			<event id="STOP_HJ_TUTORIAL" target="PLAYER"></event>
 			<event id="START_SENSORS_QUEST" target="PLAYER"></event>
 			<reply id="R1" text="OK."></reply>

@@ -35,21 +35,21 @@
 			<reply id="R1" text="We'll see about that."></reply>
 		</message>
 	
-		<message id="M3" text="Oh I hope you survive what's comming next pal.  >:D ">
+		<message id="M3" text="Oh, I hope you survive what's coming next, pal. >:D">
 			<event id="SECTOR_SLAVER_PROVOKED" target="PLAYER"></event>
 		</message>
 		
-		<message id="M4" text="Sorry pal, we're all out."></message>
+		<message id="M4" text="Sorry, pal, we're all out."></message>
 		
 		<message id="M2" text="Are you here to buy one of the slaves?">
 			<reply id="R1" text="I'm here to remove you from existence you slaver scum!" next="M3"></reply>
-			<reply id="R2" text="Yes I would like to buy one." next="M4">
+			<reply id="R2" text="Yes, I would like to buy one." next="M4">
 				<condition type="SERVER_VARIABLE_BIGGER">
 					<condition_param var_name="[SECTOR] [MOB_ID] SLAVES_SOLD"></condition_param>
 					<condition_param var_value="2"></condition_param>
 				</condition>				
 			</reply>
-			<reply id="R3" text="Yes I would like to buy one." next="M5">
+			<reply id="R3" text="Yes, I would like to buy one." next="M5">
 				<condition type="SERVER_VARIABLE_SMALLER">
 					<condition_param var_name="[SECTOR] [MOB_ID] SLAVES_SOLD"></condition_param>
 					<condition_param var_value="3"></condition_param>
@@ -58,7 +58,7 @@
 		</message>
 		
 		<message id="M5" text="It's 300 for 1 slave.">
-			<reply id="R1" text="Alright, I'm transfering the scrap." next="M7">
+			<reply id="R1" text="Alright, I'm transferring the scrap." next="M7">
 				<condition type="SHIP_SCRAP_PRESENT">
 					<condition_param target_player="1"></condition_param>
 					<condition_param qty="300"></condition_param>

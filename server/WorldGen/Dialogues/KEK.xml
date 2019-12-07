@@ -39,10 +39,10 @@
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 		
-		<message id="M33" text="Hello again [PLAYER_NAME], were you able to find the last crystal?">
-			<reply id="R1" text="Hello [NPC_NAME], yes, we now have averything we need to stop that pirate ship." next="M34"></reply>
+		<message id="M33" text="Hello again, [PLAYER_NAME], were you able to find the last crystal?">
+			<reply id="R1" text="Hello, [NPC_NAME]. Yes, we now have everything we need to stop that pirate ship." next="M34"></reply>
 		</message>
-		<message id="M34" text="That's good news. Because if you don't stop it, my business will be ruined.">
+		<message id="M34" text="That's good news, because if you don't stop it, my business will be ruined.">
 			<reply id="R1" text="Can you tell me where was the last caravan raided?" next="M35"></reply>
 		</message>
 		<message id="M35" text="Sure, last caravan was raided in sector [SECTOR]">
@@ -55,7 +55,7 @@
 		<message id="M36" text="Good luck.  Turn those bastards to space dust!"></message>
 
 
-		<message id="M31" text="Hi [PLAYER_NAME]. Hope the search for the third crystal is going well.">
+		<message id="M31" text="Hi, [PLAYER_NAME]. Hope the search for the third crystal is going well.">
 			<reply id="R1" text="I'm working on it."></reply>
 			<reply id="R2" text="Can you please remind me, where's the Empire base?" next="M32"></reply>
 		</message>
@@ -78,10 +78,10 @@
 		<message id="M26" text="that was supposed to have an asteroid with a HAK86 in it.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M27"></reply>
 		</message>
-		<message id="M27" text="But when we arrived the belt was clean picked.">
+		<message id="M27" text="But when we arrived the belt was picked clean.">
 			<reply id="R1" text="So, who mined it?" next="M28"></reply>
 		</message>
-		<message id="M28" text="We scanned the sector and found trails of Emperial ships.">
+		<message id="M28" text="We scanned the sector and found trails of Imperial ships.">
 			<reply id="R1" text="So you think that Empire might have another crystal?" next="M29"></reply>
 		</message>
 		<message id="M29" text="I think they might. And this is the only info I was able to find.">
@@ -95,7 +95,7 @@
 			<event id="INC_CRYSTALS_COLLECTED" target="PLAYER"></event>
 			<reply id="R1" text="Thanks."></reply>
 		</message>
-		<message id="M19" text="[PLAYER_NAME], Did you already get the second crystal?">
+		<message id="M19" text="[PLAYER_NAME], did you already get the second crystal?">
 			<reply id="R1" text="No, not yet." next="M20">
 				<condition type="SHIP_CARGO_ABSENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
@@ -112,7 +112,7 @@
 					<condition_param qty="2"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R3" text="Can you remind me please where is that asteroid belt?" next="M21"></reply>
+			<reply id="R3" text="Please can you remind me where that asteroid belt is?" next="M21"></reply>
 		</message>
 		<message id="M20" text="Well then get on to it!">
 			<reply id="R1" text="I'm working on it."></reply>
@@ -121,7 +121,7 @@
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 		
-		<message id="M1" text="Yes? Who are you and what do you want? Cant you see I'm busy here!">
+		<message id="M1" text="Yes? Who are you and what do you want? Can't you see I'm busy here!">
 			<reply id="R1" text="[SKIP][AUTO]" next="M2"></reply>
 		</message>
 		<message id="M2" text="[ACTION]You hear a voice in the background: 6occ,  KTO-TO  Orpa6uJl  KOPOBAH  nr.8!">
@@ -165,21 +165,21 @@
 				</condition>			
 			</reply>
 		</message>
-		<message id="M12_1" text="Alright, I will order to transfer the one I have to your ship.">
+		<message id="M12_1" text="Alright, I will order a transfer of the one I have to your ship.">
 			<event id="ADD_CRYSTAL" target="PLAYER"></event>
 			<event id="ADD_CR1" target="PLAYER"></event>		
 			<reply id="R1" text="Good, and the second one?" next="M13"></reply>
 		</message>
-		<message id="M12_2" text="Alright, I will order to transfer the one I have to your ship.">
+		<message id="M12_2" text="Alright, I will order a transfer of the one I have to your ship.">
 			<reply id="R1" text="Good, and the second one?" next="M13"></reply>
 		</message>
 		<message id="M13" text="I have information about an asteroid belt that has an asteroid with HAK86 inside.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M14"></reply>
 		</message>
-		<message id="M14" text="But there's a problem, that belt was recently occupied by pirates.">
+		<message id="M14" text="But there's a problem; that belt was recently occupied by pirates.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M15"></reply>
 		</message>
-		<message id="M15" text="If you can clear them out. You can get one more crystal.">
+		<message id="M15" text="If you can clear them out, you can get one more crystal.">
 			<reply id="R1" text="I think it's worth a shot. Where is it?" next="M16_1">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="B_HQ_SPAWNED"></condition_param>
