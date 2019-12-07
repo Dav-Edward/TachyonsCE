@@ -68,7 +68,7 @@
 		<message id="M19" text="The sensors will switch to trailing mode.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M20"></reply>
 		</message>
-		<message id="M20" text="In this mode, the sector map will show you the hyperspace entry points.">
+		<message id="M20" text="In this mode, the sector map will show you the Hyper-Space entry points.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M21"></reply>
 		</message>
 		<message id="M21" text="Focus on one of the entry points so that it's visible in the target map screen.">
@@ -414,19 +414,19 @@
 		<message id="M8" text="First is that it's near impossible to track it down.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M9"></reply>
 		</message>
-		<message id="M9" text="As you probably know, when a ship goes into hyper space it leaves a trail behind.">
+		<message id="M9" text="As you probably know, when a ship goes into Hyper-Space it leaves a trail behind.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M10"></reply>
 		</message>
-		<message id="M10" text="And with a good enough sensor system you can detect this trail.">
+		<message id="M10" text="And with a good enough Sensors system you can detect this trail.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M11"></reply>
 		</message>
-		<message id="M11" text="More powerful hyper drives leave a less detectable trail behind.">
+		<message id="M11" text="More powerful HyperDrives leave a less detectable trail behind.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M12"></reply>
 		</message>
-		<message id="M12" text="So you need a more powerful sensor system to detect it.">
+		<message id="M12" text="So you need a more powerful Sensors system to detect it.">
 			<reply id="R1" text="[SKIP][AUTO]" next="M13"></reply>
 		</message>
-		<message id="M13" text="The D.F. Prototype has the newest hyper drive prototype.">
+		<message id="M13" text="The D.F. Prototype has the newest HyperDrive prototype.">
 			<reply id="R1" text="[SKIP]..." next="M14"></reply>
 		</message>
 		<message id="M14" text="And I can assure you, there is no sensors system that can detect its trail.">

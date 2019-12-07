@@ -108,16 +108,16 @@
 		<message id="HJ3" text="You can see the glowing circles indicating what sectors you can reach.">
 			<reply id="R1" text="[SKIP][AUTO]" next="HJ4"></reply>
 		</message>
-		<message id="HJ4" text="The range depends on your Hyper Drive power and level and the class of your ship.">
+		<message id="HJ4" text="The range depends on your HyperDrive power and level and the class of your ship.">
 			<reply id="R1" text="[SKIP][AUTO]" next="HJ5"></reply>
 		</message>
-		<message id="HJ5" text="On the bottom of the screen you can see the Hyper Drive power bars and energy level.">
+		<message id="HJ5" text="On the bottom of the screen you can see the HyperDrive power bars and energy level.">
 			<reply id="R1" text="[SKIP][AUTO]" next="HJ6"></reply>
 		</message>
-		<message id="HJ6" text="Add some power to the Hyper Drive and see the energy bar filling up.">
+		<message id="HJ6" text="Add some power to the HyperDrive and see the energy bar filling up.">
 			<reply id="R1" text="[SKIP]..." next="HJ7"></reply>
 		</message>
-		<message id="HJ7" text="As the Hyper drive charges more energy, you will see glowing circles getting blue color.">
+		<message id="HJ7" text="As the HyperDrive charges more energy, you will see glowing circles getting blue color.">
 			<reply id="R1" text="[SKIP][AUTO]" next="HJ8"></reply>
 		</message>
 		<message id="HJ8" text="Blue circles indicate the sectors that you can jump to with current stored energy.">
@@ -133,7 +133,7 @@
 		<message id="FIG1" text="Great work destroying those pirates, [PLAYER_NAME]!">
 			<reply id="R1" text="Yeah, that wasn't so hard." next="FIG2"></reply>
 		</message>
-		<message id="FIG2" text="I've finished assembling the new HYPER DRIVE for you.">
+		<message id="FIG2" text="I've finished assembling the new HyperDrive for you.">
 			<reply id="R1" text="That's great news!" next="FIG3" any_condition="1">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="PLAYER_CREW_SPAWNED"></condition_param>
@@ -173,7 +173,7 @@
 			<event id="SPAWN_NPC_CREW_3" target="PLAYER"></event>
 			<reply id="R1" text="That's even better!" next="FIG3"></reply>
 		</message>
-		<message id="FIG3" text="I will send the new Hyper-drive to your ship's cargo hold.">
+		<message id="FIG3" text="I will send the new HyperDrive to your ship's cargo hold.">
 			<reply id="R1" text="Thanks." next="FIG4_1">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="USC_SPAWNED"></condition_param>
@@ -187,12 +187,12 @@
 				</condition>			
 			</reply>
 		</message>
-		<message id="FIG4_1" text="Install the Hyper Drive and travel to the USC station in sector [SECTOR].">
+		<message id="FIG4_1" text="Install the HyperDrive and travel to the USC station in sector [SECTOR].">
 			<event id="SPAWN_USC" target="PLAYER"></event>
 			<event id="MAKE_USC_SECTOR_EXPLORED" target="PLAYER"></event>
 			<reply id="R1" text="[SKIP][AUTO]" next="FIG5"></reply>
 		</message>
-		<message id="FIG4_2" text="Install the Hyper Drive and travel to the USC station in sector VAR(USC_SECTOR).">
+		<message id="FIG4_2" text="Install the HyperDrive and travel to the USC station in sector VAR(USC_SECTOR).">
 			<reply id="R1" text="[SKIP][AUTO]" next="FIG5"></reply>
 		</message>
 		<message id="FIG5" text="There you will need to find Dr. Darius Graydon, and tell him what happened here.">
@@ -233,7 +233,7 @@
 		<message id="SHOOT7" text="To shoot, you need to power the weapon, and let it charge to full.">
 			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT8"></reply>
 		</message>
-		<message id="SHOOT8" text="Then click a spot on the target map, and a cross-hair will appear there.">
+		<message id="SHOOT8" text="Then click a spot on the target map, and a crosshair will appear there.">
 			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT9"></reply>
 		</message>
 		<message id="SHOOT9" text="Then you just press the FIRE button and it's done.">
@@ -343,8 +343,8 @@
 			<reply id="R1" text="OK. Thanks."></reply>
 		</message>
 		
-		<message id="LJ8" text="Hi, [PLAYER_NAME]. Did you recover the Hyper Drive parts?">
-			<reply id="R0" text="Yes. All Hyper Drive parts have been transferred to the station." next="LJ18">
+		<message id="LJ8" text="Hi, [PLAYER_NAME]. Did you recover the HyperDrive parts?">
+			<reply id="R0" text="Yes. All HyperDrive parts have been transferred to the station." next="LJ18">
 				<condition type="SHIP_CARGO_PRESENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
 					<condition_param system_model="TACSTAB"></condition_param>
@@ -537,7 +537,7 @@
 		<message id="CL10" text="The Second prototype ship is near death. You'll never be able to reach USC like this.">
 			<reply id="R1" text="[SKIP][AUTO]" next="CL11"></reply>
 		</message>
-		<message id="CL11" text="Not to mention that the Hyper drive is missing completely!">
+		<message id="CL11" text="Not to mention that the HyperDrive is missing completely!">
 			<reply id="R1" text="What do we do then?" next="CL12"></reply>
 		</message>
 		<message id="CL12" text="Well at least the engine is intact.">
@@ -561,7 +561,7 @@
 		<message id="CL17" text="I want you to pilot the second prototype ship and recover these parts for me.">
 			<reply id="R1" text="[SKIP]..." next="CL18"></reply>
 		</message>
-		<message id="CL18" text="With them I believe I will be able to assemble a new Hyper drive for you.">
+		<message id="CL18" text="With them I believe I will be able to assemble a new HyperDrive for you.">
 			<reply id="R1" text="[SKIP][AUTO]" next="CL19"></reply>
 		</message>
 		<message id="CL19" text="Look for me in the LASER WEAPON room when you are done.">
