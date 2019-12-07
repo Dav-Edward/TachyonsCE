@@ -41,7 +41,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R6" text="Can you please remind me ho to track down ships?" next="M18">
+			<reply id="R6" text="Can you please remind me how to track down ships?" next="M18">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="KEK_LAST_RAIDED_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -55,27 +55,27 @@
 			</reply>
 		</message>
 		
-		<message id="M17" text="Yes. With It, you should be able to track down the VAR(DF_NAME).">
-			<reply id="R1" text="[SKIP]..." next="M17_2"></reply>
+		<message id="M17" text="Yes. With it, you should be able to track down the VAR(DF_NAME).">
+			<reply id="R1" text="[SKIP][AUTO]" next="M17_2"></reply>
 		</message>
 		<message id="M17_2" text="I will send the Super sensors to your ship. Don't forget to install it.">
 			<reply id="R1" text="How do I track down a ship with the sensors?" next="M18"></reply>
 			<reply id="R2" text="Where should I start looking for the DF prototype?" next="M24"></reply>
 		</message>
 		<message id="M18" text="Open the sensors system interface, and click the TRAIL MODE button.">
-			<reply id="R1" text="[SKIP]..." next="M19"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M19"></reply>
 		</message>
 		<message id="M19" text="The sensors will switch to trailing mode.">
-			<reply id="R1" text="[SKIP]..." next="M20"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M20"></reply>
 		</message>
 		<message id="M20" text="In this mode, on the sector map you will see the hyperspace entry points.">
-			<reply id="R1" text="[SKIP]..." next="M21"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M21"></reply>
 		</message>
 		<message id="M21" text="Focus on one of the entry points so that it's vissible in the target map screen.">
-			<reply id="R1" text="[SKIP]..." next="M22"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M22"></reply>
 		</message>
 		<message id="M22" text="On the target map screen you will se the details of that entry point.">
-			<reply id="R1" text="[SKIP]..." next="M23"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M23"></reply>
 		</message>
 		<message id="M23" text="What ship left this trail and where it jumped.">
 			<reply id="R1" text="Thanks. Where should I start looking for the DF prototype?" next="M24">
@@ -172,10 +172,10 @@
 		</message>
 		
 		<message id="M13" text="Excelent! We now have everything we need to build the super sensors.">
-			<reply id="R1" text="[SKIP]..." next="M14"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M14"></reply>
 		</message>
 		<message id="M14" text="This will take some time, contact me some time later.">
-			<reply id="R1" text="[SKIP]..." next="M15"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M15"></reply>
 		</message>
 		<message id="M15" text="By the way, Darius was looking for you, please contact him.">
 			<event id="DROP_COLLECTED_CRYSTALS" target="PLAYER"></event>
@@ -201,16 +201,16 @@
 			<reply id="R1" text="That's right." next="M3"></reply>
 		</message>
 		<message id="M3" text="Well, we have all the parts I will need, right here at USC.">
-			<reply id="R1" text="[SKIP]..." next="M4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M4"></reply>
 		</message>
 		<message id="M4" text="The only thing we're missing are the HAK86 crystals.">
-			<reply id="R1" text="[SKIP]..." next="M5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M5"></reply>
 		</message>
 		<message id="M5" text="These crystals are very rare, and we need 3 pieces of it.">
 			<reply id="R1" text="Where do we find them then?" next="M6"></reply>
 		</message>
 		<message id="M6" text="I would suggest that you visit the KeK trading company first.">
-			<reply id="R1" text="[SKIP]..." next="M7"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M7"></reply>
 		</message>
 		<message id="M7" text="If im not mistaking they might have some of it.">
 			<reply id="R1" text="Where are they located?" next="M8"></reply>
@@ -226,13 +226,13 @@
 	<dialogue name="GRAYDON">
 		<start>M0</start>
 		<message id="M0" text="[ACTION]You see a man in a white lab coat.">
-			<reply id="R1" text="[SKIP]..." next="M1">
+			<reply id="R1" text="[SKIP][AUTO]" next="M1">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="HJ_TUTORIAL_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="[SKIP]..." next="M33">
+			<reply id="R2" text="[SKIP][AUTO]" next="M33">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="HJ_TUTORIAL_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -242,7 +242,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R3" text="[SKIP]..." next="M34">
+			<reply id="R3" text="[SKIP][AUTO]" next="M34">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="S_EMP_QUEST"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -252,7 +252,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R4" text="[SKIP]..." next="M38">
+			<reply id="R4" text="[SKIP][AUTO]" next="M38">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="S_EMP_PICKUP_QUEST"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -273,7 +273,7 @@
 					<condition_param qty="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R5" text="[SKIP]..." next="M40">
+			<reply id="R5" text="[SKIP][AUTO]" next="M40">
 				<condition type="SHIP_CARGO_PRESENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
 					<condition_param system_model="EMP_Cannon"></condition_param>
@@ -294,7 +294,7 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R6" text="[SKIP]..." next="M40">
+			<reply id="R6" text="[SKIP][AUTO]" next="M40">
 				<condition type="SHIP_CARGO_ABSENT">
 					<condition_param cargo_type="SHIP_SYSTEM"></condition_param>
 					<condition_param system_model="EMP_Cannon"></condition_param>
@@ -315,19 +315,19 @@
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R7" text="[SKIP]..." next="M42">
+			<reply id="R7" text="[SKIP][AUTO]" next="M42">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="FINAL_PREP_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R8" text="[SKIP]..." next="M43">
+			<reply id="R8" text="[SKIP][AUTO]" next="M43">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="LAST_FISHING_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R9" text="[SKIP]..." next="M43">
+			<reply id="R9" text="[SKIP][AUTO]" next="M43">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="KEK_LAST_RAIDED_QUEST_STARTED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -364,7 +364,7 @@
 		</message>		
 		
 		<message id="M38" text="Hello [PLAYER_NAME]. Have you retrieved the EMP Cannon?">
-			<reply id="R1" text="Not yet. I'm workin on it."></reply>
+			<reply id="R1" text="Not yet. I'm working on it."></reply>
 			<reply id="R2" text="Please remind me where is A03 station located." next="M39"></reply>
 		</message>		
 		<message id="M39" text="The A03 station is located in sector VAR(A03_SECTOR)">
@@ -391,7 +391,7 @@
 		<message id="M33" text="I'm very busy right now. Please talk to Dr. Bishop."></message>
 		
 		<message id="M1" text="Who are you and why are you flying one of our secret prototype ships?">
-			<reply id="R1" text="[SKIP]..." next="M2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M2"></reply>
 		</message>
 		<message id="M2" text="Explain yourself immediately or I'm calling in reinforcements!">
 			<reply id="R1" text="My name is [PLAYER_NAME], I am one of the guards at D31." next="M3"></reply>
@@ -402,88 +402,91 @@
 		<message id="M4" text="What?! The D.F. Prototype is stolen? This is devastating!">
 			<reply id="R1" text="Communications were cut off, second prototype ship was the only way to deliver the news to you." next="M5"></reply>
 		</message>
-		<message id="M5" text="This is very horrifying. Can you imagine what those pirates can do with that ship?">
-			<reply id="R1" text="No, I don't. Can't we just send a fleet to find it and destroy it?" next="M6"></reply>
+		<message id="M5" text="What?! The D.F. Prototype is stolen? This is devastating!">
+			<reply id="R1" text="Communications were cut off, second prototype ship was the only way to deliver the news to you." next="M6"></reply>
 		</message>
-		<message id="M6" text="You see, there are two problems with that ship.">
-			<reply id="R1" text="[SKIP]..." next="M7"></reply>
+		<message id="M6" text="This is very horrifying. Can you imagine what those pirates can do with that ship?">
+			<reply id="R1" text="No, I don't. Can't we just send a fleet to find it and destroy it?" next="M7"></reply>
 		</message>
-		<message id="M7" text="First is that it's near impossible to track it down.">
-			<reply id="R1" text="[SKIP]..." next="M8"></reply>
+		<message id="M7" text="You see, there are two problems with that ship.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M8"></reply>
 		</message>
-		<message id="M8" text="As you probably know, when a ship goes into hyper space it leaves a trail behind.">
-			<reply id="R1" text="[SKIP]..." next="M9"></reply>
+		<message id="M8" text="First is that it's near impossible to track it down.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M9"></reply>
 		</message>
-		<message id="M9" text="And with a good enough sensors system you can detect this trail.">
-			<reply id="R1" text="[SKIP]..." next="M10"></reply>
+		<message id="M9" text="As you probably know, when a ship goes into hyper space it leaves a trail behind.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M10"></reply>
 		</message>
-		<message id="M10" text="More powerful hyper drives leave a less detectable trail behind.">
-			<reply id="R1" text="[SKIP]..." next="M11"></reply>
+		<message id="M10" text="And with a good enough sensors system you can detect this trail.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M11"></reply>
 		</message>
-		<message id="M11" text="So you need a more powerful sensors system to detect it.">
-			<reply id="R1" text="[SKIP]..." next="M12"></reply>
+		<message id="M11" text="More powerful hyper drives leave a less detectable trail behind.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M12"></reply>
 		</message>
-		<message id="M12" text="The D.F. Prototype has the newest hyper drive prototype.">
-			<reply id="R1" text="[SKIP]..." next="M13"></reply>
+		<message id="M12" text="So you need a more powerful sensors system to detect it.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M13"></reply>
 		</message>
-		<message id="M13" text="And I can assure you, there is no sensors system that can detect its trail.">
+		<message id="M13" text="The D.F. Prototype has the newest hyper drive prototype.">
 			<reply id="R1" text="[SKIP]..." next="M14"></reply>
 		</message>
-		<message id="M14" text="We only have a theory on how to make such a sensors system.">
-			<reply id="R1" text="[SKIP]..." next="M15"></reply>
+		<message id="M14" text="And I can assure you, there is no sensors system that can detect its trail.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M15"></reply>
 		</message>
-		<message id="M15" text="But as you can guess, we have never tried it.">
-			<reply id="R1" text="You've said that there are two problems with the D.F. Prototype." next="M16"></reply>
+		<message id="M15" text="We only have a theory on how to make such a sensors system.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M16"></reply>
 		</message>
-		<message id="M16" text="Yes, the second problem is that it's near impossible to destroy it!">
-			<reply id="R1" text="What?" next="M17"></reply>
+		<message id="M16" text="But as you can guess, we have never tried it.">
+			<reply id="R1" text="You've said that there are two problems with the D.F. Prototype." next="M17"></reply>
 		</message>
-		<message id="M17" text="The D.F. Prototype has a one of a kind shield system.">
-			<reply id="R1" text="[SKIP]..." next="M18"></reply>
+		<message id="M17" text="Yes, the second problem is that it's near impossible to destroy it!">
+			<reply id="R1" text="What?" next="M18"></reply>
 		</message>
-		<message id="M18" text="We have retrieved it from an alien spaceship of unknown origin.">
-			<reply id="R1" text="[SKIP]" next="M19"></reply>
+		<message id="M18" text="The D.F. Prototype has a one of a kind shield system.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M19"></reply>
 		</message>
-		<message id="M19" text="Even missiles can not bypass that shield!">
-			<reply id="R1" text="No way!" next="M20"></reply>
+		<message id="M19" text="We have retrieved it from an alien spaceship of unknown origin.">
+			<reply id="R1" text="[SKIP]" next="M20"></reply>
 		</message>
-		<message id="M20" text="It's true. And to be honest, I have no idea how we can stop it now.">
-			<reply id="R1" text="How did the pirates find out about this ship?" next="M21"></reply>
+		<message id="M20" text="Even missiles can not bypass that shield!">
+			<reply id="R1" text="No way!" next="M21"></reply>
 		</message>
-		<message id="M21" text="They couldn't have. I don't think they know what they got their hands on.">
-			<reply id="R1" text="[SKIP]..." next="M22"></reply>
+		<message id="M21" text="It's true. And to be honest, I have no idea how we can stop it now.">
+			<reply id="R1" text="How did the pirates find out about this ship?" next="M22"></reply>
 		</message>
-		<message id="M22" text="If they figure out what they have stolen...">
-			<reply id="R1" text="They can wreck havoc all over our galaxy!" next="M23"></reply>
+		<message id="M22" text="They couldn't have. I don't think they know what they got their hands on.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M23"></reply>
 		</message>
-		<message id="M23" text="Exactly! That's why we have to find a way to destroy it, ASAP.">
-			<reply id="R1" text="Right..." next="M24"></reply>
+		<message id="M23" text="If they figure out what they have stolen...">
+			<reply id="R1" text="They can wreck havoc all over our galaxy!" next="M24"></reply>
 		</message>
-		<message id="M24" text="And apparently, the second prototype ship is now our only hope now.">
-			<reply id="R1" text="Why?" next="M25"></reply>
+		<message id="M24" text="Exactly! That's why we have to find a way to destroy it, ASAP.">
+			<reply id="R1" text="Right..." next="M25"></reply>
 		</message>
-		<message id="M25" text="Because only it has the potential to standup to the D.F. Prototype and survive.">
-			<reply id="R1" text="[SKIP]..." next="M26"></reply>
+		<message id="M25" text="And apparently, the second prototype ship is now our only hope now.">
+			<reply id="R1" text="Why?" next="M26"></reply>
 		</message>
-		<message id="M26" text="It is our older prototype ship, it has very high upgrading capabilities.">
-			<reply id="R1" text="[SKIP]..." next="M27"></reply>
+		<message id="M26" text="Because only it has the potential to standup to the D.F. Prototype and survive.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M27"></reply>
 		</message>
-		<message id="M27" text="The systems on it can be upgraded many times.">
-			<reply id="R1" text="[SKIP]..." next="M28"></reply>
+		<message id="M27" text="It is our older prototype ship, it has very high upgrading capabilities.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M28"></reply>
 		</message>
-		<message id="M28" text="Unlike our other common ships. So I guess your'e in for the ride.">
-			<reply id="R1" text="So what do we do now?" next="M29"></reply>
+		<message id="M28" text="The systems on it can be upgraded many times.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M29"></reply>
 		</message>
-		<message id="M29" text="Please speak to doctor Bishop, he is our sensors specialist.">
-			<reply id="R1" text="[SKIP]..." next="M30"></reply>
+		<message id="M29" text="Unlike our other common ships. So I guess your'e in for the ride.">
+			<reply id="R1" text="So what do we do now?" next="M30"></reply>
 		</message>
-		<message id="M30" text="He can tell you more about his super sensors theory.">
-			<reply id="R1" text="[SKIP]..." next="M31"></reply>
+		<message id="M30" text="Please speak to doctor Bishop, he is our sensors specialist.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M31"></reply>
 		</message>
-		<message id="M31" text="Meanwhile I will arrange the meeting with other scientists.">
-			<reply id="R1" text="[SKIP]..." next="M32"></reply>
+		<message id="M31" text="He can tell you more about his super sensors theory.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M32"></reply>
 		</message>
-		<message id="M32" text="Hopefully we will be able to figure out how to break through the super shields.">
+		<message id="M32" text="Meanwhile I will arrange the meeting with other scientists.">
+			<reply id="R1" text="[SKIP][AUTO]" next="M33"></reply>
+		</message>
+		<message id="M33" text="Hopefully we will be able to figure out how to break through the super shields.">
 			<event id="STOP_HJ_TUTORIAL" target="PLAYER"></event>
 			<event id="START_SENSORS_QUEST" target="PLAYER"></event>
 			<reply id="R1" text="OK."></reply>

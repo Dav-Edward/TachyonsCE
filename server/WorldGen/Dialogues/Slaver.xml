@@ -3,13 +3,13 @@
 	<dialogue name="SLAVER_TRADER">
 		<start>M0</start>
 		<message id="M0" text="[ACTION]You see a pirate.">
-			<reply id="R1" text="[SKIP]..." next="M1">
+			<reply id="R1" text="[SKIP][AUTO]" next="M1">
 				<condition type="SERVER_VARIABLE_PRESENT">
 					<condition_param var_name="[SECTOR] SLAVER_PROVOKED"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R2" text="[SKIP]..." next="M2">
+			<reply id="R2" text="[SKIP][AUTO]" next="M2">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="[SECTOR] SLAVER_PROVOKED"></condition_param>
 					<condition_param var_value="1"></condition_param>
@@ -18,7 +18,7 @@
 					<condition_param target_player="0"></condition_param>
 				</condition>
 			</reply>
-			<reply id="R3" text="[SKIP]..." next="F1">
+			<reply id="R3" text="[SKIP][AUTO]" next="F1">
 				<condition type="SERVER_VARIABLE_ABSENT">
 					<condition_param var_name="[SECTOR] SLAVER_PROVOKED"></condition_param>
 					<condition_param var_value="1"></condition_param>

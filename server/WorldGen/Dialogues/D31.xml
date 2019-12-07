@@ -43,6 +43,7 @@
 				</condition>
 				<condition type="SECTOR_SHIPS_PRESENT">
 					<condition_param ship_name="Pirate scavenger"></condition_param>
+					<condition_param qty="1"></condition_param>
 				</condition>
 			</reply>
 			<reply id="R7" text="[SKIP][AUTO]" next="FIG1">
@@ -52,6 +53,7 @@
 				</condition>
 				<condition type="SECTOR_SHIPS_ABSENT">
 					<condition_param ship_name="Pirate scavenger"></condition_param>
+					<condition_param qty="1"></condition_param>
 				</condition>
 			</reply>
 			<reply id="R8" text="[SKIP][AUTO]" next="HJ11">
@@ -86,7 +88,7 @@
 			<event id="SKIP_TUTORIAL0" target="NPC"></event>
 			<event id="SKIP_TUTORIAL" target="PLAYER"></event>
 			<event id="SKIP_TUTORIAL2" target="NPC"></event>
-			<reply id="R1" text="[SKIP]..." next="HJ11"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ11"></reply>
 		</message>
 
 		<message id="HJ11" text="Please find Dr. Darius Graydon, at USC in sector VAR(USC_SECTOR)">
@@ -95,34 +97,34 @@
 		</message>
 
 		<message id="HJ0" text="To do a hyper jump, open the PILOTING interface and go to the STAR MAP page.">
-			<reply id="R1" text="[SKIP]..." next="HJ1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ1"></reply>
 		</message>
 		<message id="HJ1" text="There you can see all the stars and empy space sectors.">
-			<reply id="R1" text="[SKIP]..." next="HJ2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ2"></reply>
 		</message>
 		<message id="HJ2" text="The ship icon will indicate in which sector you are located right now.">
-			<reply id="R1" text="[SKIP]..." next="HJ3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ3"></reply>
 		</message>
 		<message id="HJ3" text="You can see the glowing circles indicating what sectors you can reach.">
-			<reply id="R1" text="[SKIP]..." next="HJ4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ4"></reply>
 		</message>
 		<message id="HJ4" text="The range depends on your Hyper Drive power and level and the class of your ship.">
-			<reply id="R1" text="[SKIP]..." next="HJ5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ5"></reply>
 		</message>
 		<message id="HJ5" text="On the bottom of the screen you can see the Hyper Drive power bars and energy level.">
-			<reply id="R1" text="[SKIP]..." next="HJ6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ6"></reply>
 		</message>
 		<message id="HJ6" text="Add some power to the Hyper Drive and see the energy bar filling up.">
 			<reply id="R1" text="[SKIP]..." next="HJ7"></reply>
 		</message>
 		<message id="HJ7" text="As the Hyper drive charges more energy, you will see glowing circles getting blue color.">
-			<reply id="R1" text="[SKIP]..." next="HJ8"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ8"></reply>
 		</message>
 		<message id="HJ8" text="Blue circles indicate the sectors that you can jump to with current stored energy.">
-			<reply id="R1" text="[SKIP]..." next="HJ9"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ9"></reply>
 		</message>
 		<message id="HJ9" text="Select a destination sector from one of the blue circles, then click the SET TARGET button.">
-			<reply id="R1" text="[SKIP]..." next="HJ10"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="HJ10"></reply>
 		</message>
 		<message id="HJ10" text="Then press the HYPER JUMP button, and away you go, into the hyper space.">
 			<reply id="R1" text="Thanks!"></reply>
@@ -188,10 +190,10 @@
 		<message id="FIG4_1" text="Install the Hyper Drive and travel to the USC station in sector [SECTOR].">
 			<event id="SPAWN_USC" target="PLAYER"></event>
 			<event id="MAKE_USC_SECTOR_EXPLORED" target="PLAYER"></event>
-			<reply id="R1" text="[SKIP]..." next="FIG5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="FIG5"></reply>
 		</message>
 		<message id="FIG4_2" text="Install the Hyper Drive and travel to the USC station in sector VAR(USC_SECTOR).">
-			<reply id="R1" text="[SKIP]..." next="FIG5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="FIG5"></reply>
 		</message>
 		<message id="FIG5" text="There you will need to find Dr. Darius Graydon, and tell him what happened here.">
 			<event id="ADD_HD_TO_PLAYER" target="PLAYER"></event>
@@ -208,61 +210,61 @@
 		</message>
 
 		<message id="SHOOT0" text="There are two ways to shoot your weapons,">
-			<reply id="R1" text="[SKIP]..." next="SHOOT1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT1"></reply>
 		</message>
 		<message id="SHOOT1" text="First way is to man the weapon itself:">
-			<reply id="R1" text="[SKIP]..." next="SHOOT2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT2"></reply>
 		</message>
 		<message id="SHOOT2" text="To do that you need to go into the room where the weapon is installed,">
-			<reply id="R1" text="[SKIP]..." next="SHOOT3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT3"></reply>
 		</message>
 		<message id="SHOOT3" text="and open the system interface.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT4"></reply>
 		</message>
 		<message id="SHOOT4" text="There you will see 2 screens: Radar screen and Target screen.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT5"></reply>
 		</message>
 		<message id="SHOOT5" text="On the Radar screen you can see all the ships and space ojects in the sector.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT6"></reply>
 		</message>
 		<message id="SHOOT6" text="On the target screen you see the ships in detail, with their systems and stats.">
 			<reply id="R1" text="[SKIP]..." next="SHOOT7"></reply>
 		</message>
 		<message id="SHOOT7" text="To shoot, you need to power the weapon, let it charge to full,">
-			<reply id="R1" text="[SKIP]..." next="SHOOT8"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT8"></reply>
 		</message>
 		<message id="SHOOT8" text="Then click a spot on the target map, and a croshair will appear there.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT9"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT9"></reply>
 		</message>
 		<message id="SHOOT9" text="Then you just press the FIRE button and it's done.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT10"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT10"></reply>
 		</message>
 		<message id="SHOOT10" text="You can see the projectiles traveling on the Radar map.">
 			<reply id="R1" text="And the second way?" next="SHOOT11"></reply>
 		</message>
 		<message id="SHOOT11" text="Second way is to man the WEAPONS CONTROL system.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT12"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT12"></reply>
 		</message>
 		<message id="SHOOT12" text="Go to the WEAPONS CONTROL room and open the system interface.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT13"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT13"></reply>
 		</message>
 		<message id="SHOOT13" text="It is almost the same as the WEAPON system interface,">
-			<reply id="R1" text="[SKIP]..." next="SHOOT14"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT14"></reply>
 		</message>
 		<message id="SHOOT14" text="but from here you can shoot any weapon on the ship.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT15"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT15"></reply>
 		</message>
 		<message id="SHOOT15" text="Under the Radar map screen you will see a bar with all available weapons.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT16"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT16"></reply>
 		</message>
 		<message id="SHOOT16" text="To shoot you first need to select which weapon you want to aim.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT17"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT17"></reply>
 		</message>
 		<message id="SHOOT17" text="Click on the icon of the weapon you need and then select the target.">
 			<reply id="R1" text="[SKIP]..." next="SHOOT18"></reply>
 		</message>
 		<message id="SHOOT18" text="To fire each weapon individually you can press their own small FIRE button.">
-			<reply id="R1" text="[SKIP]..." next="SHOOT19"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="SHOOT19"></reply>
 		</message>
 		<message id="SHOOT19" text="To fire all ready weapons at the same time, press the FRIE ALL button.">
 			<reply id="R1" text="Thanks."></reply>
@@ -283,16 +285,16 @@
 			<reply id="R4" text="Can you tell me how to shoot weapons?" next="SHOOT0"></reply>
 		</message>
 		<message id="INST14" text="Perfect timing [PLAYER_NAME]!">
-			<reply id="R1" text="[SKIP]..." next="INST15"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST15"></reply>
 		</message>
 		<message id="INST15" text="Sensors have detected an incomming ship signature.">
-			<reply id="R1" text="[SKIP]..." next="INST16"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST16"></reply>
 		</message>
 		<message id="INST16" text="It must be the pirates' salvage team, comming to finish us up!">
-			<reply id="R1" text="[SKIP]..." next="INST17"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST17"></reply>
 		</message>
 		<message id="INST17" text="Use the laser I gave you, and blow them to space dust!">
-			<reply id="R1" text="[SKIP]..." next="INST18"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST18"></reply>
 		</message>
 		<message id="INST18" text="Speak to me again when the pirates are dealt with.">
 			<event id="STOP_INST_TUTORIAL" target="PLAYER"></event>
@@ -305,37 +307,37 @@
 		</message>
 		
 		<message id="INST0" text="To uninstall a system - Open the PILOTING interface and go to the SYSTEMS page">
-			<reply id="R1" text="[SKIP]..." next="INST1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST1"></reply>
 		</message>
 		<message id="INST1" text="There you will see the layout of the ship.  Click on a system you want to unsinstall,">
-			<reply id="R1" text="[SKIP]..." next="INST2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST2"></reply>
 		</message>
 		<message id="INST2" text="then click the UNINSTALL button on the bottom left.  And it will be moved to your cargo hold.">
-			<reply id="R1" text="[SKIP]..." next="INST3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST3"></reply>
 		</message>
 		<message id="INST3" text="If your cargo hold is full though, the system will be jettisoned into outer space.">
-			<reply id="R1" text="[SKIP]..." next="INST4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST4"></reply>
 		</message>
 		<message id="INST4" text="Be careful, when you uninstall a system, it looses any upgrades it had.">
-			<reply id="R1" text="[SKIP]..." next="INST5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST5"></reply>
 		</message>
 		<message id="INST5" text="And some systems can't be uninstalled without breaking and loosing them.">
 			<reply id="R1" text="OK. Got it." next="INST6"></reply>
 		</message>
 		<message id="INST6" text="To install a system - Open the PILOTING interface and go to the CARGO page">
-			<reply id="R1" text="[SKIP]..." next="INST7"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST7"></reply>
 		</message>
 		<message id="INST7" text="There you will see all the cargo that you have.  Click on the system that you want to install,">
-			<reply id="R1" text="[SKIP]..." next="INST8"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST8"></reply>
 		</message>
 		<message id="INST8" text="Then click on the INSTALL button on the bottom left.">
-			<reply id="R1" text="[SKIP]..." next="INST9"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST9"></reply>
 		</message>
 		<message id="INST9" text="A window will appear, where you can select the place to install the system.">
-			<reply id="R1" text="[SKIP]..." next="INST10"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST10"></reply>
 		</message>
 		<message id="INST10" text="Click the top left corner of any room to install a system in it.">
-			<reply id="R1" text="[SKIP]..." next="INST11"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="INST11"></reply>
 		</message>
 		<message id="INST11" text="On the bottom of the ship layout window there's a button that rotates the system.">
 			<reply id="R1" text="OK. Thanks."></reply>
@@ -411,22 +413,22 @@
 			<reply id="R7" text="How do I find items in space?" next="FIND0"></reply>
 		</message>
 		<message id="LJ18" text="Great work [PLAYER_NAME]!  I will start assembling the new HD right away.">
-			<reply id="R1" text="[SKIP]..." next="LJ19"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ19"></reply>
 		</message>
 		<message id="LJ19" text="Meanwhile you can do some hull repairs for the second prototype ship.">
-			<reply id="R1" text="[SKIP]..." next="LJ20"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ20"></reply>
 		</message>
 		<message id="LJ20" text="On this station there's a repair system.">
-			<reply id="R1" text="[SKIP]..." next="LJ20_2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ20_2"></reply>
 		</message>
 		<message id="LJ20_2" text="But you will need some scrap metal to use it.">
 			<reply id="R1" text="Where can I get scrap?" next="LJ21"></reply>
 		</message>
 		<message id="LJ21" text="When a ship or an asteroid is blown up, there will be some scrap left.">
-			<reply id="R1" text="[SKIP]..." next="LJ22"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ22"></reply>
 		</message>
 		<message id="LJ22" text="I will uninstall the station's laser and send it to your ship, so you can use it.">
-			<reply id="R1" text="[SKIP]..." next="LJ23"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ23"></reply>
 		</message>
 		<message id="LJ23" text="Install the laser, blow up asteroids and repair the ship.">
 			<event id="STOP_LJ_TUTORIAL" target="PLAYER"></event>
@@ -445,22 +447,22 @@
 			<reply id="R2" text="How do I do that?" next="LJ11"></reply>
 		</message>
 		<message id="LJ11" text="Open the PILOTING system interface and go to the CARGO page.">
-			<reply id="R1" text="[SKIP]..." next="LJ12"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ12"></reply>
 		</message>
 		<message id="LJ12" text="There you will see all your ship's cargo.  Click the one you want to jettison,">
-			<reply id="R1" text="[SKIP]..." next="LJ13"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ13"></reply>
 		</message>
 		<message id="LJ13" text="then select a direction in which you want to jettison the cargo box.">
-			<reply id="R1" text="[SKIP]..." next="LJ14"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ14"></reply>
 		</message>
 		<message id="LJ14" text="To do that you need to click the button that looks like a direction arrow.">
-			<reply id="R1" text="[SKIP]..." next="LJ15"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ15"></reply>
 		</message>
 		<message id="LJ15" text="It is located near the JET. CARGO button.  When you click it, it will change the direction.">
-			<reply id="R1" text="[SKIP]..." next="LJ16"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ16"></reply>
 		</message>
 		<message id="LJ16" text="So if the station is below your ship, then select direction DOWN.">
-			<reply id="R1" text="[SKIP]..." next="LJ17"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ17"></reply>
 		</message>
 		<message id="LJ17" text="Then press the JET. CARGO button to throw the cargo box out and it will fly in that direction.">
 			<reply id="R1" text="OK. Thanks!"></reply>
@@ -470,22 +472,22 @@
 			<reply id="R1" text="OK. I'm on it."></reply>
 		</message>
 		<message id="LJ0" text="Open the PILOTING system interface and go to SECTOR MAP page.">
-			<reply id="R1" text="[SKIP]..." next="LJ1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ1"></reply>
 		</message>
 		<message id="LJ1" text="Or go to the ENGINES room and open the ENGINES system interface.">
-			<reply id="R1" text="[SKIP]..." next="LJ2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ2"></reply>
 		</message>
 		<message id="LJ2" text="On the bottom you will see the Engines energy meter and power bars.">
-			<reply id="R1" text="[SKIP]..." next="LJ3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ3"></reply>
 		</message>
 		<message id="LJ3" text="Left click on the power bars to divert some power to the engines.">
-			<reply id="R1" text="[SKIP]..." next="LJ4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ4"></reply>
 		</message>
 		<message id="LJ4" text="Right click to de-power. Once the energy meter is full - you can jump.">
-			<reply id="R1" text="[SKIP]..." next="LJ5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ5"></reply>
 		</message>
 		<message id="LJ5" text="Left click somewhere on the radar map where you want to move your ship.">
-			<reply id="R1" text="[SKIP]..." next="LJ6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="LJ6"></reply>
 		</message>
 		<message id="LJ6" text="Then press the JUMP button.  And away you go!">
 			<reply id="R1" text="[SKIP]..." next="LJ7"></reply>
@@ -495,20 +497,20 @@
 		</message>
 
 		<message id="PICK0" text="You can jump on top of them with your ship.">
-			<reply id="R1" text="[SKIP]..." next="PICK1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="PICK1"></reply>
 		</message>
 		<message id="PICK1" text="Or you can fly out in space through an airlock, approach the debris, ">
-			<reply id="R1" text="[SKIP]..." next="PICK2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="PICK2"></reply>
 		</message>
 		<message id="PICK2" text="and then press the debris button (SPACE) to grab it. Then haul it back to the ship.">
-			<reply id="R1" text="[SKIP]..." next="PICK3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="PICK3"></reply>
 		</message>
 		<message id="PICK3" text="Also most debris will be attracted to the ship if they are close enough.">
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 
 		<message id="FIND0" text="On the sector map debris and cargo boxes are shown as orange dots.">
-			<reply id="R1" text="[SKIP]..." next="FIND1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="FIND1"></reply>
 		</message>
 		<message id="FIND1" text="And on the target map the cargo box looks like a box rather some scrap metal.">
 			<reply id="R1" text="Thanks."></reply>
@@ -530,37 +532,37 @@
 			<reply id="R3" text="Please remind me how to claim a ship or add crew." next="CL0"></reply>
 		</message>		
 		<message id="CL9" text="Good.  Let's see now... ">
-			<reply id="R1" text="[SKIP]..." next="CL10"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL10"></reply>
 		</message>
 		<message id="CL10" text="The Second prototype ship is near death. You'll never be able to reach USC like this.">
-			<reply id="R1" text="[SKIP]..." next="CL11"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL11"></reply>
 		</message>
 		<message id="CL11" text="Not to mention that the Hyper drive is missing completely!">
 			<reply id="R1" text="What do we do then?" next="CL12"></reply>
 		</message>
 		<message id="CL12" text="Well at least the engine is intact. ">
-			<reply id="R1" text="[SKIP]..." next="CL13"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL13"></reply>
 		</message>
 		<message id="CL13" text="Let me run a sector scan with the Sensors.">
-			<reply id="R1" text="[SKIP]..." next="CL13_2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL13_2"></reply>
 		</message>
 		<message id="CL13_2" text="Maybe there's an HD in one of the debris fields.">
-			<reply id="R1" text="[SKIP]..." next="CL14"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL14"></reply>
 		</message>
 		<message id="CL14" text="Hmm... No luck.  But I see there are several broken ones.">
-			<reply id="R1" text="[SKIP]..." next="CL15"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL15"></reply>
 		</message>
 		<message id="CL15" text="Perhaps we can assemble a working one from all the broken pieces.">
-			<reply id="R1" text="[SKIP]..." next="CL16"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL16"></reply>
 		</message>
 		<message id="CL16" text="I see there's a Tachyon Stabilizer, Accelerator and Chamber floating in space.">
-			<reply id="R1" text="[SKIP]..." next="CL17"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL17"></reply>
 		</message>
 		<message id="CL17" text="I want you to pilot the second prototype ship and recover these parts for me.">
 			<reply id="R1" text="[SKIP]..." next="CL18"></reply>
 		</message>
 		<message id="CL18" text="With them I think I will be able to assemble a new Hyper drive for you.">
-			<reply id="R1" text="[SKIP]..." next="CL19"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL19"></reply>
 		</message>
 		<message id="CL19" text="Look for me in the LASER WEAPON room when you are done.">
 			<event id="STOP_CLAIM_TUTORIAL" target="PLAYER"></event>
@@ -578,22 +580,22 @@
 			<reply id="R1" text="OK. I'm on it."></reply>
 		</message>
 		<message id="CL0" text="You need to go to the PILOTING room, and open the system interface.">
-			<reply id="R1" text="[SKIP]..." next="CL1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL1"></reply>
 		</message>
 		<message id="CL1" text="To open the system interface press SPACE.  There open the CREW page.">
-			<reply id="R1" text="[SKIP]..." next="CL2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL2"></reply>
 		</message>
 		<message id="CL2" text="If a ship has no owner/captain, then there will be a CLAIM button.">
-			<reply id="R1" text="[SKIP]..." next="CL3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL3"></reply>
 		</message>
 		<message id="CL3" text="When you are the captain of the ship you can add more crew to it.">
-			<reply id="R1" text="[SKIP]..." next="CL4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL4"></reply>
 		</message>
 		<message id="CL4" text="To do that - press the ADD CREW button and input the name.">
-			<reply id="R1" text="[SKIP]..." next="CL5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL5"></reply>
 		</message>
 		<message id="CL5" text="When the crew member is not present in the sector it shows - NO DATA">
-			<reply id="R1" text="[SKIP]..." next="CL6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="CL6"></reply>
 		</message>
 		<message id="CL6" text="That's pretty much it.">
 			<reply id="R1" text="Thanks!"></reply>
@@ -655,7 +657,7 @@
 			<reply id="R1" text="OK."></reply>
 		</message>
 		<message id="REP2" text="Just walk into the room with a damaged system.">
-			<reply id="R1" text="[SKIP]..." next="REP3"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP3"></reply>
 		</message>
 		<message id="REP3" text="To put out fire just stand on top of it">
 			<reply id="R1" text="Thanks!"></reply>
@@ -664,19 +666,19 @@
 			<reply id="R1" text="How?" next="REP5"></reply>
 		</message>
 		<message id="REP5" text="Our second prototype ship, it's badly damaged but still operational.">
-			<reply id="R1" text="[SKIP]..." next="REP6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP6"></reply>
 		</message>
 		<message id="REP6" text="I want you to go and repair it. And I suggest you start with the REACTOR.">
-			<reply id="R1" text="[SKIP]..." next="REP7"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP7"></reply>
 		</message>
 		<message id="REP7" text="Also keep an eye on your oxygen level. Because that ship probably has no O2.">
-			<reply id="R1" text="[SKIP]..." next="REP8"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP8"></reply>
 		</message>
 		<message id="REP8" text="After you have repaired it, I want you to take control of it and talk to me again.">
-			<reply id="R1" text="[SKIP]..." next="REP8_2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP8_2"></reply>
 		</message>
 		<message id="REP8_2" text="You can use the Comms on the ship if you want.">
-			<reply id="R1" text="[SKIP]..." next="REP9"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="REP9"></reply>
 		</message>
 		<message id="REP9" text="Meanwhile I want to check something in the Sensors room.">
 			<event id="STOP_REPAIR_TUTORIAL" target="PLAYER"></event>
@@ -700,23 +702,23 @@
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M4" text="Damn. The clone replication system must have been damaged.">
-			<reply id="R1" text="[SKIP]..." next="M5"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M5"></reply>
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M5" text="This is the D31 Science station. You are posted here as one of the guards.">
-			<reply id="R1" text="[SKIP]..." next="M6"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M6"></reply>
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M6" text="We were attacked by pirates, and they have stolen one of our prototype ships!">
-			<reply id="R1" text="[SKIP]..." next="M7"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M7"></reply>
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M7" text="We need to report this to the Unity Science Centre. ASAP!">
-			<reply id="R1" text="[SKIP]..." next="M8"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M8"></reply>
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M8" text="Problem is that the pirates have taken out our communications system.">
-			<reply id="R1" text="[SKIP]..." next="M9"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M9"></reply>
 			<reply id="R2" text="I would like to skip the tutorial." next="Skip1"></reply>
 		</message>
 		<message id="M9" text="We need to think of a way to get the message to the USC.">
@@ -728,13 +730,13 @@
 			<reply id="R2" text="I'm on it." next="M14"></reply>
 		</message>
 		<message id="M11" text="Just walk into the room with a damaged system and it will auto repair.">
-			<reply id="R1" text="[SKIP]..." next="M12"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M12"></reply>
 		</message>
 		<message id="M12" text="Same thing with the hull breach, just stand on top of it, and it will auto repair.">
 			<reply id="R1" text="OK. Got it." next="M13"></reply>
 		</message>		
 		<message id="M13" text="To put out fire just stand on top of it and it will auto extinguish.">
-			<reply id="R1" text="[SKIP]..." next="M14"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M14"></reply>
 		</message>		
 		<message id="M14" text="Thanks. Speak to me when you're done.">
 			<event id="START_TUTORIALS" target="PLAYER"></event>

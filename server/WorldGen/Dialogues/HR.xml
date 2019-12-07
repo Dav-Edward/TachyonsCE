@@ -3,15 +3,15 @@
 	<dialogue name="HR_AGENT">
 		<start>M0</start>
 		<message id="M0" text="[ACTION]A busy man reading some data sheets.">
-			<reply id="R1" text="[SKIP]..." next="M1"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M1"></reply>
 		</message>
 
 		<message id="M1" text="Greetings! Welcome to the Space Engineering Agency!">
-			<reply id="R1" text="[SKIP]..." next="M2"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M2"></reply>
 		</message>
 
 		<message id="M3" text="Unfortunately all the employees we had at this station are already hired.">
-			<reply id="R1" text="[SKIP]..." next="M4"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M4"></reply>
 		</message>
 		<message id="M4" text="Try checking on another trading station, we have offices in most of them.">
 			<reply id="R1" text="Thank you."></reply>
