@@ -3,4 +3,13 @@
 	<event type="MODIFY_SHIP" name="EJECT_ALL_CARGO" all_mob_ships="0" random_eject_direction="1" eject_all_cargo="1" /> //Ships or stations to eject all cargo
 
 	<event type="MODIFY_SHIP" name="EJECT_CRYSTAL" all_mob_ships="0" random_eject_direction="1" eject_system_model_from_cargo="CRYSTAL" /> //Ships or stations eject the HAK86 crystal if they have it
+
+	<event type="PLAY_AUDIO" name="MUSIC_INTRO">
+		<event_param nonstop="1"></event_param>
+		<event_param track="CE_Track1a:CE_Track1b"></event_param>
+		<event_param music="1"></event_param>
+		<event_param all_players="1"></event_param>
+		<!-- <event_param sector="VAR(STARTING_SECTOR)"></event_param> -->
+		<!-- Track currently unused looking for a good place for it -->
+	</event>
 </events>
