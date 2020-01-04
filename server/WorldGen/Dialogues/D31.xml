@@ -93,10 +93,10 @@
 
 		<message id="HJ11" text="Please find Dr. Darius Graydon, at USC in sector VAR(USC_SECTOR)">
 			<reply id="R1" text="I'm on my way."></reply>
-			<reply id="R2" text="Please remind me ho to do Hyper jumps." next="HJ0"></reply>
+			<reply id="R2" text="Please remind me how to do Hyper Jumps." next="HJ0"></reply>
 		</message>
 
-		<message id="HJ0" text="To do a hyper jump, open the PILOTING interface and go to the STAR MAP page.">
+		<message id="HJ0" text="To do a Hyper Jump, open the PILOTING interface and go to the STAR MAP page.">
 			<reply id="R1" text="[SKIP][AUTO]" next="HJ1"></reply>
 		</message>
 		<message id="HJ1" text="There you can see all the stars and empty space sectors.">
@@ -201,7 +201,7 @@
 			<event id="STOP_FIGHT_TUTORIAL" target="PLAYER"></event>
 			<event id="START_HJ_TUTORIAL" target="PLAYER"></event>
 			<reply id="R1" text="I will get right on it."></reply>
-			<reply id="R2" text="Can you tell me how to do Hyper jumps?" next="HJ0"></reply>
+			<reply id="R2" text="Can you tell me how to do Hyper Jumps?" next="HJ0"></reply>
 		</message>
 		
 		<message id="FIG0" text="What are you still doing here?! Go blow up that pirate!">
