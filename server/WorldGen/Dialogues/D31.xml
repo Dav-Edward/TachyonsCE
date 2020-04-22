@@ -200,6 +200,7 @@
 			<event id="REMOVE_D31_SAFEZONE" target="NPC"></event>			
 			<event id="STOP_FIGHT_TUTORIAL" target="PLAYER"></event>
 			<event id="START_HJ_TUTORIAL" target="PLAYER"></event>
+			<event id="Game_Progress_2" target="PLAYER"></event>
 			<reply id="R1" text="I will get right on it."></reply>
 			<reply id="R2" text="Can you tell me how to do Hyper Jumps?" next="HJ0"></reply>
 		</message>
@@ -285,6 +286,7 @@
 			<reply id="R4" text="Can you tell me how to shoot weapons?" next="SHOOT0"></reply>
 		</message>
 		<message id="INST14" text="Perfect timing, [PLAYER_NAME]!">
+			<event id="Game_Progress_1" target="PLAYER"></event>
 			<reply id="R1" text="[SKIP][AUTO]" next="INST15"></reply>
 		</message>
 		<message id="INST15" text="Sensors have detected an incoming ship signature.">

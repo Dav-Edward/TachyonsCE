@@ -14,6 +14,7 @@
 		<event_param chain_event="SPAWN_D31"></event_param>
 		<event_param chain_event="STARTING_SECTOR_TYPE"></event_param>
 		<event_param chain_event="DF_NAME"></event_param>
+		<event_param chain_event="Game_Progress_0"></event_param>
 	</event>
 		
 	<event type="START_LOCATION" name="HUMAN_SPAWN">
@@ -65,7 +66,7 @@
 	<event type="MODIFY_SECTOR" name="STARTING_SECTOR_TYPE">
 		<event_param nonstop="1"></event_param>
 		<event_param sector="VAR(STARTING_SECTOR)"></event_param>
-		<event_param sector_type="14"></event_param>
+		<event_param sector_type="37"></event_param>
 		<event_param visible_to_all="1"></event_param>
 	</event>
 

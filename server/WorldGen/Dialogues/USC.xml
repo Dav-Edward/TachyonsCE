@@ -489,6 +489,7 @@
 		<message id="M33" text="Hopefully, we will be able to figure out how to break through the super shields.">
 			<event id="STOP_HJ_TUTORIAL" target="PLAYER"></event>
 			<event id="START_SENSORS_QUEST" target="PLAYER"></event>
+			<event id="Game_Progress_3" target="PLAYER"></event>
 			<reply id="R1" text="OK."></reply>
 		</message>		
 	</dialogue>

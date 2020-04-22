@@ -1,0 +1,45 @@
+Chat commands:
+(deprecated)/SHIPSHADE 35:68:84 - set the shade of the ship image to specified rgb. RGB range goes from 10 to 100%
+(deprecated)/SHIELDSHADE 35:68:84 - set the shade of the ship's shield to specified rgb. RGB range goes from 10 to 100%
+/ONLINE - list online players
+/SHIPLEVEL - show the power level of the ship. It is based on the ship's weapons and shields.
+/MYSPAWN - list player spawn locations
+/SETSPAWN <name_of_a_ship_or_station> - set player spawn. There can be 2 spawns - 1 on a ship and 1 on a station. Ship spawn has priority when respawning.
+/SHIPID - get the ID of the ship
+/KILL - suicide
+/SHIPDEF - toggles ship's automatic defense system(meaning it will shoot back at hostiles when there's no online crew onboard it)
+
+Here's some info regarding the all_mob_ships parameter in the MODIFY_SHIP event that might come in handy.
+1. By default all_mob_ships is set to true.
+2. When a modify ship event is executed - it requires a ship to modify, and if the event was initialized by a mob, not a ship, then it will search for a ship in this sector based on the event parameters or based on the mob that initialized the event.
+3. If in dialogue you set TARGET=PLAYER then player that was talking will be the event initializer
+if you set TARGET=NPC then the npc that you were talking to will be used as the event initializer.
+4. If all_mob_ships=1 then it will take all the ships in the sector on which the initializer mob is crew or owner, and apply the event to all of them.
+5. If all_mob_ships=0 then it will take the ship that the mob is on right now, but only if that mob is crew or owner on that ship (or if ignore_passenger_access=1). 
+However if mob is not crew or owner on that ship, then it will take the first ship it finds in the sector that is related to the mob. If there is one where this mob is owner - it will be chosen over any other ship where this mob is only crew.
+6. If event has for_ship_name or for_owner or for_crew_name or for_race or for_ship_class or for_pos_area_start or for_pos_area_end
+then it will take all the ships and filter them by the provided parameters. Ex: if for_race=HUMAN and for_ship_class =TRADER - it will take all HUMAN TRADER ships in the sector and modify them.
+7. for_pos_area_start and for_pos_area_end are meant to be used together at the same time, but if one is set and the other one is not then the one without a value will be set to 0.0
+What it actually does is make a square between the 2 provided points and take all the ships in that square
+8. The priority order in determining which ships to modify is this: 1 - if any params from pt.6 are set then the ships will be taken with that filter, 2 if event was initialized by ship(s) it will take them, 3 if event was initizlied by mob(s) it will take the ships based on the mobs(see pts. 1-5)
+9. if after all the checking an searching and filtering there are not ships to be modified - the event will just not do anything.
+
+What can trigger an event?
+There are several ways an event can be triggered.
+1. A ship entering the sector will trigger a random event from a list that contains events of types SECTOR_EVENT or SECTOR_ENTER. These are usually based on the threat level of the sector.
+2. Scanning a sector will trigger a random event from a list that contains events of types SECTOR_EVENT or SECTOR_SCAN. These are usually based on the threat level of the sector.
+3. Events can be triggered from dialogues.
+4. EVENT_TRIGGER ship AI triggers events on a timer.
+5. EVENT_TRIGGER mob AI triggers events on a timer.
+6. Ships can trigger events: on jump, on hit, on death.
+7. Weapon projectiles can trigger events on hit.
+8. During world generation all events of type WORLD_GEN are triggered.
+
+Different types of events affect different entities, and in most cases events expect the event initializer to be that entity.
+Example:
+You want an event that deals hull damage to the ship, when it enters the sector.
+You make a SECTOR_ENTER event and give it a chain event that links to a MODIFY_SHIP event.
+When the ship enters the sector it triggers(initializes) the SECTOR_ENTER event.
+It does what it needs to do, and then runs the chained event. Passing the initializer to it.
+This way the ship that triggered the SECTOR_ENTER event will also be the initializer of the MODIFY_SHIP event.
+And that one in its turn will apply the damage to the ship.

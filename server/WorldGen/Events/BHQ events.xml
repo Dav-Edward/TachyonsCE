@@ -24,8 +24,10 @@
 			<ship_param max_drone_ammo="10"></ship_param>
 			<ship_param min_scrap="200"></ship_param>
 			<ship_param max_scrap="300"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="SENTRY"></ship_ai>
+			<ship_param death_event="Game_Progress_6"></ship_param>			
 			<spawn_npc_on_ship>
 				<npc_param npc_qty="1"></npc_param>
 				<npc_param npc_is_crew="1"></npc_param>
@@ -33,7 +35,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -54,7 +57,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -75,7 +79,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">

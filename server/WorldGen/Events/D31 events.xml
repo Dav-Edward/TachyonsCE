@@ -466,6 +466,7 @@
 		<event_param chain_event="SS31_STOP_CALLING_HELP"></event_param>
 		<event_param chain_event="SS31_GO_TO_SENSORS"></event_param>
 		<event_param chain_event="START_HJ_TUTORIAL"></event_param>
+		<event_param chain_event="Game_Progress_2"></event_param>
 		<event_param chain_event="SKIP_TUTORIAL2"></event_param>
 		<event_param chain_event="SPAWN_NPC_CREW_3"></event_param>
 		<event_param chain_event="SPAWN_NPC_CREW_2"></event_param>

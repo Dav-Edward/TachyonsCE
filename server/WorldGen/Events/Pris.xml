@@ -90,29 +90,9 @@
 					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
 					<condition_param var_value="1"></condition_param>
 				</ship_ai_condition>
-				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
-					<condition_param var_name="[SECTOR] RIOT_STARTED"></condition_param>
-					<condition_param var_value="1"></condition_param>
-				</ship_ai_condition>
-				<ship_ai_param TIMER="1"></ship_ai_param>
-				<ship_ai_param EVENT="GETAWAY_WAKEUP"></ship_ai_param>
-				<ship_ai_param EVENT="GETAWAY_WAKE_CHARGE"></ship_ai_param>
-			</ship_ai>
-			<ship_ai type="EVENT_TRIGGER">
-				<ship_ai_condition type="SERVER_VARIABLE_ABSENT">
-					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
-					<condition_param var_value="1"></condition_param>
-				</ship_ai_condition>
-				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param TIMER="30"></ship_ai_param>
 				<ship_ai_param EVENT="GETAWAY_SLEEP"></ship_ai_param>
-			</ship_ai>
-			<ship_ai type="EVENT_TRIGGER">
-				<ship_ai_condition type="SERVER_VARIABLE_PRESENT">
-					<condition_param var_name="[SECTOR] GETAWAY_AWAKE"></condition_param>
-					<condition_param var_value="1"></condition_param>
-				</ship_ai_condition>
-				<ship_ai_param TIMER="1"></ship_ai_param>
-				<ship_ai_param EVENT="GETAWAY_CHARGE_TP"></ship_ai_param>
+				<ship_ai_param ai_id="GETAWAY_SLEEP_TRIGGER" />
 			</ship_ai>
 			<spawn_npc_on_ship>
 				<npc_param npc_qty="1"></npc_param>
@@ -173,7 +153,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="ENGINES">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+					<ship_random_systems_param model="GETAWAY_ENGINES"></ship_random_systems_param>
 				</ship_random_systems>
 				<ship_random_systems type="HYPERDRIVE">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
@@ -189,7 +169,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="CLOAKING">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="BOU_CLOAK1"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_GETAWAY_CLOAK"></ship_random_systems_param>
 				</ship_random_systems>
 				<ship_random_systems type="TELEPORT">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
@@ -205,22 +185,33 @@
 		<event_param nonstop="1"></event_param>
 		<event_param var_name="[SECTOR] GETAWAY_AWAKE"></event_param>
 		<event_param var_value="1"></event_param>
+		<event_param chain_event="REMOVE_GETAWAY_SLEEP_TRIGGER" />
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_GETAWAY_SLEEP_TRIGGER" for_ship_name="Civilian transport TN-719">
+		<event_param remove_ship_ai_id="GETAWAY_SLEEP_TRIGGER" />
 	</event>
 	<event type="MODIFY_SHIP" name="GETAWAY_SLEEP">
 		<event_param nonstop="1"></event_param>
 		<event_param decharge_engines="100"></event_param>
-		<event_param decharge_weapons="100"></event_param>
 		<event_param charge_cloak="100"></event_param>
 	</event>
-	<event type="MODIFY_SHIP" name="GETAWAY_WAKE_CHARGE">
-		<event_param nonstop="1"></event_param>
-		<event_param charge_engines="98"></event_param>
-		<event_param decharge_cloak="90"></event_param>
-		<event_param charge_hd="94"></event_param>
+	<event type="MODIFY_SHIP" name="GETAWAY_WAKE_CHARGE" for_ship_name="Civilian transport TN-719">
+		<event_param chain_event="REMOVE_GETAWAY_ENGINES" />
+		<event_param chain_event="INSTALL_GETAWAY_ENGINES2" />
+		<event_param chain_event="GETAWAY_WAKE_CHARGE2" />
 	</event>
-	<event type="MODIFY_SHIP" name="GETAWAY_CHARGE_TP">
+	<event type="MODIFY_SHIP" name="REMOVE_GETAWAY_ENGINES">
+		<event_param remove_system_model="GETAWAY_ENGINES" />
+	</event>
+	<event type="MODIFY_SHIP" name="INSTALL_GETAWAY_ENGINES2">
+		<event_param install_system_model="BOU_ENGINES5" />
+	</event>
+	<event type="MODIFY_SHIP" name="GETAWAY_WAKE_CHARGE2">
 		<event_param nonstop="1"></event_param>
 		<event_param charge_system_type="TELEPORT:100"></event_param>
+		<event_param charge_engines="98"></event_param>
+		<event_param decharge_cloak="99"></event_param>
+		<event_param charge_hd="90"></event_param>
 	</event>
 
 	<event type="SPAWN_SHIP" name="SPAWN_PRISON">
@@ -261,8 +252,11 @@
 				<ship_ai_condition type="SHIP_SHIELDS_ABSENT">
 					<condition_param qty="1"></condition_param>
 				</ship_ai_condition>
-				<ship_ai_param TIMER="1"></ship_ai_param>
+				<ship_ai_param TIMER="3"></ship_ai_param>
 				<ship_ai_param EVENT="START_PRISON_RIOT"></ship_ai_param>
+				<ship_ai_param ai_id="PRISON_RIOT_TRIGGER" />
+				<ship_ai_param EVENT="GETAWAY_WAKEUP"></ship_ai_param>
+				<ship_ai_param EVENT="GETAWAY_WAKE_CHARGE"></ship_ai_param>
 			</ship_ai>
 		</add_ship>
 	</event>
@@ -503,6 +497,11 @@
 		<event_param nonstop="1"></event_param>
 		<event_param var_name="[SECTOR] RIOT_STARTED"></event_param>
 		<event_param var_value="1"></event_param>
+		<event_param chain_event="REMOVE_PRISON_RIOT_TRIGGER" />
+	</event>
+	<event type="MODIFY_SHIP" name="REMOVE_PRISON_RIOT_TRIGGER" for_ship_name="Iron Grasp Maximum Security Prison">
+		<event_param nonstop="1" />
+		<event_param remove_ship_ai_id="PRISON_RIOT_TRIGGER" />
 	</event>
 	<event type="SERVER_VARIABLE" name="PROVKE_PRISON">
 		<event_param nonstop="1"></event_param>

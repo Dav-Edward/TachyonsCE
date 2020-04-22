@@ -24,12 +24,14 @@
 			<ship_param max_drone_ammo="30"></ship_param>
 			<ship_param min_scrap="1000"></ship_param>
 			<ship_param max_scrap="1000"></ship_param>
+			<ship_param death_event="DF_Defeated_Trigger"></ship_param>
 			<ship_ai type="AUTOREPAIR">
 				<ship_ai_param CREWLESS="1"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="LIFE_SUPPORT">
 				<ship_ai_param CREWLESS="1"></ship_ai_param>
-			</ship_ai>			<ship_ai type="EVADER">
+			</ship_ai>
+			<ship_ai type="EVADER">
 				<ship_ai_param CREWLESS="1"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="SENTRY">
@@ -73,7 +75,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -89,7 +92,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -110,7 +114,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -131,7 +136,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">

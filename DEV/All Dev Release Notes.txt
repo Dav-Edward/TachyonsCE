@@ -1,0 +1,276 @@
+Version a0.8.21 - Release notes:
+
+Features:
+
+    Added ip info to the server console /online command
+    Music files in the playlist.dat now can be marked to have a parallel transition between ambient and battle (like in FTL)
+    New door sounds for energy doors - (Thanks Arilou Lalee'lay) 
+
+Modding:
+
+     In dialogues you can now have a player type in their reply. Example: <reply id="T3" text="[INPUT]Input your name." regex="^[a-zA-Z0-9 -]+$" next="Test125"/>
+    In the modify ship event remove_system_type and remove_system_model now completely remove the system from the ship. In order to simply uninstall a ships system into it's cargo hold you can now use uninstall_system_type and uninstall_system_model
+    If npc's dialogue message starts with [SKIP] then it won't be shown in the dialogue lines.
+    If a dialogue reply text ends with [AUTO] then that dialogue reply will be selected automatically. 
+
+Bug fixes:
+
+    Unable to move while in HS on-board ai ship.
+     Ejecting a specific system type from cargo via modify ship event was ejecting everything.
+    Door control/shields/sensors and other system screens were broken in non default resolution.
+    Slaver ships were not fighting back
+    You can no longer hack a broken system
+
+
+
+
+
+Version a0.8.20 - Release notes:
+
+Features:
+
+    In the main HUD you can now see the current sector coordinates and threat level.
+
+Modding:
+
+    Weapons can now add or remove O2 from the impact cells.  Example: In the weapon model set the parameter OXYGEN=100 or -100 (it's in % of the max O2 in a cell) 
+    Weapons can now be non hostile.  Example: In the weapon model set the parameter HOSTILE=0 
+    Unrecognized event, dialogue and model parameters are now shown in logs.
+
+Bug fixes:
+
+    SERVER_VARIABLE_PRESENT/ABSENT conditions - fixed any_value parameter
+    Ship AI ai_id - fixed saving set ID
+    When Teleporting multiple mobs/players they no longer get melded like in the old movie The Fly
+
+
+
+
+
+
+Version a0.8.19 - Release notes: 
+
+This release is made mostly by modders requests, while I'm working on the steam version of the game.
+
+Modding features:
+
+    World gen events are now sorted by name before execution
+    Added possibility for conditions related to projectile events to be based on both the target and shooter ship at the same time.  Ex. If target ship is missing 5+ hull, and origin ship has 1+ drone, trigger event <condition type="SHIP_SYSTEM_PRESENT"> <!-- Check_target_ship and check_shootership are used only by events --> <!-- that are triggered by ship projectiles on hit. --> <!-- Available in all SHIP... events. --> <condition_param check_target_ship="1"> </condition_param> <condition_param check_shooter_ship="1"> </condition_param> <condition_param system_type="SHIELDS"> </condition_param> <condition_param qty="1"></condition_param>  </condition>
+    Added possibility to jettison items from ship's cargo via events.  (ex. If npc ship accidentally picks up cargo, spit it back out) In the MODIFY_SHIP event: eject_direction="UP" eject_system_type_from_cargo="SHIELDS" eject_system_model_from_cargo="BASIC_LASER1" eject_all_cargo eject_scrap eject_missiles eject_drones random_eject_direction
+    Added possibility to remove specific instances of ship ai instead of all of the same type. Ex. remove one event_trigger without removing the other event_trigger. When adding an AI give it some id: <ship_ai_param ai_id="abc123"></ship_ai_param> Then in the modify ship event use: <event_param remove_ship_ai_id="abc123"></event_param>
+    Modify ship event <event_param hyper_jump="100:200"></event_param> No longer requires the ship to have a functioning Hyper drive
+    In the SERVER_VARIABLE_PRESENT/ABSENT condition - added a new parameter. <condition_param any_value="1"></condition_param>
+    Added [MOB_POS] and [SHIP_POS] placeholders that can be used in events and conditions.
+    Added [PROJ_POS] placeholder that can be used in events and conditions tied to projectile hit events.
+    In the Spawn ship and Spawn NPC events the pos parameter can now have a reference to a variable, including the mentioned above. (Previously it was expecting a strict XX:YY value)
+    In the ship editor you can now press C to see the cell coordinates
+    In the MODIFY_SHIP_EVENT added a new parameter:  chain_events_to_modified  If set to 1, then it passes only the ships that were modified in the current event to all chain events.
+    Changed the core event files to not use a hard-coded ship name Falcon.  Now it uses the name that is set in the VAR(PLAYER_SHIP_NAME) variable. This allows the modders to make own player ships.
+
+Bug fixes:
+
+    LEVEL_LOADER AI - was broken
+    NPC_EVENT_TRIGER AI - was broken
+    SCAVENGER AI - was broken
+    SHIP_CARGO_PRESENT/ABSENT condition - was broken
+    SECTOR_SHIPS_PRESENT condition - crew parameter was ignored.
+    Hacking page - buttons alignment on higher resolutions - was broken
+
+
+
+
+
+Version a0.8.18 - Release notes:
+
+Features:
+
+    Full-screen option removed from settings menu
+    Borderless window option added in settings menu
+    Added movement propagation to improve network performance.
+    It is now possible to teleport players between multiple owned ships.
+
+Rebalancing:
+
+    There are now less NPCs overall, but they are harder to kill.
+
+Bug fixes:
+
+    Hacking page was broken on high resolutions.
+    Finally fixed the Space Disorder Syndrome?  (The oldest bug that made NPCs vent themselves into space and die there)
+
+
+
+
+
+Version a0.8.17 - Release notes:
+
+Features:
+
+    In the star map you can now see the ship's travel path for last 10 sectors
+    Type in chat /SHIPID to get the id of the ship you are on.
+    Type in chat /SETSPAWN <SHIP ID> to set spawn on a ship without accessing it's Med bay. - Useful to get players to the ship when they join the midgame.
+    Added a mini chat window in top right corner of the screen. To see the messages while using some system.
+    AZERTY keyboard support in settings menu
+    You can now access the settings from the ingame menu.
+    Added the screen resolutions selection in settings - there might still be bugs related to different resolutions, please report them on the Discord.
+    Improved the font a bit in some places.
+    Fixed the color scheme, if you notice any issues - report on Discord.
+    Added a little bit of content - just the first steps more to come
+
+Modding:
+
+    New ship AI BOARDING_MANAGER. Manages NPC boarders.
+    Made it easier to start the game with your own custom ship:  For that open the event file D31 events.xml.  There in the event SPAWN_D31, change SPAWN_FALCON to SPAWN_CUSTOM_FALCON. Then in the SPAWN_CUSTOM_FALCON event change ship_model="FALCON" to your custom model.
+    In the modify ship event you can now: (de)charge_system_model,  (de)charge_system_type,  (de)charge_cloak,  install_system_model_direct - (allows you you specify where to install the system)
+
+Rebalancing:
+
+    Traders now have more stock.
+    Storm hazard now also damage systems and can kill mobs in open space.
+
+Bug fixes:
+
+    A little bit more refactoring to win in the Lag war. In bigger screen resolutions - npcs might move with a stutter. Still working on improving this.
+    Other small bug fixes here and there.
+
+
+
+
+
+Version a0.8.16 - Release notes:
+
+    More netcode optimizations.
+    Other small bug fixes.
+
+
+
+
+
+Version a0.8.15 - Release notes:
+
+    More netcode optimizations.
+    Other small bug fixes.
+
+
+
+
+
+Version a0.8.14 - Release notes:
+
+Bug fixes:
+
+    Massively refactored netcode for ships and projectiles.
+    Other small bug fixes.
+
+
+
+
+
+Version a0.8.12 - Release notes:
+
+Modding:
+
+    BOU systems' name starts with Rusty now
+
+Bug fixes:
+
+    New projectiles network logic
+    Other minor fixes
+
+
+
+
+
+Version a0.8.11 - Release notes:
+
+Changes:
+
+    Shops not accessible in combat
+    Chat window now stays up a bit longer on incoming messages
+    NPC Life support AI now sends NPCs to heal and replenish O2 while ship is in hyperspace. 
+
+Rebalancing:
+
+    Shops not accessible in combat.
+    Evasion per engines power increased to 3%
+    EMP weapons are now more rare
+    More scrap drops
+    Some weapons charge times changed.
+
+Modding:
+
+    Evasion per engines power is now configurable in server's config file
+    For each ship system with param BREAK_ON_UNINSTALL=0 a copy is generated with BREAK_ON_UNINSTALL=1, RARITY=100, PRICE=0. These systems will have the same name as the original but with a prefix BOU_ 
+
+Bug fixes:
+
+    Players' "Use systems" animation was not working.
+
+
+
+
+
+Version a0.8.10 - Release notes:
+
+Bug fixes:
+
+    Min requirement for Java is now 8 or more.
+    Java 9 issue - sun 64 decoder should be fixed now
+    Fixed event when pirates fighting each other would still shoot you instead of ignoring you.
+    Fixed a bug when server would majorly lag, if some NPC would get out in space.
+
+
+
+
+
+Version a0.8.9 - Release notes:
+
+New features:
+
+    Added Cloaking system
+    Added Beam weapons system
+    Weapons can now have AOE.
+    You can now toggle the ship's self defense AI on and off, using the /SHIPDEF chat command.
+    Re-implemented the old keyboard movement controls: WASD - move, X - combat mode, SPACE - use system
+    Reactors now receive only 25% EMP damage.
+    Ship's evasion is now = 2% * Current engines charge rate.
+
+Modding:
+
+    You can now have events that happen when a ship jumps, takes damage, or dies.
+    Modify ship event can now add or remove a range of sectors to be considered as explored ones.
+    Added the new Remove ship event
+    Added a new Random ship generator
+    Removed ship icons from the client folder - now it uses the scaled image of the ship isntead.
+    Weapons in gen ships - removed param #13
+    Added the new Play music/sound event
+    Added events that happen when a projectile hits a ship(can be applied to the shooter or the target)
+    Added the new Peace keeper Ship AI
+    Modify ship event can now install a system onto the ship into a random room(if there is enough space)
+    Life support AI and AntiLifesuport AI now also make sure that the shield system is powered up.
+    Modify sector event can mark a sector to be visible to all players on any ship.
+    In the Spawn ship event you can now specify a ship_model to use instead of a gen_ship_model.
+    Modify ship event can now add_ship_ai to the ship
+    Spawn ship event now has a new parameter chain_events_to_created. If it's set to 1 then all chain events from this Spawn ship event will be applied to the ships that were created by this Spawn ship event.
+    All events now have a new parameter chain_events_to_created_by_children. If it's set to 1 then all chain events from this Event will be applied to the ships that were created by preceding chain events.
+    You can now specify which races are available for choosing, whenever it is necessary to choose a random race for some NPC.
+
+Other improvements:
+
+    Improved network performance.
+    Dashes ( - ) are now allowed in the Server IP field
+    Teleport system's ShieldsPass param not updated
+    Multiple other small bug fixes.
+
+Also a new story mode is being developed. It will contain a lot more different random events.
+
+
+
+
+
+Version a0.8.8 - Release notes
+    Multiple bugs fixed(clients should no longer loose server connection)
+    Improved network performance
+    Improved "Downloading server data" time.
+    For modders: in config.cfg of the server 
+    UNIVERSE_SIZE is now replaced with  UNIVERSE_WIDTH and UNIVERSE_HEIGHT

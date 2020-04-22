@@ -72,7 +72,7 @@
 		<message id="SL4" text="I ca..t spea.. long, they m...t detect my sig..l.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL5" any_condition="0"></reply>
 		</message>
-		<message id="SL5" text="Lis.en, there .. a sh..ip hidden right ne..r the s..ation. You ..eed to co..tact it.">
+		<message id="SL5" text="Lis.en, there .. a sh..ip hidden right ne..r the s..ation in t.is s.ctor. You ..eed to co..tact it.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL6" any_condition="0"></reply>
 		</message>
 		<message id="SL6" text="They wi.. ..plain every..g.">
@@ -288,7 +288,7 @@
 		<message id="SL6" text="Yeah, bye.">
 			<reply id="SLEEPING" text="[SKIP][AUTO]" next="SL7" any_condition="0"></reply>
 		</message>
-		<message id="SL7" text="You can't get rid of a feeling that something is not right here.">
+		<message id="SL7" text="[ACTION]You can't get rid of a feeling that something is not right here.">
 			<random_event>0</random_event>
 			<event id="TALKED_TO_PRISON_WARDEN" target="PLAYER"></event>
 		</message>

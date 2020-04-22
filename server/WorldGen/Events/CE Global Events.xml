@@ -4,12 +4,41 @@
 
 	<event type="MODIFY_SHIP" name="EJECT_CRYSTAL" all_mob_ships="0" random_eject_direction="1" eject_system_model_from_cargo="CRYSTAL" /> //Ships or stations eject the HAK86 crystal if they have it
 
-	<event type="PLAY_AUDIO" name="MUSIC_INTRO">
-		<event_param nonstop="1"></event_param>
-		<event_param track="CE_Track1a:CE_Track1b"></event_param>
-		<event_param music="1"></event_param>
-		<event_param all_players="1"></event_param>
-		<!-- <event_param sector="VAR(STARTING_SECTOR)"></event_param> -->
-		<!-- Track currently unused looking for a good place for it -->
+	<event type="MODIFY_SECTOR" name="DO_NOTHING" /> //Important! Don't remove used to give scripts a way to 'do nothing' but still use trigger events
+
+	<event type="SERVER_VARIABLE" name="DF_Defeated_Trigger" var_name="DF_Defeated" var_value="1">
+	//Modders: Do something with this trigger so that something happens when the D.F Prototype is defeated
 	</event>
+
+//Tachyons CE Variables:
+<!--
+Campaign_Progress
+DF_Defeated
+
+
+-->
+// Campaign Story Progress Tracker
+	
+	<event type="SERVER_VARIABLE" name="Game_Progress_0" var_name="Campaign_Progress" var_value="0" /> //Worldgen completed
+	<event type="SERVER_VARIABLE" name="Game_Progress_1" var_name="Campaign_Progress" var_value="1" /> //Tutorial fight about to start
+	<event type="SERVER_VARIABLE" name="Game_Progress_2" var_name="Campaign_Progress" var_value="2" /> //Tutorial skipped or HyperJump tutorial started after tutorial fight
+	<event type="SERVER_VARIABLE" name="Game_Progress_3" var_name="Campaign_Progress" var_value="3" /> //Sensors quest started
+	<event type="SERVER_VARIABLE" name="Game_Progress_4" var_name="Campaign_Progress" var_value="4" /> //Unassigned
+	<event type="SERVER_VARIABLE" name="Game_Progress_5" var_name="Campaign_Progress" var_value="5" /> //Starting the Bears quest from KEK
+	<event type="SERVER_VARIABLE" name="Game_Progress_6" var_name="Campaign_Progress" var_value="6" /> //Bears Base Destoried
+	<event type="SERVER_VARIABLE" name="Game_Progress_7" var_name="Campaign_Progress" var_value="7" /> //EMP Quest started from KEK
+	<event type="SERVER_VARIABLE" name="Game_Progress_8" var_name="Campaign_Progress" var_value="8" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_9" var_name="Campaign_Progress" var_value="9" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_10" var_name="Campaign_Progress" var_value="10" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_11" var_name="Campaign_Progress" var_value="11" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_12" var_name="Campaign_Progress" var_value="12" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_13" var_name="Campaign_Progress" var_value="13" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_14" var_name="Campaign_Progress" var_value="14" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_15" var_name="Campaign_Progress" var_value="15" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_16" var_name="Campaign_Progress" var_value="16" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_17" var_name="Campaign_Progress" var_value="17" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_18" var_name="Campaign_Progress" var_value="18" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_19" var_name="Campaign_Progress" var_value="19" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_20" var_name="Campaign_Progress" var_value="20" />
+
 </events>
