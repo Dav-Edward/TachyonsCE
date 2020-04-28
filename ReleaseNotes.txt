@@ -3,9 +3,9 @@ Tachyons CE release notes:
 +Re-branded "Tachyon" to "Tachyons" to reflect the new name of the game and project
 +Changed the main title splash screen
 +Changed the main title music theme to a unique track made just for Tachyons CE
-+Changed the game UI slightly to a blue theme instead of the green+teal original colour
++Changed the game UI slightly to a blue theme instead of the green-teal original colour
 +Changed game fonts to a nicer, easier to read font style that's easier on the eye
-+Changed 'BreakOnUninstall' aka 'Rusty' non+weapon systems on ships. Now ships can be raided for everything on common ships. Most situations there is a 50% chance a system is 'rusty'
++Changed 'BreakOnUninstall' aka 'Rusty' non-weapon systems on ships. Now ships can be raided for everything on common ships. Most situations there is a 50% chance a system is 'rusty'
 +Changed Engines, HyperDrive, and Shields in stores to reflect the fact players can steal inferior versions from common ships. The store versions are more upgradeable.
 +Stopped D.F from wandering too far if the players are slow to catch up with it. (Currently limited to 9 jumps until the player spots it)
 +Stopped trader ships spawning in hazard zones
