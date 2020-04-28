@@ -27,7 +27,8 @@
 			<ship_param max_drone_ammo="10"></ship_param>
 			<ship_param min_scrap="10"></ship_param>
 			<ship_param max_scrap="1000"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="TRADER"></ship_ai>
 			<spawn_npc_on_ship>
@@ -39,7 +40,8 @@
 				<npc_param npc_spawn_at_home="1"></npc_param>
 				<npc_param npc_dialogue="SERG"></npc_param>
 				<npc_param npc_remote_dialogue="SERG"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_WORKER">
 					<npc_ai_param SYSTEMS="PILOTING"></npc_ai_param>
 					<npc_ai_param SYSTEMS="WEAPONS_CONTROL"></npc_ai_param>
@@ -54,7 +56,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -76,7 +79,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -98,7 +102,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER">
@@ -212,7 +217,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -289,7 +294,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -369,7 +374,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -446,7 +451,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>

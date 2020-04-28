@@ -27,7 +27,7 @@
 			<ship_ai type="LIFE_SUPPORT"></ship_ai>
 			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="SENTRY"></ship_ai>
-			<ship_param death_event="Game_Progress_6"></ship_param>			
+			<ship_param death_event="Game_Progress_5"></ship_param>
 			<spawn_npc_on_ship>
 				<npc_param npc_qty="1"></npc_param>
 				<npc_param npc_is_crew="1"></npc_param>

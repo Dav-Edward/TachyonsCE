@@ -189,6 +189,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -209,6 +213,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -242,6 +250,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -263,6 +275,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -284,6 +300,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -590,6 +610,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -612,6 +636,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -635,6 +663,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -660,6 +692,10 @@
 			<condition_param sector_type="2"></condition_param>
 			<condition_param sector_type="3"></condition_param>
 			<condition_param sector_type="4"></condition_param>
+			<condition_param sector_type="19"></condition_param>
+			<condition_param sector_type="20"></condition_param>
+			<condition_param sector_type="21"></condition_param>
+			<condition_param sector_type="23"></condition_param>
 		</condition>
 		<condition type="SECTOR_SHIPS_ABSENT">
 			<condition_param qty="2"></condition_param>
@@ -947,6 +983,11 @@
 			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS5"></ship_randomizer_param>
 			<ship_random_systems type="OXYGEN">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
@@ -968,6 +1009,12 @@
 				<ship_random_systems_param model="ENGINES6"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES7"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES8"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES4"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES5"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES6"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES7"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES8"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="HYPERDRIVE">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
@@ -975,6 +1022,10 @@
 				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE3"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE4"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE4"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="WEAPONS_CONTROL">
 				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
@@ -1119,6 +1170,11 @@
 			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS5"></ship_randomizer_param>
 			<ship_random_systems type="OXYGEN">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
@@ -1137,12 +1193,19 @@
 				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES4"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES5"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES4"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES5"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="HYPERDRIVE">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE3"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="WEAPONS_CONTROL">
 				<ship_random_systems_param mandatory="0"></ship_random_systems_param>
@@ -1226,6 +1289,11 @@
 			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS5"></ship_randomizer_param>
 			<ship_random_systems type="OXYGEN">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
@@ -1241,11 +1309,16 @@
 				<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES3"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="HYPERDRIVE">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE2"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="WEAPONS_CONTROL">
 				<ship_random_systems_param mandatory="0"></ship_random_systems_param>

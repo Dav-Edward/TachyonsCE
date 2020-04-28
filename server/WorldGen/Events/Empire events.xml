@@ -226,7 +226,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -303,7 +303,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -383,7 +383,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -460,7 +460,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>

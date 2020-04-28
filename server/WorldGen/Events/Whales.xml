@@ -72,6 +72,11 @@
 			<ship_randomizer_param random_sheld="SHIELDS3"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS4"></ship_randomizer_param>
 			<ship_randomizer_param random_sheld="SHIELDS5"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS1"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS2"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS3"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS4"></ship_randomizer_param>
+			<ship_randomizer_param random_sheld="BOU_SHIELDS5"></ship_randomizer_param>
 			<ship_random_systems type="OXYGEN">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="OXYGEN1"></ship_random_systems_param>
@@ -87,11 +92,16 @@
 				<ship_random_systems_param model="ENGINES1"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES2"></ship_random_systems_param>
 				<ship_random_systems_param model="ENGINES3"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_ENGINES3"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="HYPERDRIVE">
 				<ship_random_systems_param mandatory="1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE1"></ship_random_systems_param>
 				<ship_random_systems_param model="HYPERDRIVE2"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE1"></ship_random_systems_param>
+				<ship_random_systems_param model="BOU_HYPERDRIVE2"></ship_random_systems_param>
 			</ship_random_systems>
 			<ship_random_systems type="WEAPONS_CONTROL">
 				<ship_random_systems_param mandatory="0"></ship_random_systems_param>

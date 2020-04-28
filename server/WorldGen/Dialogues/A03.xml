@@ -41,6 +41,7 @@
 			<event id="ADD_EMP_CANNON_TO_PLAYER" target="PLAYER"></event>
 			<event id="REMOVE_EMP_CANNON_FROM_A03" target="PLAYER"></event>
 			<event id="EMP_CANNON_COLLECTED" target="PLAYER"></event>
+			<event id="Game_Progress_12" target="PLAYER"></event>
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 	</dialogue>

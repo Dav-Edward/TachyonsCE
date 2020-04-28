@@ -87,7 +87,12 @@
 			<event id="STOP_SCORCHERS_HQ_QUEST" target="PLAYER"></event>
 			<event id="REMOVE_EMPIRE_ACCESS" target="PLAYER"></event>
 			<event id="STOP_EMPIRE_CRYSTAL_QUEST" target="PLAYER"></event>
-			<reply id="R1" text="Thank you."></reply>
+			<event id="Game_Progress_9" target="PLAYER"></event>
+			<reply id="R1" text="Thank you." next="M25"></reply>
+		</message>
+
+		<message id="M25" text="[ACTION]With all three crystals you best return back to the USC right away.">
+			<reply id="R1" text="[SKIP]..."></reply>
 		</message>
 		
 		<message id="M22" text="The Scorchers' base is at sector VAR(S_HQ_SECTOR)">
@@ -161,6 +166,7 @@
 		<message id="M17_1" text="The Scorchers' base is at sector [SECTOR]">
 			<event id="SPAWN_S_HQ" target="PLAYER"></event>
 			<event id="MAKE_S_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
+			<event id="Game_Progress_7" target="PLAYER"></event>
 			<reply id="R1" text="[SKIP][AUTO]" next="M18"></reply>
 		</message>
 		<message id="M17_2" text="The Scorchers' base is at sector VAR(S_HQ_SECTOR)">

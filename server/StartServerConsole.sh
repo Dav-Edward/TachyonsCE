@@ -1,3 +1,3 @@
 #!/bin/bash
-java -jar TachyonServer.jar
+java -jar TachyonsCEServer.jar
 read -p  "Press [Enter] key to continue..."

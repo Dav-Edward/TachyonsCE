@@ -34,7 +34,8 @@
 			<ship_param max_scrap="200"></ship_param>
 			<ship_param min_health="10"></ship_param>
 			<ship_param max_health="20"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="TRADER"></ship_ai>
 			<spawn_npc_on_ship>
@@ -44,7 +45,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
@@ -56,7 +58,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="ENGINES"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
@@ -68,7 +71,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
@@ -302,7 +306,8 @@
 			<ship_param max_scrap="200"></ship_param>
 			<ship_param min_health="10"></ship_param>
 			<ship_param max_health="20"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="TRADER"></ship_ai>
 			<spawn_npc_on_ship>
@@ -312,7 +317,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
@@ -324,7 +330,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="ENGINES"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
@@ -336,7 +343,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
@@ -379,7 +387,8 @@
 			<ship_param max_scrap="300"></ship_param>
 			<ship_param min_health="30"></ship_param>
 			<ship_param max_health="40"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="TRADER"></ship_ai>
 			<spawn_npc_on_ship>
@@ -389,7 +398,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
@@ -401,7 +411,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="ENGINES"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
@@ -413,7 +424,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
@@ -447,7 +459,8 @@
 			<ship_param max_scrap="300"></ship_param>
 			<ship_param min_health="30"></ship_param>
 			<ship_param max_health="40"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="TRADER"></ship_ai>
 			<spawn_npc_on_ship>
@@ -459,7 +472,8 @@
 				<npc_param npc_spawn_at_home="1"></npc_param>
 				<npc_param npc_dialogue="HR_AGENT"></npc_param>
 				<npc_param npc_remote_dialogue="HR_AGENT"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SENSORS" WORK_TIME="10"></npc_ai>
 			</spawn_npc_on_ship>
 			<spawn_npc_on_ship>
@@ -469,7 +483,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
@@ -481,7 +496,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="ENGINES"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
@@ -493,7 +509,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>
 			</spawn_npc_on_ship>
 		</add_ship>
@@ -519,7 +536,8 @@
 			<ship_param max_scrap="160"></ship_param>
 			<ship_param min_health="16"></ship_param>
 			<ship_param max_health="26"></ship_param>
-			<ship_ai type="LIFE_SUPPORT"></ship_ai>			<ship_ai type="EVADER"></ship_ai>
+			<ship_ai type="LIFE_SUPPORT"></ship_ai>
+			<ship_ai type="EVADER"></ship_ai>
 			<ship_ai type="ENEMY_SHOOTER"></ship_ai>
 			<ship_ai type="MOB_HUNTER">
 				<ship_ai_param TARGET="THE_BEARS"></ship_ai_param>
@@ -537,7 +555,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>
@@ -547,7 +565,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="PILOTING"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="PILOTING:SENSORS:WEAPONS_CONTROL" WORK_TIME="10"></npc_ai>
@@ -559,7 +578,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="ENGINES"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="SHIELDS:ENGINES:HYPERDRIVE:REACTOR:CAPACITOR" WORK_TIME="12"></npc_ai>
@@ -571,7 +591,8 @@
 				<npc_param npc_race="HUMAN"></npc_param>
 				<npc_param npc_home_system="MEDICAL"></npc_param>
 				<npc_param npc_spawn_at_home="1"></npc_param>
-				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>				<npc_ai type="NPC_DEFENDER"></npc_ai>
+				<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+				<npc_ai type="NPC_DEFENDER"></npc_ai>
 	 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 				<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 				<npc_ai type="NPC_WORKER" SYSTEMS="REPAIR:CONSUMABLES_SHOP:SYSTEMS_SHOP:SHIPS_SHOP" WORK_TIME="15"></npc_ai>

@@ -7,6 +7,7 @@
 	<event type="MODIFY_SECTOR" name="DO_NOTHING" /> //Important! Don't remove used to give scripts a way to 'do nothing' but still use trigger events
 
 	<event type="SERVER_VARIABLE" name="DF_Defeated_Trigger" var_name="DF_Defeated" var_value="1">
+	<event_param chain_event="Game_Progress_15"></event_param>
 	//Modders: Do something with this trigger so that something happens when the D.F Prototype is defeated
 	</event>
 
@@ -14,31 +15,29 @@
 <!--
 Campaign_Progress
 DF_Defeated
-
+Pris_Rescued
 
 -->
-// Campaign Story Progress Tracker
-	
+// Campaign Story Progress Tracker	
 	<event type="SERVER_VARIABLE" name="Game_Progress_0" var_name="Campaign_Progress" var_value="0" /> //Worldgen completed
 	<event type="SERVER_VARIABLE" name="Game_Progress_1" var_name="Campaign_Progress" var_value="1" /> //Tutorial fight about to start
 	<event type="SERVER_VARIABLE" name="Game_Progress_2" var_name="Campaign_Progress" var_value="2" /> //Tutorial skipped or HyperJump tutorial started after tutorial fight
 	<event type="SERVER_VARIABLE" name="Game_Progress_3" var_name="Campaign_Progress" var_value="3" /> //Sensors quest started
-	<event type="SERVER_VARIABLE" name="Game_Progress_4" var_name="Campaign_Progress" var_value="4" /> //Unassigned
-	<event type="SERVER_VARIABLE" name="Game_Progress_5" var_name="Campaign_Progress" var_value="5" /> //Starting the Bears quest from KEK
-	<event type="SERVER_VARIABLE" name="Game_Progress_6" var_name="Campaign_Progress" var_value="6" /> //Bears Base Destoried
-	<event type="SERVER_VARIABLE" name="Game_Progress_7" var_name="Campaign_Progress" var_value="7" /> //EMP Quest started from KEK
-	<event type="SERVER_VARIABLE" name="Game_Progress_8" var_name="Campaign_Progress" var_value="8" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_9" var_name="Campaign_Progress" var_value="9" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_10" var_name="Campaign_Progress" var_value="10" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_11" var_name="Campaign_Progress" var_value="11" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_12" var_name="Campaign_Progress" var_value="12" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_13" var_name="Campaign_Progress" var_value="13" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_14" var_name="Campaign_Progress" var_value="14" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_15" var_name="Campaign_Progress" var_value="15" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_16" var_name="Campaign_Progress" var_value="16" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_17" var_name="Campaign_Progress" var_value="17" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_18" var_name="Campaign_Progress" var_value="18" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_19" var_name="Campaign_Progress" var_value="19" />
-	<event type="SERVER_VARIABLE" name="Game_Progress_20" var_name="Campaign_Progress" var_value="20" />
+	<event type="SERVER_VARIABLE" name="Game_Progress_4" var_name="Campaign_Progress" var_value="4" /> //Starting the Bears quest from KEK
+	<event type="SERVER_VARIABLE" name="Game_Progress_5" var_name="Campaign_Progress" var_value="5" /> //Bears Base Destoried
+	<event type="SERVER_VARIABLE" name="Game_Progress_6" var_name="Campaign_Progress" var_value="6" /> //Empire Quest started from KEK
+	<event type="SERVER_VARIABLE" name="Game_Progress_7" var_name="Campaign_Progress" var_value="7" /> //Scorchers Quest started from Empire
+	<event type="SERVER_VARIABLE" name="Game_Progress_8" var_name="Campaign_Progress" var_value="8" /> //Scorchers HQ Destoried
+	<event type="SERVER_VARIABLE" name="Game_Progress_9" var_name="Campaign_Progress" var_value="9" /> //Brought Scorchers Emblem back to Emp_Error at Empire
+	<event type="SERVER_VARIABLE" name="Game_Progress_10" var_name="Campaign_Progress" var_value="10" /> //Delivered the HAK86 crystals to USC
+	<event type="SERVER_VARIABLE" name="Game_Progress_11" var_name="Campaign_Progress" var_value="11" /> //Started EMP Cannon Quest (note: this is available immedately after delivering HAK86 crystals)
+	<event type="SERVER_VARIABLE" name="Game_Progress_12" var_name="Campaign_Progress" var_value="12" /> //Got EMP Cannon from A03
+	<event type="SERVER_VARIABLE" name="Game_Progress_13" var_name="Campaign_Progress" var_value="13" /> //Returned to USC with EMP Cannon and got Super Sensors from USC. Starting 2nd mission to KEK
+	<event type="SERVER_VARIABLE" name="Game_Progress_14" var_name="Campaign_Progress" var_value="14" /> //KEK shares last known whereabouts of D.F at Prison
+	<event type="SERVER_VARIABLE" name="Game_Progress_15" var_name="Campaign_Progress" var_value="15" /> //The D.F has been defeated
+
+//Optional Quest Progress Tracker
+<event type="SERVER_VARIABLE" name="Prison_Rescue_Complete" var_name="Pris_Rescued" var_value="1" /> //Prison optional mission completed
+
 
 </events>

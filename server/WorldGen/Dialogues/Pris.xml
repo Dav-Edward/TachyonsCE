@@ -48,12 +48,14 @@
 			<random_event>0</random_event>
 			<event id="GIVE_PRISON_CLOAK" target="PLAYER"></event>
 			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<event id="Prison_Rescue_Complete" target="PLAYER"></event>
 			<reply id="R1" text="Thanks." any_condition="0"></reply>
 		</message>
 		<message id="SAT" text="Alright, we've sent it to your ship.">
 			<random_event>0</random_event>
 			<event id="GIVE_PRISON_TELEPORT" target="PLAYER"></event>
 			<event id="PRISON_AWARDED_VAR" target="PLAYER"></event>
+			<event id="Prison_Rescue_Complete" target="PLAYER"></event>
 			<reply id="R1" text="Thanks." any_condition="0"></reply>
 		</message>
 

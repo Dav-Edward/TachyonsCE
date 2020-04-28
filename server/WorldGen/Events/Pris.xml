@@ -141,7 +141,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR2"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR2"></ship_random_systems_param>
 				</ship_random_systems>
 				<ship_random_systems type="OXYGEN">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>

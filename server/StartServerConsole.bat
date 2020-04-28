@@ -1,2 +1,2 @@
-java -jar TachyonServer.jar
+java -jar TachyonsCEServer.jar
 PAUSE

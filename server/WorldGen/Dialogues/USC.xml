@@ -95,6 +95,7 @@
 			<event id="STOP_FINAL_PREP_QUEST" target="PLAYER"></event>
 			<event id="ADD_SUPER_SENSORS" target="PLAYER"></event>
 			<event id="START_KEK_LAST_RAIDED_QUEST" target="PLAYER"></event>
+			<event id="Game_Progress_13" target="PLAYER"></event>
 			<reply id="R1" text="OK, thanks." next="M"></reply>
 		</message>
 
@@ -180,6 +181,7 @@
 		<message id="M15" text="By the way, Darius was looking for you, please contact him.">
 			<event id="DROP_COLLECTED_CRYSTALS" target="PLAYER"></event>
 			<event id="START_EMP_QUEST" target="PLAYER"></event>
+			<event id="Game_Progress_10" target="PLAYER"></event>
 			<reply id="R1" text="OK. Thanks."></reply>
 		</message>
 		
@@ -385,6 +387,7 @@
 			<event id="FINISH_EMP_QUEST" target="PLAYER"></event>
 			<event id="SPAWN_A03" target="PLAYER"></event>
 			<event id="MAKE_A03_SECTOR_EXPLORED" target="PLAYER"></event>
+			<event id="Game_Progress_11" target="PLAYER"></event>
 			<reply id="R1" text="I'll get right on that!"></reply>
 		</message>
 		
@@ -445,7 +448,7 @@
 			<reply id="R1" text="[SKIP][AUTO]" next="M19"></reply>
 		</message>
 		<message id="M19" text="We have retrieved it from an alien spaceship of unknown origin.">
-			<reply id="R1" text="[SKIP]" next="M20"></reply>
+			<reply id="R1" text="[SKIP][AUTO]" next="M20"></reply>
 		</message>
 		<message id="M20" text="Even missiles can not bypass that shield!">
 			<reply id="R1" text="No way!" next="M21"></reply>

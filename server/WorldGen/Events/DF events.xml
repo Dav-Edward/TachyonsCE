@@ -26,16 +26,16 @@
 			<ship_param max_scrap="1000"></ship_param>
 			<ship_param death_event="DF_Defeated_Trigger"></ship_param>
 			<ship_ai type="AUTOREPAIR">
-				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="LIFE_SUPPORT">
 				<ship_ai_param CREWLESS="1"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="EVADER">
-				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="SENTRY">
-				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
 			</ship_ai>
 			<ship_ai type="EVENT_TRIGGER">
 				<ship_ai_param CREWLESS="1"></ship_ai_param>
@@ -46,15 +46,19 @@
 				</ship_ai_condition>
 			</ship_ai>
 			<ship_ai type="EXPLORER">
-				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
 				<ship_ai_param DELAY="180"></ship_ai_param>
 				<ship_ai_condition type="SECTOR_SHIPS_ABSENT">
 					<condition_param ship_name="VAR(PLAYER_SHIP_NAME)"></condition_param>
 					<condition_param qty="1"></condition_param>
 				</ship_ai_condition>
+				<ship_ai_condition type="SERVER_VARIABLE_SMALLER">
+					<condition_param var_name="DF_Explore_Limit"></condition_param>
+					<condition_param var_value="8"></condition_param>
+				</ship_ai_condition>
 			</ship_ai>
 			<ship_ai type="EXPLORER">
-				<ship_ai_param CREWLESS="1"></ship_ai_param>
+				<ship_ai_param CREWLESS="0"></ship_ai_param>
 				<ship_ai_param DELAY="60"></ship_ai_param>
 				<ship_ai_condition type="SECTOR_SHIPS_PRESENT">
 					<condition_param ship_name="VAR(PLAYER_SHIP_NAME)"></condition_param>
@@ -153,6 +157,7 @@
 			</spawn_npc_on_ship>
 			<ship_param jump_event="DROP_DF_TOOK_DAMAGE"></ship_param>			
 			<ship_param jump_event="REPAIR_HULL_1"></ship_param>			
+			<ship_param jump_event="DF_Explore_Limit"></ship_param>
 			<ship_param damage_event="DF_TOOK_DAMAGE"></ship_param>			
 		</add_ship>
 	</event>
@@ -182,6 +187,10 @@
 	<event type="SERVER_VARIABLE" name="DF_TOOK_DAMAGE">
 		<event_param var_name="DF_TOOK_DAMAGE"></event_param>
 		<event_param var_value="1"></event_param>
+	</event>
+	<event type="SERVER_VARIABLE" name="DF_Explore_Limit">
+		<event_param nonstop="1"></event_param>
+		<event_param var_value="++"></event_param>
 	</event>
 	<event type="MODIFY_SECTOR" name="MAKE_DF_SECTOR_EXPLORED">
 		<event_param sector="VAR(DF_SECTOR)"></event_param>
@@ -223,7 +232,7 @@
 				</ship_random_systems>
 				<ship_random_systems type="REACTOR">
 					<ship_random_systems_param mandatory="1"></ship_random_systems_param>
-					<ship_random_systems_param model="REACTOR4"></ship_random_systems_param>
+					<ship_random_systems_param model="BOU_REACTOR4"></ship_random_systems_param>
 				</ship_random_systems>
 			</ship_randomizer>
 			<spawn_npc_on_ship>

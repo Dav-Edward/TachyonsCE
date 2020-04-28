@@ -50,6 +50,7 @@
 			<event id="MAKE_DF_SECTOR_EXPLORED" target="PLAYER"></event>
 			<event id="STOP_KEK_LAST_RAIDED_QUEST" target="PLAYER"></event>
 			<event id="START_LAST_FISHING_QUEST" target="PLAYER"></event>
+			<event id="Game_Progress_14" target="PLAYER"></event>
 			<reply id="R1" text="Thanks.  Wish me luck!" next="M36"></reply>
 		</message>
 		<message id="M36" text="Good luck.  Turn those bastards to space dust!"></message>
@@ -93,7 +94,7 @@
 			<event id="STOP_BEARS_HQ_QUEST" target="PLAYER"></event>
 			<event id="START_EMPIRE_CRYSTAL_QUEST" target="PLAYER"></event>
 			<event id="INC_CRYSTALS_COLLECTED" target="PLAYER"></event>
-			<event id="Game_Progress_7" target="PLAYER"></event>
+			<event id="Game_Progress_6" target="PLAYER"></event>
 			<reply id="R1" text="Thanks."></reply>
 		</message>
 		<message id="M19" text="[PLAYER_NAME], did you already get the second crystal?">
@@ -199,7 +200,7 @@
 			<event id="MAKE_B_HQ_SECTOR_EXPLORED" target="PLAYER"></event>
 			<event id="START_BEARS_HQ_QUEST" target="PLAYER"></event>
 			<event id="STOP_KEK_SENSORS_QUEST" target="PLAYER"></event>
-			<event id="Game_Progress_5" target="PLAYER"></event>
+			<event id="Game_Progress_4" target="PLAYER"></event>
 			<reply id="R1" text="[SKIP][AUTO]" next="M17"></reply>
 		</message>
 		<message id="M16_2" text="The asteroid belt is located at sector VAR(B_HQ_SECTOR)">

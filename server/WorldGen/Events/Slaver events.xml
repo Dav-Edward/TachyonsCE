@@ -37,10 +37,14 @@
 	</event>
 	
 	<event type="MODIFY_SHIP" name="REMOVE_SLAVE_PRICE_FROM_PLAYER">
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
 		<event_param take_scrap="300"></event_param>
 	</event>
 	
 	<event type="MODIFY_SHIP" name="ADD_SLAVE_PRICE_TO_SLAVER">
+		<event_param min_event_qty="1"></event_param>
+		<event_param max_event_qty="1"></event_param>
 		<event_param give_scrap="300"></event_param>
 	</event>	
 
@@ -54,7 +58,8 @@
 			<npc_param npc_race="HUMAN"></npc_param>
 			<npc_param npc_home_system="MEDICAL"></npc_param>
 			<npc_param npc_spawn_at_home="1"></npc_param>
-			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>			<npc_ai type="NPC_DEFENDER"></npc_ai>
+			<npc_ai type="NPC_LIFESUPPORT"></npc_ai>
+			<npc_ai type="NPC_DEFENDER"></npc_ai>
 			<npc_ai type="NPC_FIREMAN"></npc_ai>
 			<npc_ai type="NPC_REPAIRMAN"></npc_ai>
 			<npc_ai type="NPC_WORKER" WORK_TIME="30"></npc_ai>
