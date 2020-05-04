@@ -2,7 +2,7 @@ Tachyons CE release notes:
 
 +Re-branded "Tachyon" to "Tachyons" to reflect the new name of the game and project
 +Changed the main title splash screen
-+Changed the main title music theme to a unique track made just for Tachyons CE
++Changed the main title music theme to a unique track made just for Tachyons CE by AlexBlackRaven
 +Changed the game UI slightly to a blue theme instead of the green-teal original colour
 +Changed game fonts to a nicer, easier to read font style that's easier on the eye
 +Changed 'BreakOnUninstall' aka 'Rusty' non-weapon systems on ships. Now ships can be raided for everything on common ships. Most situations there is a 50% chance a system is 'rusty'
@@ -12,7 +12,7 @@ Tachyons CE release notes:
 +Optimized Prison events to use less timer events that fire less often to reduce server slow-down
 +Fire is more dangerous
 +Air depletes faster causing mobs to suffocate faster, but the damage taken from suffocation is slower
-
++Attempted to fix purchasing workers/slaves charging players multiple times if they own multiple ships
 
 Commit ??-22:
 +Lots of small changes
