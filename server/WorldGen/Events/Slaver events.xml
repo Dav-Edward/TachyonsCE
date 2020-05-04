@@ -37,14 +37,12 @@
 	</event>
 	
 	<event type="MODIFY_SHIP" name="REMOVE_SLAVE_PRICE_FROM_PLAYER">
-		<event_param min_event_qty="1"></event_param>
-		<event_param max_event_qty="1"></event_param>
+		<event_param all_mob_ships="0"></event_param>
 		<event_param take_scrap="300"></event_param>
 	</event>
 	
 	<event type="MODIFY_SHIP" name="ADD_SLAVE_PRICE_TO_SLAVER">
-		<event_param min_event_qty="1"></event_param>
-		<event_param max_event_qty="1"></event_param>
+		<event_param all_mob_ships="0"></event_param>
 		<event_param give_scrap="300"></event_param>
 	</event>	
 
