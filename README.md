@@ -1,9 +1,12 @@
 # TachyonCE
 Tachyon Community Edition
 
-Build 0.1.6
+Build 1.0
 
 Tachyons CE release notes:
+
++Reverted Prison event changes due to breaking the event entirely. Kept only basic timer cleanups
++Fixed end game boss crashing the game in previous build
 
 +Re-branded "Tachyon" to "Tachyons" to reflect the new name of the game and project
 +Changed the main title splash screen
