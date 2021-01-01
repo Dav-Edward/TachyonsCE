@@ -1,6 +1,9 @@
 # TachyonCE
 Tachyon Community Edition
 
+Build 1.0.1
+Updated subversion data to check client/server matching
+
 Build 1.0
 
 Tachyons CE release notes:
