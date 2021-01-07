@@ -1,6 +1,6 @@
 TYPE=SHIELDS
-NAME=Alien super shields
-SHORT_NAME=Alien shields
+NAME=Alien super Shields
+SHORT_NAME=Alien Shields
 CHARGE=1
 HP=3000
 FIX=1
