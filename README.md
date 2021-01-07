@@ -1,6 +1,8 @@
 # TachyonCE
 Tachyon Community Edition
 
+![Tachyons CE latest version](https://img.shields.io/badge/dynamic/json.svg?label=Latest%20version:&url=https://api.github.com/repos/Dav-Edward/TachyonsCE/releases/latest&query=$.name&style=for-the-badge)
+
 Build 1.0.1
 Updated subversion data to check client/server matching
 
