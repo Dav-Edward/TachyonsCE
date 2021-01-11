@@ -1,6 +1,11 @@
 # TachyonCE
 Tachyon Community Edition
 
+<<<<<<< HEAD
+=======
+![Tachyons CE latest version](https://img.shields.io/badge/dynamic/json.svg?label=Latest%20version:&url=https://api.github.com/repos/Dav-Edward/TachyonsCE/releases/latest&query=$.name&style=for-the-badge)
+>>>>>>> 7e87c68a92e9027e774762df86e2e2c901a49871
+
 Build -WIP-
 Added additional ship sprites courtesy of EditDotEXE.
 
