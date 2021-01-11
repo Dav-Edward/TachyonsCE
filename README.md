@@ -1,6 +1,9 @@
 # TachyonCE
 Tachyon Community Edition
 
+Build -WIP-
+Added additional ship sprites courtesy of EditDotEXE.
+
 Build 1.0.1
 Updated subversion data to check client/server matching
 
