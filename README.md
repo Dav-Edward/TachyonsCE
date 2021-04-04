@@ -3,7 +3,10 @@ Tachyon Community Edition
 =======
 ![Tachyons CE latest version](https://img.shields.io/badge/dynamic/json.svg?label=Latest%20version:&url=https://api.github.com/repos/Dav-Edward/TachyonsCE/releases/latest&query=$.name&style=for-the-badge)
 
-Build -WIP-
+Build 1.0.2
+Created Windows-Friendly launcher for the game and included JRE to make playing experience easier for Windows users.
+
+Build 1.0.1.x
 Added additional ship sprites courtesy of EditDotEXE.
 
 Build 1.0.1
