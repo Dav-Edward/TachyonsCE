@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>console</headerType>
+  <jar>TachyonsCEServer.jar</jar>
+  <outfile>D:\Repos\TachyonsCE\Server\TachyonsCE_Server.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>https://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Repos\TachyonsCE\DEV\TachyonsIcon.ico</icon>
+  <jre>
+    <path>..\JRE</path>
+    <bundledJre64Bit>true</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion>1.8.9</maxVersion>
+    <jdkPreference>jdkOnly</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <bundledJreErr>This application requires a Java Runtime Environment Version 8 but cannot find the JRE folder that should have been part of the TachyonsCE zip.
+If you prefer to use your own Java Runtime Envrionment please use the &apos;Start Client Console.bat&apos; file instead and be sure you installed Java 8.</bundledJreErr>
+    <jreVersionErr>This application requires a Java Runtime Environment Version 8 but cannot find the JRE folder that should have been part of the TachyonsCE zip.
+If you prefer to use your own Java Runtime Envrionment please use the &apos;Start Server Console.bat&apos; file instead and be sure you installed Java 8.</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>
